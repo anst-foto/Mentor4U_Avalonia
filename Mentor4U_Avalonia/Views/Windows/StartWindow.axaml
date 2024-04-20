@@ -8,7 +8,7 @@
         d:DesignWidth="{StaticResource WindowWidth}" 
         d:DesignHeight="{StaticResource WindowHeight}"
         
-        x:Class="Mentor4U_Avalonia.Views.StartWindow"
+        x:Class="Mentor4U_Avalonia.Views.Windows.StartWindow"
         x:DataType="vm:StartWindowViewModel"
         
         Icon="/Assets/avalonia-logo.ico"
@@ -27,13 +27,13 @@
     <Window.Resources>
         <ResourceDictionary>
             <ResourceDictionary.MergedDictionaries>
-                <ResourceInclude Source="../Icons.axaml"/>
+                <ResourceInclude Source="../../Icons.axaml"/>
             </ResourceDictionary.MergedDictionaries>
         </ResourceDictionary>
     </Window.Resources>
     
     <Window.Styles>
-        <StyleInclude Source="../Styles.axaml"/>
+        <StyleInclude Source="../../Styles.axaml"/>
     </Window.Styles>
     
     <Window.Background>
@@ -45,7 +45,8 @@
 
         <StackPanel Grid.Row="0"
                     HorizontalAlignment="Right">
-            <Button Content="{StaticResource ResourceKey=IconClose}"
+            <Button x:Name="ButtonClose"
+                    Content="{StaticResource ResourceKey=IconClose}"
                     Command="{Binding Path=CloseWindow}"/>
         </StackPanel>
         
@@ -55,7 +56,8 @@
         </StackPanel>
         
         <StackPanel Grid.Row="2">
-            <Button Content="Войти"
+            <Button x:Name="ButtonAuth"
+                    Content="Войти"
                     Command="{Binding Auth}"
                     Classes="open"
                     IsDefault="True"/>

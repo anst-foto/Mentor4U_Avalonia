@@ -3,12 +3,12 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:vm="using:Mentor4U_Avalonia.ViewModels.Windows"
-        xmlns:uc="using:Mentor4U_Avalonia.Controls"
+        xmlns:controls="clr-namespace:Mentor4U_Avalonia.Views.Controls"
 
         mc:Ignorable="d" 
         d:DesignWidth="{StaticResource WindowWidth}" 
         d:DesignHeight="{StaticResource WindowHeight}"
-        x:Class="Mentor4U_Avalonia.Views.AuthWindow"
+        x:Class="Mentor4U_Avalonia.Views.Windows.AuthWindow"
         
         Title="AuthWindow"
         
@@ -34,7 +34,8 @@
                      Watermark="Введите логин"
                      UseFloatingWatermark="False"/>
         </StackPanel>-->
-        <uc:InputControl DataContext="{Binding InputLogin}"/>
+        <controls:InputControl x:Name="InputControlLogin" 
+                               DataContext="{Binding InputLogin}"/>
         
         <!--<StackPanel Orientation="Horizontal">
             <Label Content="Password"
@@ -45,12 +46,15 @@
                      Watermark="Введите пароль"
                      UseFloatingWatermark="True"/>
         </StackPanel>-->
-        <uc:InputControl DataContext="{Binding InputPassword}"/>
+        <controls:InputControl x:Name="InputControlPassword"
+                               DataContext="{Binding InputPassword}"/>
         
         <StackPanel Orientation="Horizontal">
-            <Button Content="Авторизоваться"
+            <Button x:Name="ButtonAuth"
+                    Content="Авторизоваться"
                     Command="{Binding AuthCommand}"/>
-            <Button Content="Очистить"
+            <Button x:Name="ButtonClear"
+                    Content="Очистить"
                     Command="{Binding ClearCommand}"/>
         </StackPanel>
     </StackPanel>

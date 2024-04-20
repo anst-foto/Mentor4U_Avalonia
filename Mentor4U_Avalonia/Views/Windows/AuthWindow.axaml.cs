@@ -1,8 +1,6 @@
-﻿using Avalonia;
-using Avalonia.Controls;
-using Avalonia.Markup.Xaml;
+﻿using Avalonia.Controls;
 
-namespace Mentor4U_Avalonia.Views;
+namespace Mentor4U_Avalonia.Views.Windows;
 
 public partial class AuthWindow : Window
 {

@@ -1,0 +1,78 @@
+@startuml
+
+
+package Views {
+    package Windows {
+        class StartWindow {
+            + Button ButtonAuth { Command="{Binding Auth}" }
+            + Button ButtonClose { Command="{Binding Path=CloseWindow}" }
+        }
+        
+        class AuthWindow {
+            + InputControl InputControlLogin { DataContext="{Binding InputLogin}" }
+            + InputControl InputControlPassword { DataContext="{Binding InputPassword}" }
+                    
+            + Button ButtonAuth { Command="{Binding AuthCommand}" }
+            + Button ButtonClear { Command="{Binding ClearCommand}" }
+        }
+    }
+    
+    package  Controls {
+        class InputControl {
+            + Label Label { Content="{Binding Label}" }
+            + TextBox Input { Text="{Binding Input}" Watermark="{Binding Watermark}" UseFloatingWatermark="{Binding IsFloatingWatermark}" }
+        }
+    } 
+}
+note right of Views: XAML
+
+package ViewModels {
+    package Controls {
+        class InputControlViewModel {
+            + string Label { get; set; }
+            + string Input { get; set; }
+            + string? Watermark { get; set; }
+            + bool IsFloatingWatermark { get; set; }
+        }
+        note left of InputControlViewModel::Label
+            RxProp
+        end note
+        note left of InputControlViewModel::Input
+            RxProp
+        end note
+        note left of InputControlViewModel::Watermark
+            RxProp
+        end note
+        note left of InputControlViewModel::IsFloatingWatermark
+            RxProp
+        end note
+    }
+    
+    package Windows {
+        class StartWindowViewModel {
+            + void CloseWindow()
+            + void Auth()
+        }
+        
+        class AuthWindowViewModel {
+            + InputControlViewModel InputLogin { get; set; }
+            + InputControlViewModel InputPassword { get; set; }
+            
+            + ReactiveCommand<Unit, Task> AuthCommand { get; }
+            + ReactiveCommand<Unit, Unit> ClearCommand { get; } 
+        }
+    }
+}
+note left of ViewModels
+C#
+end note
+
+InputControlViewModel <.. InputControl
+
+StartWindowViewModel <.. StartWindow
+AuthWindowViewModel <.. AuthWindow
+
+InputControl <-- AuthWindow
+InputControlViewModel <-- AuthWindowViewModel
+
+@enduml

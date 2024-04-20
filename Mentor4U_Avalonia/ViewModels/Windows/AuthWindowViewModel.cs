@@ -90,6 +90,7 @@ public class AuthWindowViewModel : ViewModelBase
             property1: p1 => p1.InputLogin.Input,
             property2: p2 => p2.InputPassword.Input,
             selector: (p1, p2) => !string.IsNullOrWhiteSpace(p1) && !string.IsNullOrWhiteSpace(p2));
+        
         AuthCommand = ReactiveCommand.Create(
             execute: async () =>
             {

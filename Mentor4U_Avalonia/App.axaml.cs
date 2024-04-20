@@ -4,6 +4,7 @@ using Avalonia.Markup.Xaml;
 using Mentor4U_Avalonia.ViewModels;
 using Mentor4U_Avalonia.ViewModels.Windows;
 using Mentor4U_Avalonia.Views;
+using StartWindow = Mentor4U_Avalonia.Views.Windows.StartWindow;
 
 namespace Mentor4U_Avalonia;
 
