@@ -1,0 +1,19 @@
+<Application xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             x:Class="Mentor4U_Avalonia.App"
+             xmlns:local="using:Mentor4U_Avalonia"
+             RequestedThemeVariant="Dark">
+
+    <Application.DataTemplates>
+        <local:ViewLocator/>
+    </Application.DataTemplates>
+  
+    <Application.Styles>
+        <FluentTheme />
+    </Application.Styles>
+    
+    <Application.Resources>
+        <x:Double x:Key="WindowWidth">600</x:Double>
+        <x:Double x:Key="WindowHeight">600</x:Double>
+    </Application.Resources>
+</Application>

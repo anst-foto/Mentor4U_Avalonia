@@ -1,0 +1,22 @@
+﻿<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:vm="using:Mentor4U_Avalonia.ViewModels.Controls"
+             mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+             x:Class="Mentor4U_Avalonia.Controls.InputControl"
+             x:DataType="vm:InputControlViewModel">
+    
+    <UserControl.DataContext>
+        <vm:InputControlViewModel/>
+    </UserControl.DataContext>
+    
+    <StackPanel Orientation="Horizontal">
+        <Label Content="{Binding Label}"
+               Target="{Binding ElementName=Input}"/>
+        <TextBox x:Name="Input"
+                 Text="{Binding Input}"
+                 Watermark="{Binding Watermark}"
+                 UseFloatingWatermark="{Binding IsFloatingWatermark}"/>
+    </StackPanel>
+</UserControl>

@@ -1,0 +1,64 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:vm="using:Mentor4U_Avalonia.ViewModels.Windows"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+
+        mc:Ignorable="d" 
+        d:DesignWidth="{StaticResource WindowWidth}" 
+        d:DesignHeight="{StaticResource WindowHeight}"
+        
+        x:Class="Mentor4U_Avalonia.Views.StartWindow"
+        x:DataType="vm:StartWindowViewModel"
+        
+        Icon="/Assets/avalonia-logo.ico"
+        Title="Mentor4U_Avalonia"
+        
+        WindowState="Normal" WindowStartupLocation="CenterScreen"
+        CanResize="False" SystemDecorations="BorderOnly"
+        
+        Width="{StaticResource WindowWidth}" 
+        Height="{StaticResource WindowHeight}">
+
+    <Design.DataContext>
+        <vm:StartWindowViewModel/>
+    </Design.DataContext>
+    
+    <Window.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceInclude Source="../Icons.axaml"/>
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </Window.Resources>
+    
+    <Window.Styles>
+        <StyleInclude Source="../Styles.axaml"/>
+    </Window.Styles>
+    
+    <Window.Background>
+        <ImageBrush Source="/Assets/background_start_window.jpg"
+                    Opacity="0.9" Stretch="UniformToFill"/>
+    </Window.Background>
+
+    <Grid RowDefinitions="Auto,*,0.5*,2*">
+
+        <StackPanel Grid.Row="0"
+                    HorizontalAlignment="Right">
+            <Button Content="{StaticResource ResourceKey=IconClose}"
+                    Command="{Binding Path=CloseWindow}"/>
+        </StackPanel>
+        
+        <StackPanel Grid.Row="1">
+            <TextBlock Text="Ментор для вас"/>
+            <TextBlock Text="Сервис для поиска ментора и для поиска учеников"/>
+        </StackPanel>
+        
+        <StackPanel Grid.Row="2">
+            <Button Content="Войти"
+                    Command="{Binding Auth}"
+                    Classes="open"
+                    IsDefault="True"/>
+        </StackPanel>
+    </Grid>
+</Window>
