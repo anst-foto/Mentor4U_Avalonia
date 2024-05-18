@@ -31,13 +31,13 @@
 CREATE TYPE dml_type AS ENUM ('INSERT', 'UPDATE', 'DELETE');
 CREATE TABLE table_dml_log
 (
-    id             BIGSERIAL    NOT NULL PRIMARY KEY,
-    table_name     TEXT         NOT NULL,
+    id             BIGSERIAL NOT NULL PRIMARY KEY,
+    table_name     TEXT      NOT NULL,
     old_row_data   jsonb,
     new_row_data   jsonb,
-    dml_type       dml_type     NOT NULL,
-    dml_timestamp  TIMESTAMP    NOT NULL DEFAULT CURRENT_TIMESTAMP,
-    dml_created_by TEXT         NOT NULL DEFAULT current_user
+    dml_type       dml_type  NOT NULL,
+    dml_timestamp  TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    dml_created_by TEXT      NOT NULL DEFAULT current_user
 );
 
 -- Create functions
@@ -105,15 +105,17 @@ CREATE OR REPLACE PROCEDURE log.procedure_insert_log(
     IN _old_row_data jsonb,
     IN _new_row_data jsonb,
     IN _dml_type dml_type)
-LANGUAGE SQL
-BEGIN ATOMIC
-        INSERT INTO log.table_dml_log (table_name, old_row_data, new_row_data, dml_type)
-        VALUES (_table_name, _old_row_data, _new_row_data, _dml_type);
+    LANGUAGE SQL
+BEGIN
+    ATOMIC
+    INSERT INTO log.table_dml_log (table_name, old_row_data, new_row_data, dml_type)
+    VALUES (_table_name, _old_row_data, _new_row_data, _dml_type);
 END;
 
 CREATE OR REPLACE FUNCTION log.functions_dml_log()
-    RETURNS trigger AS
-$body$
+    RETURNS trigger
+    LANGUAGE plpgsql AS
+$$
 BEGIN
     IF (TG_OP = 'INSERT') THEN
         CALL log.procedure_insert_log(tg_table_name, null, to_jsonb(NEW), 'INSERT');
@@ -126,8 +128,7 @@ BEGIN
         RETURN OLD;
     END IF;
 END;
-$body$
-LANGUAGE plpgsql;
+$$;
 
 -- ######################################
 
@@ -197,26 +198,143 @@ CREATE TABLE table_persons_specializations
 
 -- Create triggers
 CREATE TRIGGER trigger_dml_log_for_table_roles
-    AFTER INSERT OR UPDATE OR DELETE ON table_roles
-    FOR EACH ROW EXECUTE FUNCTION log.functions_dml_log();
+    AFTER INSERT OR
+        UPDATE OR
+        DELETE
+    ON table_roles
+    FOR EACH ROW
+EXECUTE FUNCTION log.functions_dml_log();
 
 CREATE TRIGGER trigger_dml_log_for_table_specializations
-    AFTER INSERT OR UPDATE OR DELETE ON table_specializations
-    FOR EACH ROW EXECUTE FUNCTION log.functions_dml_log();
+    AFTER INSERT OR
+        UPDATE OR
+        DELETE
+    ON table_specializations
+    FOR EACH ROW
+EXECUTE FUNCTION log.functions_dml_log();
 
 CREATE TRIGGER trigger_dml_log_for_table_accounts
-    AFTER INSERT OR UPDATE OR DELETE ON table_accounts
-    FOR EACH ROW EXECUTE FUNCTION log.functions_dml_log();
+    AFTER INSERT OR
+        UPDATE OR
+        DELETE
+    ON table_accounts
+    FOR EACH ROW
+EXECUTE FUNCTION log.functions_dml_log();
 
 CREATE TRIGGER trigger_dml_log_for_table_persons
-    AFTER INSERT OR UPDATE OR DELETE ON table_persons
-    FOR EACH ROW EXECUTE FUNCTION log.functions_dml_log();
+    AFTER INSERT OR
+        UPDATE OR
+        DELETE
+    ON table_persons
+    FOR EACH ROW
+EXECUTE FUNCTION log.functions_dml_log();
 
 CREATE TRIGGER trigger_dml_log_for_table_persons_specializations
-    AFTER INSERT OR UPDATE OR DELETE ON table_persons_specializations
-    FOR EACH ROW EXECUTE FUNCTION log.functions_dml_log();
+    AFTER INSERT OR
+        UPDATE OR
+        DELETE
+    ON table_persons_specializations
+    FOR EACH ROW
+EXECUTE FUNCTION log.functions_dml_log();
+
+-- Create views
+CREATE OR REPLACE VIEW view_persons AS
+SELECT table_accounts.id     AS id,
+       login,
+       password,
+       table_roles.role_name AS role,
+       last_name,
+       first_name,
+       patronymic_name,
+       birthday,
+       telegram,
+       email,
+       photo
+FROM table_accounts
+         JOIN table_persons
+              ON table_accounts.id = table_persons.id
+         JOIN table_roles
+              ON table_accounts.role_id = table_roles.id;
+-- SELECT * FROM view_persons;
+
+-- Create functions
+CREATE OR REPLACE FUNCTION function_check_login(IN _login TEXT)
+    RETURNS BOOLEAN
+    LANGUAGE plpgsql AS
+$$
+BEGIN
+    RETURN EXISTS (SELECT * FROM table_accounts WHERE login = _login);
+END;
+$$;
+
+CREATE OR REPLACE FUNCTION function_check_person(
+    IN _last_name TEXT, IN _first_name TEXT, IN _patronymic_name TEXT, IN _birthday DATE)
+    RETURNS BOOLEAN
+    LANGUAGE plpgsql AS
+$$
+BEGIN
+    RETURN (SELECT COUNT(*)
+            FROM table_persons
+            WHERE last_name = _last_name
+              AND first_name = _first_name
+              AND patronymic_name = _patronymic_name
+              AND birthday = _birthday) > 0;
+END;
+$$;
+
+-- Create procedures
+CREATE OR REPLACE PROCEDURE procedure_insert_person(
+    IN _login TEXT, IN _password TEXT, IN _role_name TEXT,
+    IN _last_name TEXT, IN _first_name TEXT, IN _patronymic_name TEXT,
+    IN _birthday DATE, IN _telegram TEXT, IN _email TEXT, IN _photo TEXT)
+    LANGUAGE plpgsql AS
+$$
+BEGIN
+    IF function_check_login(_login)
+    THEN
+        ROLLBACK;
+    ELSE
+        INSERT INTO table_accounts (login, password, role_id)
+        VALUES (_login, _password, (SELECT id FROM table_roles WHERE role_name = _role_name));
+
+        IF function_check_person(_last_name, _first_name, _patronymic_name, _birthday)
+        THEN
+            ROLLBACK;
+        ELSE
+            INSERT INTO table_persons (last_name, first_name, patronymic_name, birthday, telegram, email, photo)
+            VALUES (_last_name, _first_name, _patronymic_name, _birthday, _telegram, _email, _photo);
+
+            IF (SELECT id FROM table_accounts WHERE login = _login) != (SELECT id
+                                                                        FROM table_persons
+                                                                        WHERE last_name = _last_name
+                                                                          AND first_name = _first_name
+                                                                          AND patronymic_name = _patronymic_name
+                                                                          AND birthday = _birthday)
+            THEN
+                ROLLBACK;
+            END IF;
+
+            COMMIT;
+        END IF;
+    END IF;
+END;
+$$;
 
 -- Insert test data
-INSERT INTO table_roles (role_name) VALUES ('admin');
-INSERT INTO table_roles (role_name) VALUES ('mentor');
-INSERT INTO table_roles (role_name) VALUES ('student');
+INSERT INTO table_roles (role_name)
+VALUES ('admin');
+INSERT INTO table_roles (role_name)
+VALUES ('mentor');
+INSERT INTO table_roles (role_name)
+VALUES ('student');
+
+CALL procedure_insert_person('anst', '1234', 'admin', 'Иванов', 'Иван', 'Иванович', '1989-01-01', 'test_telegram',
+                             '<EMAIL>', 'test_photo');
+CALL procedure_insert_person('admin', '1234', 'admin', 'Иванов', 'Иван', 'Иванович', '1989-01-01', 'test_telegram',
+                             '<EMAIL>', 'test_photo');
+CALL procedure_insert_person('anst', '1234', 'admin', 'Петров', 'Иван', 'Иванович', '1989-01-01', 'test_telegram',
+                             '<EMAIL>', 'test_photo');
+INSERT INTO table_persons (last_name, first_name, patronymic_name, birthday, telegram, email, photo)
+VALUES ('Иванов', 'Иван', 'Иванович', '1989-01-01', 'test_telegram', '<EMAIL>', 'test_photo');
+CALL procedure_insert_person('user', '1234', 'admin', 'Сидоров', 'Иван', 'Иванович', '1989-01-01', 'test_telegram',
+                             '<EMAIL>', 'test_photo');
