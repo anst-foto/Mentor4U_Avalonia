@@ -32,6 +32,7 @@ CREATE TYPE dml_type AS ENUM ('INSERT', 'UPDATE', 'DELETE');
 CREATE TABLE table_dml_log
 (
     id             BIGSERIAL NOT NULL PRIMARY KEY,
+    schema_name    TEXT      NOT NULL,
     table_name     TEXT      NOT NULL,
     old_row_data   jsonb,
     new_row_data   jsonb,
@@ -101,6 +102,7 @@ END;
 $BODY$;*/
 
 CREATE OR REPLACE PROCEDURE log.procedure_insert_log(
+    IN _schema_name TEXT,
     IN _table_name TEXT,
     IN _old_row_data jsonb,
     IN _new_row_data jsonb,
@@ -108,8 +110,8 @@ CREATE OR REPLACE PROCEDURE log.procedure_insert_log(
     LANGUAGE SQL
 BEGIN
     ATOMIC
-    INSERT INTO log.table_dml_log (table_name, old_row_data, new_row_data, dml_type)
-    VALUES (_table_name, _old_row_data, _new_row_data, _dml_type);
+    INSERT INTO log.table_dml_log (schema_name, table_name, old_row_data, new_row_data, dml_type)
+    VALUES (_schema_name, _table_name, _old_row_data, _new_row_data, _dml_type);
 END;
 
 CREATE OR REPLACE FUNCTION log.functions_dml_log()
@@ -118,13 +120,13 @@ CREATE OR REPLACE FUNCTION log.functions_dml_log()
 $$
 BEGIN
     IF (TG_OP = 'INSERT') THEN
-        CALL log.procedure_insert_log(tg_table_name, null, to_jsonb(NEW), 'INSERT');
+        CALL log.procedure_insert_log(TG_TABLE_SCHEMA, TG_TABLE_NAME, NULL, to_jsonb(NEW), 'INSERT');
         RETURN NEW;
     ELSEIF (TG_OP = 'UPDATE') THEN
-        CALL log.procedure_insert_log(tg_table_name, to_jsonb(OLD), to_jsonb(NEW), 'UPDATE');
+        CALL log.procedure_insert_log(TG_TABLE_SCHEMA, TG_TABLE_NAME, to_jsonb(OLD), to_jsonb(NEW), 'UPDATE');
         RETURN NEW;
     ELSEIF (TG_OP = 'DELETE') THEN
-        CALL log.procedure_insert_log(tg_table_name, to_jsonb(OLD), null, 'DELETE');
+        CALL log.procedure_insert_log(TG_TABLE_SCHEMA, TG_TABLE_NAME, to_jsonb(OLD), NULL, 'DELETE');
         RETURN OLD;
     END IF;
 END;
@@ -338,3 +340,10 @@ INSERT INTO table_persons (last_name, first_name, patronymic_name, birthday, tel
 VALUES ('Иванов', 'Иван', 'Иванович', '1989-01-01', 'test_telegram', '<EMAIL>', 'test_photo');
 CALL procedure_insert_person('user', '1234', 'admin', 'Сидоров', 'Иван', 'Иванович', '1989-01-01', 'test_telegram',
                              '<EMAIL>', 'test_photo');
+
+-- #########################
+EXPLAIN (ANALYZE) SELECT id, login, password, role_id, is_deleted FROM table_accounts;
+
+-- CREATE INDEX index_accounts_login ON table_accounts (login);
+ALTER TABLE table_accounts ADD CONSTRAINT unique_login UNIQUE (login);
+
