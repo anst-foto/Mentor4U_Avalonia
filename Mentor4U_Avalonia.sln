@@ -2,6 +2,12 @@
 Microsoft Visual Studio Solution File, Format Version 12.00
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Mentor4U_Avalonia", "Mentor4U_Avalonia\Mentor4U_Avalonia.csproj", "{9D7F6828-364F-448A-8FCE-21C123631D92}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Mentor4U_Avalonia.Models", "Mentor4U_Avalonia.Models\Mentor4U_Avalonia.Models.csproj", "{7CB36815-AED3-4504-B1BA-C9AB006F32B7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Mentor4U_Avalonia.DAL", "Mentor4U_Avalonia.DAL\Mentor4U_Avalonia.DAL.csproj", "{2994820E-98E0-4B14-A5A9-16ECDA8F1985}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Mentor4U_Avalonia.DAL.Test", "Mentor4U_Avalonia.DAL.Test\Mentor4U_Avalonia.DAL.Test.csproj", "{AB8F288F-1602-4A98-B90C-41685565C480}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -12,5 +18,17 @@ Global
 		{9D7F6828-364F-448A-8FCE-21C123631D92}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9D7F6828-364F-448A-8FCE-21C123631D92}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9D7F6828-364F-448A-8FCE-21C123631D92}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7CB36815-AED3-4504-B1BA-C9AB006F32B7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7CB36815-AED3-4504-B1BA-C9AB006F32B7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7CB36815-AED3-4504-B1BA-C9AB006F32B7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7CB36815-AED3-4504-B1BA-C9AB006F32B7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2994820E-98E0-4B14-A5A9-16ECDA8F1985}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2994820E-98E0-4B14-A5A9-16ECDA8F1985}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2994820E-98E0-4B14-A5A9-16ECDA8F1985}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2994820E-98E0-4B14-A5A9-16ECDA8F1985}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AB8F288F-1602-4A98-B90C-41685565C480}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AB8F288F-1602-4A98-B90C-41685565C480}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AB8F288F-1602-4A98-B90C-41685565C480}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AB8F288F-1602-4A98-B90C-41685565C480}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
