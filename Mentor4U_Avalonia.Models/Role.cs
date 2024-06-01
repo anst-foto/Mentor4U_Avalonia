@@ -1,6 +1,6 @@
 ﻿namespace Mentor4U_Avalonia.Models;
 
-public class Role : IModel
+public record class Role : IModel
 {
     private int _id;
     public int Id
