@@ -8,6 +8,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Mentor4U_Avalonia.DAL", "Me
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Mentor4U_Avalonia.DAL.Test", "Mentor4U_Avalonia.DAL.Test\Mentor4U_Avalonia.DAL.Test.csproj", "{AB8F288F-1602-4A98-B90C-41685565C480}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Mentor4U_Avalonia.BLL", "Mentor4U_Avalonia.BLL\Mentor4U_Avalonia.BLL.csproj", "{4FE5C927-1157-4191-A226-742EDB440257}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Mentor4U_Avalonia.BLL.Test", "Mentor4U_Avalonia.BLL.Test\Mentor4U_Avalonia.BLL.Test.csproj", "{05FEC687-C6B8-48E0-BE96-38572D5FE030}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -30,5 +34,13 @@ Global
 		{AB8F288F-1602-4A98-B90C-41685565C480}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{AB8F288F-1602-4A98-B90C-41685565C480}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{AB8F288F-1602-4A98-B90C-41685565C480}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4FE5C927-1157-4191-A226-742EDB440257}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4FE5C927-1157-4191-A226-742EDB440257}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4FE5C927-1157-4191-A226-742EDB440257}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4FE5C927-1157-4191-A226-742EDB440257}.Release|Any CPU.Build.0 = Release|Any CPU
+		{05FEC687-C6B8-48E0-BE96-38572D5FE030}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{05FEC687-C6B8-48E0-BE96-38572D5FE030}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{05FEC687-C6B8-48E0-BE96-38572D5FE030}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{05FEC687-C6B8-48E0-BE96-38572D5FE030}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
