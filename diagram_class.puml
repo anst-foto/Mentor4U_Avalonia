@@ -1,0 +1,88 @@
+﻿@startuml
+'https://plantuml.com/class-diagram
+
+package Models {
+    Exception <|-- NegativeNumberException
+    class NegativeNumberException {
+        + NegativeNumberException(string message)
+    }
+    
+    Exception <|-- EmptyStringException
+    class EmptyStringException {
+        + EmptyStringException(string message)
+    }
+    
+    interface IModel {
+        + {abstract} int Id { get; set; }
+    }
+    
+    IModel <|.. Role
+    class Role {
+        - int _id
+        + int Id { get; set; }
+        
+        - string _roleName
+        + string RoleName { get; set; }
+    }
+}
+
+package DAL {
+    class DbHelper {
+        + {static} Dictionary<Type, string> TableNames
+    }
+    
+    IModel <--* DbService
+    DbHelper <-- DbService
+    class DbService<TEntity> {
+        - {static} NpgsqlConnection? _connection
+        
+        + {static} Task ConnectAsync(string connectionString)
+        + {static} Task<IEnumerable<TEntity>> GetAllAsync(string sql)
+        + {static} Task<TEntity?> GetByIdAsync(int id)
+        + {static} Task DisconnectAsync()
+    }
+    note left
+        where TEntity : IModel
+    end note
+    
+    IModel <--* ICrud
+    interface ICrud<TEntity> {
+        + {abstract} Task<bool> InsertAsync(TEntity entity)
+        + {abstract} Task<bool> UpdateAsync(TEntity entity)
+        + {abstract} Task<bool> DeleteAsync(int id)
+        + {abstract} Task<TEntity?> GetAsync(int id)
+        + {abstract} Task<IEnumerable<TEntity>?> GetAllAsync()
+    }
+    note left
+        where TEntity : IModel
+    end note
+    
+    ICrud <|.. Roles
+    DbService <-- Roles
+    Role  <--* Roles
+    class Roles {
+        - readonly string _connectionString
+        
+        + Roles(string connectionString)
+        
+        + Task<bool> InsertAsync(Role entity)
+        + Task<bool> UpdateAsync(Role entity)
+        + Task<bool> DeleteAsync(int id)
+        + Task<Role?> GetAsync(int id)
+        + Task<IEnumerable<Role>?> GetAllAsync()
+    }
+}
+
+package BLL {
+    class Roles {
+        - readonly ICrud<Role> _table
+        
+        + Roles(ICrud<Role> table)
+        
+        + Task<Role?> GetByIdAsync(int id)
+        + Task<Role?> GetByNameAsync(string name)
+        + Task<IEnumerable<Role>?> GetAllAsync()
+    }
+}
+
+@enduml
