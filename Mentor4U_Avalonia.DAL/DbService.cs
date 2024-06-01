@@ -11,6 +11,8 @@ public static class DbService<TEntity> where TEntity : IModel
     public static async Task ConnectAsync(string connectionString)
     {
         if (string.IsNullOrEmpty(connectionString)) throw new EmptyStringException(nameof(connectionString));
+
+        Dapper.DefaultTypeMap.MatchNamesWithUnderscores = true;
         
         //TODO Добавить try {} catch {}
         _connection = new NpgsqlConnection(connectionString);
@@ -23,10 +25,13 @@ public static class DbService<TEntity> where TEntity : IModel
         return await _connection?.QueryAsync<TEntity>(sql);
     }
 
-    public static async Task<TEntity?> GetByIdAsync(string sql)
+    public static async Task<TEntity?> GetByIdAsync(int id)
     {
         //TODO Добавить try {} catch {}
-        return await _connection?.QuerySingleOrDefaultAsync<TEntity>(sql);
+        var sqlRaw = $"SELECT * FROM {DbHelper.TableNames[typeof(TEntity)]} WHERE id = @Id";
+        var sqlParameters = new { Id = id };
+        
+        return await _connection?.QuerySingleOrDefaultAsync<TEntity>(sqlRaw, sqlParameters);
     }
     
     public static async Task DisconnectAsync()
