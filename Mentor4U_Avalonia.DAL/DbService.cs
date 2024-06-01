@@ -19,9 +19,10 @@ public static class DbService<TEntity> where TEntity : IModel
         await _connection.OpenAsync();
     }
 
-    public static async Task<IEnumerable<TEntity>> GetAllAsync(string sql)
+    public static async Task<IEnumerable<TEntity>> GetAllAsync()
     {
         //TODO Добавить try {} catch {}
+        var sql = $"SELECT * FROM {DbHelper.TableNames[typeof(TEntity)]}";
         return await _connection?.QueryAsync<TEntity>(sql);
     }
 

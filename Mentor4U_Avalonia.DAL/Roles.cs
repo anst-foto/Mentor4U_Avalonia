@@ -39,6 +39,10 @@ public class Roles : ICrud<Role>
 
     public async Task<IEnumerable<Role>?> GetAllAsync()
     {
-        throw new NotImplementedException();
+        await DbService<Role>.ConnectAsync(_connectionString);
+        var roles  = await DbService<Role>.GetAllAsync();
+        await DbService<Role>.DisconnectAsync();
+        
+        return roles;
     }
 }
