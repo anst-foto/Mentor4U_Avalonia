@@ -149,19 +149,19 @@ EXECUTE FUNCTION log.functions_ddl_log();*/
 CREATE TABLE table_roles
 (
     id        SERIAL PRIMARY KEY,
-    role_name TEXT NOT NULL
+    role_name TEXT NOT NULL UNIQUE 
 );
 
 CREATE TABLE table_specializations
 (
     id                  SERIAL PRIMARY KEY,
-    specialization_name TEXT NOT NULL
+    specialization_name TEXT NOT NULL UNIQUE 
 );
 
 CREATE TABLE table_accounts
 (
     id         SERIAL PRIMARY KEY,
-    login      TEXT    NOT NULL,
+    login      TEXT    NOT NULL UNIQUE,
     password   TEXT    NOT NULL,
     role_id    INTEGER NOT NULL,
     is_deleted BOOLEAN NOT NULL DEFAULT false,
@@ -345,5 +345,7 @@ CALL procedure_insert_person('user', '1234', 'admin', 'Сидоров', 'Ива�
 EXPLAIN (ANALYZE) SELECT id, login, password, role_id, is_deleted FROM table_accounts;
 
 -- CREATE INDEX index_accounts_login ON table_accounts (login);
-ALTER TABLE table_accounts ADD CONSTRAINT unique_login UNIQUE (login);
+--ALTER TABLE table_accounts ADD CONSTRAINT unique_login UNIQUE (login);
+--ALTER TABLE table_roles ADD CONSTRAINT unique_role_name UNIQUE (role_name);
+--ALTER TABLE table_specializations ADD CONSTRAINT unique_specialization_name UNIQUE (specialization_name);
 
