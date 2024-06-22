@@ -7,12 +7,12 @@
     </PropertyGroup>
 
     <ItemGroup>
-      <ProjectReference Include="..\Mentor4U_Avalonia.Models\Mentor4U_Avalonia.Models.csproj" />
+        <ProjectReference Include="..\Mentor4U_Avalonia.Models\Mentor4U_Avalonia.Models.csproj"/>
     </ItemGroup>
 
     <ItemGroup>
-      <PackageReference Include="Dapper" Version="2.1.35" />
-      <PackageReference Include="Npgsql" Version="8.0.3" />
+        <PackageReference Include="Dapper" Version="2.1.35"/>
+        <PackageReference Include="Npgsql" Version="8.0.3"/>
     </ItemGroup>
 
 </Project>

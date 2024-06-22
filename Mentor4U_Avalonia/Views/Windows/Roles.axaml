@@ -1,0 +1,41 @@
+﻿<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:vm="using:Mentor4U_Avalonia.ViewModels.Windows"
+        xmlns:controls="clr-namespace:Mentor4U_Avalonia.Views.Controls"
+        
+        mc:Ignorable="d" 
+        d:DesignWidth="{StaticResource WindowWidth}" 
+        d:DesignHeight="{StaticResource WindowHeight}"
+        
+        Width="{StaticResource WindowWidth}" 
+        Height="{StaticResource WindowHeight}"
+        
+        x:Class="Mentor4U_Avalonia.Views.Windows.Roles"
+        Title="Roles"
+        x:DataType="vm:Roles">
+    
+    <Window.DataContext>
+        <vm:Roles/>
+    </Window.DataContext>
+    
+    <StackPanel>
+        <controls:InputControl x:Name="InputControlSearch" 
+                               DataContext="{Binding InputSearch}"/>
+        <Button x:Name="ButtonSearch"
+                Content="Search"
+                Command="{Binding SearchCommand}"/>
+		
+		<Button x:Name="ButtonViewAll"
+				Content="View all"
+				Command="{Binding ViewAllCommand}"/>
+
+		<DataGrid x:Name="TableRoles"
+				  ItemsSource="{Binding RolesCollection}"
+				  AutoGenerateColumns="True"
+				  GridLinesVisibility="All"
+				  BorderThickness="1" BorderBrush="White"
+				  Height="250"/>
+    </StackPanel>
+</Window>

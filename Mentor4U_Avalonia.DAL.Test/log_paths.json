@@ -1,0 +1,7 @@
+﻿{
+  "PathInfo": "logger.log",
+  "PathWarning": "logger.log",
+  "PathError": "logger.log",
+  "PathSuccess": "logger.log",
+  "PathCustom": "logger.log"
+}

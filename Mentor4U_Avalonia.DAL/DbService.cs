@@ -18,15 +18,17 @@ public static class DbService<TEntity> where TEntity : IModel
 
         Dapper.DefaultTypeMap.MatchNamesWithUnderscores = true;
 
-        ExceptionExtensions.LoggingIfException(
-            logger: _logger!,
-            action: async () =>
-            {
-                _connection = new NpgsqlConnection(connectionString);
-                await _connection.OpenAsync();
-            },
-            moduleName: nameof(DbService<TEntity>),
-            methodName: nameof(ConnectAsync));
+        _connection = new NpgsqlConnection(connectionString);
+        await _connection.OpenAsync();
+
+        //ExceptionExtensions.LoggingIfException( //BUG
+        //    logger: _logger!,
+        //    action: async () =>
+        //    {
+
+        //    },
+        //    moduleName: nameof(DbService<TEntity>),
+        //    methodName: nameof(ConnectAsync));
     }
 
     public static async Task<IEnumerable<TEntity>> GetAllAsync()
@@ -63,15 +65,18 @@ public static class DbService<TEntity> where TEntity : IModel
     {
         if (_connection == null) return;
 
-        ExceptionExtensions.LoggingIfException(
-            logger: _logger!,
-            action: async () =>
-            {
-                await _connection.CloseAsync();
-                await _connection.DisposeAsync();
-            },
-            moduleName: nameof(DbService<TEntity>),
-            methodName: nameof(DisconnectAsync)
-            );
+        await _connection.CloseAsync();
+        await _connection.DisposeAsync();
+
+        //ExceptionExtensions.LoggingIfException(
+        //    logger: _logger!,
+        //    action: async () =>
+        //    {
+        //        await _connection.CloseAsync();
+        //        await _connection.DisposeAsync();
+        //    },
+        //    moduleName: nameof(DbService<TEntity>),
+        //    methodName: nameof(DisconnectAsync)
+        //    );
     }
 }
