@@ -1,4 +1,7 @@
-﻿using System.Reactive;
+﻿// This is a personal academic project. Dear PVS-Studio, please check it.
+// PVS-Studio Static Code Analyzer for C, C++, C#, and Java: https://pvs-studio.com
+
+using System.Reactive;
 using System.Threading.Tasks;
 using Mentor4U_Avalonia.ViewModels.Controls;
 using MsBox.Avalonia;

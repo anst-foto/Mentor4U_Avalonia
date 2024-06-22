@@ -1,4 +1,7 @@
-﻿using Logger;
+﻿// This is a personal academic project. Dear PVS-Studio, please check it.
+// PVS-Studio Static Code Analyzer for C, C++, C#, and Java: https://pvs-studio.com
+
+using Logger;
 using Logger.File;
 using Mentor4U_Avalonia.DAL;
 using Mentor4U_Avalonia.Models;

@@ -1,3 +1,6 @@
+// This is a personal academic project. Dear PVS-Studio, please check it.
+// PVS-Studio Static Code Analyzer for C, C++, C#, and Java: https://pvs-studio.com
+
 using Mentor4U_Avalonia.Models;
 
 namespace Mentor4U_Avalonia.BLL.Test;
@@ -11,17 +14,19 @@ public class RolesTest
     
     
     [Fact]
-    public async Task GetByIdAsync_PositiveTest()
+    public Task GetByIdAsync_PositiveTest()
     {
         //TODO Implement test
         Assert.True(true);
+        return Task.CompletedTask;
     }
     
     [Fact]
-    public async Task GetByIdAsync_NegativeTest()
+    public Task GetByIdAsync_NegativeTest()
     {
         //TODO Implement test
         Assert.False(false);
+        return Task.CompletedTask;
     }
     
     [Fact]
