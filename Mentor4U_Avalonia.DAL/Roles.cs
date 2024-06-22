@@ -14,7 +14,17 @@ public class Roles : ICrud<Role>
 
     public async Task<bool> InsertAsync(Role entity)
     {
-        throw new NotImplementedException();
+        await DbService<Role>.ConnectAsync(_connectionString);
+        var sqlRaw = $"""
+                      INSERT INTO {DbHelper.TableNames[typeof(Role)]} 
+                          ({DbHelper.RoleTablesColumnNames[nameof(Role.RoleName)]}) 
+                      VALUES (@RoleName);
+                      """;
+        var sqlParameters = new { RoleName = entity.RoleName};
+        var result = await DbService<Role>.ExecuteNonQueryAsync(sqlRaw, sqlParameters);
+        await DbService<Role>.DisconnectAsync();
+        
+        return result;
     }
 
     public async Task<bool> UpdateAsync(Role entity)
@@ -24,8 +34,16 @@ public class Roles : ICrud<Role>
 
     public async Task<bool> DeleteAsync(int id)
     {
-        // throw new NotImplementedException();
-        return false;
+        await DbService<Role>.ConnectAsync(_connectionString);
+        var sqlRaw = $"""
+                      DELETE FROM {DbHelper.TableNames[typeof(Role)]}
+                      WHERE  Id = @Id;
+                      """;
+        var sqlParameters = new { Id = id};
+        var result = await DbService<Role>.ExecuteNonQueryAsync(sqlRaw, sqlParameters);
+        await DbService<Role>.DisconnectAsync();
+        
+        return result;
     }
 
     public async Task<Role?> GetAsync(int id)

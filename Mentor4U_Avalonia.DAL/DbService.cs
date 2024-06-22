@@ -20,15 +20,6 @@ public static class DbService<TEntity> where TEntity : IModel
 
         _connection = new NpgsqlConnection(connectionString);
         await _connection.OpenAsync();
-
-        //ExceptionExtensions.LoggingIfException( //BUG
-        //    logger: _logger!,
-        //    action: async () =>
-        //    {
-
-        //    },
-        //    moduleName: nameof(DbService<TEntity>),
-        //    methodName: nameof(ConnectAsync));
     }
 
     public static async Task<IEnumerable<TEntity>> GetAllAsync()
@@ -61,22 +52,18 @@ public static class DbService<TEntity> where TEntity : IModel
         }
     }
 
+    public static async Task<bool> ExecuteNonQueryAsync(string sqlRaw, object? parameters = null)
+    {
+        if  (_connection  == null) return false;
+        var result = await _connection.ExecuteAsync(sqlRaw, parameters);
+        return result > 0;
+    }
+
     public static async Task DisconnectAsync()
     {
         if (_connection == null) return;
 
         await _connection.CloseAsync();
         await _connection.DisposeAsync();
-
-        //ExceptionExtensions.LoggingIfException(
-        //    logger: _logger!,
-        //    action: async () =>
-        //    {
-        //        await _connection.CloseAsync();
-        //        await _connection.DisposeAsync();
-        //    },
-        //    moduleName: nameof(DbService<TEntity>),
-        //    methodName: nameof(DisconnectAsync)
-        //    );
     }
 }

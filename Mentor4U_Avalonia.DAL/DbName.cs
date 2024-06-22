@@ -8,4 +8,10 @@ public static class DbHelper
     {
         {typeof(Role), "table_roles"}
     };
+
+    public static readonly Dictionary<string, string> RoleTablesColumnNames = new Dictionary<string, string>()
+    {
+        {nameof(Role.Id), "id"},
+        {nameof(Role.RoleName),  "role_name"},
+    };
 }
