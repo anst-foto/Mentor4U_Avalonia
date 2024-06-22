@@ -16,5 +16,7 @@
     <Application.Resources>
         <x:Double x:Key="WindowWidth">600</x:Double>
         <x:Double x:Key="WindowHeight">600</x:Double>
+        
+        <x:String x:Key="AppTitle">Mentor4U</x:String>
     </Application.Resources>
 </Application>

@@ -33,9 +33,33 @@
 
 		<DataGrid x:Name="TableRoles"
 				  ItemsSource="{Binding RolesCollection}"
-				  AutoGenerateColumns="True"
+				  SelectedItem="{Binding SelectedRole}"
+				  AutoGenerateColumns="False"
 				  GridLinesVisibility="All"
 				  BorderThickness="1" BorderBrush="White"
-				  Height="250"/>
+				  Height="250">
+			<DataGrid.Columns>
+				<DataGridTextColumn Header="ID" Binding="{Binding Id}"/>
+				<DataGridTextColumn Header="Роль" Binding="{Binding RoleName}"/>
+				<DataGridTemplateColumn>
+					<DataGridTemplateColumn.CellTemplate>
+						<DataTemplate>
+							<StackPanel DataContext="{Binding #TableRoles.((vm:Roles)DataContext)}">
+								<Button x:Name="ButtonDeleteRole"
+								        Content="Delete"
+								        Command="{Binding DeleteCommand}"
+								        CommandParameter="{Binding SelectedRole}"/>
+							</StackPanel>
+						</DataTemplate>
+					</DataGridTemplateColumn.CellTemplate>
+				</DataGridTemplateColumn>
+			</DataGrid.Columns>
+		</DataGrid>
+        
+        <controls:InputControl x:Name="InputControlNew" 
+                               DataContext="{Binding InputNew}"/>
+        <Button x:Name="ButtonNew"
+                Content="Save"
+                Command="{Binding NewCommand}"/>
     </StackPanel>
 </Window>
