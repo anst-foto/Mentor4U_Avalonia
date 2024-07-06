@@ -1,0 +1,465 @@
+### YamlMime:ManagedReference
+items:
+- uid: Mentor4U_Avalonia.DAL.ICrud`1
+  commentId: T:Mentor4U_Avalonia.DAL.ICrud`1
+  id: ICrud`1
+  parent: Mentor4U_Avalonia.DAL
+  children:
+  - Mentor4U_Avalonia.DAL.ICrud`1.DeleteAsync(System.Int32)
+  - Mentor4U_Avalonia.DAL.ICrud`1.GetAllAsync
+  - Mentor4U_Avalonia.DAL.ICrud`1.GetAsync(System.Int32)
+  - Mentor4U_Avalonia.DAL.ICrud`1.InsertAsync(`0)
+  - Mentor4U_Avalonia.DAL.ICrud`1.UpdateAsync(`0)
+  langs:
+  - csharp
+  - vb
+  name: ICrud<TEntity>
+  nameWithType: ICrud<TEntity>
+  fullName: Mentor4U_Avalonia.DAL.ICrud<TEntity>
+  type: Interface
+  source:
+    remote:
+      path: Mentor4U_Avalonia.DAL/ICrud.cs
+      branch: master
+      repo: https://github.com/anst-foto/Mentor4U_Avalonia.git
+    id: ICrud
+    path: Mentor4U_Avalonia.DAL/ICrud.cs
+    startLine: 7
+  assemblies:
+  - Mentor4U_Avalonia.DAL
+  namespace: Mentor4U_Avalonia.DAL
+  syntax:
+    content: 'public interface ICrud<TEntity> where TEntity : IModel'
+    typeParameters:
+    - id: TEntity
+    content.vb: Public Interface ICrud(Of TEntity As IModel)
+  nameWithType.vb: ICrud(Of TEntity)
+  fullName.vb: Mentor4U_Avalonia.DAL.ICrud(Of TEntity)
+  name.vb: ICrud(Of TEntity)
+- uid: Mentor4U_Avalonia.DAL.ICrud`1.InsertAsync(`0)
+  commentId: M:Mentor4U_Avalonia.DAL.ICrud`1.InsertAsync(`0)
+  id: InsertAsync(`0)
+  parent: Mentor4U_Avalonia.DAL.ICrud`1
+  langs:
+  - csharp
+  - vb
+  name: InsertAsync(TEntity)
+  nameWithType: ICrud<TEntity>.InsertAsync(TEntity)
+  fullName: Mentor4U_Avalonia.DAL.ICrud<TEntity>.InsertAsync(TEntity)
+  type: Method
+  source:
+    remote:
+      path: Mentor4U_Avalonia.DAL/ICrud.cs
+      branch: master
+      repo: https://github.com/anst-foto/Mentor4U_Avalonia.git
+    id: InsertAsync
+    path: Mentor4U_Avalonia.DAL/ICrud.cs
+    startLine: 9
+  assemblies:
+  - Mentor4U_Avalonia.DAL
+  namespace: Mentor4U_Avalonia.DAL
+  syntax:
+    content: Task<bool> InsertAsync(TEntity entity)
+    parameters:
+    - id: entity
+      type: '{TEntity}'
+    return:
+      type: System.Threading.Tasks.Task{System.Boolean}
+    content.vb: Function InsertAsync(entity As TEntity) As Task(Of Boolean)
+  overload: Mentor4U_Avalonia.DAL.ICrud`1.InsertAsync*
+  nameWithType.vb: ICrud(Of TEntity).InsertAsync(TEntity)
+  fullName.vb: Mentor4U_Avalonia.DAL.ICrud(Of TEntity).InsertAsync(TEntity)
+- uid: Mentor4U_Avalonia.DAL.ICrud`1.UpdateAsync(`0)
+  commentId: M:Mentor4U_Avalonia.DAL.ICrud`1.UpdateAsync(`0)
+  id: UpdateAsync(`0)
+  parent: Mentor4U_Avalonia.DAL.ICrud`1
+  langs:
+  - csharp
+  - vb
+  name: UpdateAsync(TEntity)
+  nameWithType: ICrud<TEntity>.UpdateAsync(TEntity)
+  fullName: Mentor4U_Avalonia.DAL.ICrud<TEntity>.UpdateAsync(TEntity)
+  type: Method
+  source:
+    remote:
+      path: Mentor4U_Avalonia.DAL/ICrud.cs
+      branch: master
+      repo: https://github.com/anst-foto/Mentor4U_Avalonia.git
+    id: UpdateAsync
+    path: Mentor4U_Avalonia.DAL/ICrud.cs
+    startLine: 10
+  assemblies:
+  - Mentor4U_Avalonia.DAL
+  namespace: Mentor4U_Avalonia.DAL
+  syntax:
+    content: Task<bool> UpdateAsync(TEntity entity)
+    parameters:
+    - id: entity
+      type: '{TEntity}'
+    return:
+      type: System.Threading.Tasks.Task{System.Boolean}
+    content.vb: Function UpdateAsync(entity As TEntity) As Task(Of Boolean)
+  overload: Mentor4U_Avalonia.DAL.ICrud`1.UpdateAsync*
+  nameWithType.vb: ICrud(Of TEntity).UpdateAsync(TEntity)
+  fullName.vb: Mentor4U_Avalonia.DAL.ICrud(Of TEntity).UpdateAsync(TEntity)
+- uid: Mentor4U_Avalonia.DAL.ICrud`1.DeleteAsync(System.Int32)
+  commentId: M:Mentor4U_Avalonia.DAL.ICrud`1.DeleteAsync(System.Int32)
+  id: DeleteAsync(System.Int32)
+  parent: Mentor4U_Avalonia.DAL.ICrud`1
+  langs:
+  - csharp
+  - vb
+  name: DeleteAsync(int)
+  nameWithType: ICrud<TEntity>.DeleteAsync(int)
+  fullName: Mentor4U_Avalonia.DAL.ICrud<TEntity>.DeleteAsync(int)
+  type: Method
+  source:
+    remote:
+      path: Mentor4U_Avalonia.DAL/ICrud.cs
+      branch: master
+      repo: https://github.com/anst-foto/Mentor4U_Avalonia.git
+    id: DeleteAsync
+    path: Mentor4U_Avalonia.DAL/ICrud.cs
+    startLine: 11
+  assemblies:
+  - Mentor4U_Avalonia.DAL
+  namespace: Mentor4U_Avalonia.DAL
+  syntax:
+    content: Task<bool> DeleteAsync(int id)
+    parameters:
+    - id: id
+      type: System.Int32
+    return:
+      type: System.Threading.Tasks.Task{System.Boolean}
+    content.vb: Function DeleteAsync(id As Integer) As Task(Of Boolean)
+  overload: Mentor4U_Avalonia.DAL.ICrud`1.DeleteAsync*
+  nameWithType.vb: ICrud(Of TEntity).DeleteAsync(Integer)
+  fullName.vb: Mentor4U_Avalonia.DAL.ICrud(Of TEntity).DeleteAsync(Integer)
+  name.vb: DeleteAsync(Integer)
+- uid: Mentor4U_Avalonia.DAL.ICrud`1.GetAsync(System.Int32)
+  commentId: M:Mentor4U_Avalonia.DAL.ICrud`1.GetAsync(System.Int32)
+  id: GetAsync(System.Int32)
+  parent: Mentor4U_Avalonia.DAL.ICrud`1
+  langs:
+  - csharp
+  - vb
+  name: GetAsync(int)
+  nameWithType: ICrud<TEntity>.GetAsync(int)
+  fullName: Mentor4U_Avalonia.DAL.ICrud<TEntity>.GetAsync(int)
+  type: Method
+  source:
+    remote:
+      path: Mentor4U_Avalonia.DAL/ICrud.cs
+      branch: master
+      repo: https://github.com/anst-foto/Mentor4U_Avalonia.git
+    id: GetAsync
+    path: Mentor4U_Avalonia.DAL/ICrud.cs
+    startLine: 12
+  assemblies:
+  - Mentor4U_Avalonia.DAL
+  namespace: Mentor4U_Avalonia.DAL
+  syntax:
+    content: Task<TEntity?> GetAsync(int id)
+    parameters:
+    - id: id
+      type: System.Int32
+    return:
+      type: System.Threading.Tasks.Task{{TEntity}}
+    content.vb: Function GetAsync(id As Integer) As Task(Of TEntity)
+  overload: Mentor4U_Avalonia.DAL.ICrud`1.GetAsync*
+  nameWithType.vb: ICrud(Of TEntity).GetAsync(Integer)
+  fullName.vb: Mentor4U_Avalonia.DAL.ICrud(Of TEntity).GetAsync(Integer)
+  name.vb: GetAsync(Integer)
+- uid: Mentor4U_Avalonia.DAL.ICrud`1.GetAllAsync
+  commentId: M:Mentor4U_Avalonia.DAL.ICrud`1.GetAllAsync
+  id: GetAllAsync
+  parent: Mentor4U_Avalonia.DAL.ICrud`1
+  langs:
+  - csharp
+  - vb
+  name: GetAllAsync()
+  nameWithType: ICrud<TEntity>.GetAllAsync()
+  fullName: Mentor4U_Avalonia.DAL.ICrud<TEntity>.GetAllAsync()
+  type: Method
+  source:
+    remote:
+      path: Mentor4U_Avalonia.DAL/ICrud.cs
+      branch: master
+      repo: https://github.com/anst-foto/Mentor4U_Avalonia.git
+    id: GetAllAsync
+    path: Mentor4U_Avalonia.DAL/ICrud.cs
+    startLine: 13
+  assemblies:
+  - Mentor4U_Avalonia.DAL
+  namespace: Mentor4U_Avalonia.DAL
+  syntax:
+    content: Task<IEnumerable<TEntity>?> GetAllAsync()
+    return:
+      type: System.Threading.Tasks.Task{System.Collections.Generic.IEnumerable{{TEntity}}}
+    content.vb: Function GetAllAsync() As Task(Of IEnumerable(Of TEntity))
+  overload: Mentor4U_Avalonia.DAL.ICrud`1.GetAllAsync*
+  nameWithType.vb: ICrud(Of TEntity).GetAllAsync()
+  fullName.vb: Mentor4U_Avalonia.DAL.ICrud(Of TEntity).GetAllAsync()
+references:
+- uid: Mentor4U_Avalonia.DAL
+  commentId: N:Mentor4U_Avalonia.DAL
+  href: Mentor4U_Avalonia.html
+  name: Mentor4U_Avalonia.DAL
+  nameWithType: Mentor4U_Avalonia.DAL
+  fullName: Mentor4U_Avalonia.DAL
+  spec.csharp:
+  - uid: Mentor4U_Avalonia
+    name: Mentor4U_Avalonia
+    href: Mentor4U_Avalonia.html
+  - name: .
+  - uid: Mentor4U_Avalonia.DAL
+    name: DAL
+    href: Mentor4U_Avalonia.DAL.html
+  spec.vb:
+  - uid: Mentor4U_Avalonia
+    name: Mentor4U_Avalonia
+    href: Mentor4U_Avalonia.html
+  - name: .
+  - uid: Mentor4U_Avalonia.DAL
+    name: DAL
+    href: Mentor4U_Avalonia.DAL.html
+- uid: Mentor4U_Avalonia.DAL.ICrud`1.InsertAsync*
+  commentId: Overload:Mentor4U_Avalonia.DAL.ICrud`1.InsertAsync
+  href: Mentor4U_Avalonia.DAL.ICrud-1.html#Mentor4U_Avalonia_DAL_ICrud_1_InsertAsync__0_
+  name: InsertAsync
+  nameWithType: ICrud<TEntity>.InsertAsync
+  fullName: Mentor4U_Avalonia.DAL.ICrud<TEntity>.InsertAsync
+  nameWithType.vb: ICrud(Of TEntity).InsertAsync
+  fullName.vb: Mentor4U_Avalonia.DAL.ICrud(Of TEntity).InsertAsync
+- uid: '{TEntity}'
+  commentId: '!:TEntity'
+  definition: TEntity
+  name: TEntity
+  nameWithType: TEntity
+  fullName: TEntity
+- uid: System.Threading.Tasks.Task{System.Boolean}
+  commentId: T:System.Threading.Tasks.Task{System.Boolean}
+  parent: System.Threading.Tasks
+  definition: System.Threading.Tasks.Task`1
+  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  name: Task<bool>
+  nameWithType: Task<bool>
+  fullName: System.Threading.Tasks.Task<bool>
+  nameWithType.vb: Task(Of Boolean)
+  fullName.vb: System.Threading.Tasks.Task(Of Boolean)
+  name.vb: Task(Of Boolean)
+  spec.csharp:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: <
+  - uid: System.Boolean
+    name: bool
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.Boolean
+    name: Boolean
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: )
+- uid: TEntity
+  name: TEntity
+  nameWithType: TEntity
+  fullName: TEntity
+- uid: System.Threading.Tasks.Task`1
+  commentId: T:System.Threading.Tasks.Task`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  name: Task<TResult>
+  nameWithType: Task<TResult>
+  fullName: System.Threading.Tasks.Task<TResult>
+  nameWithType.vb: Task(Of TResult)
+  fullName.vb: System.Threading.Tasks.Task(Of TResult)
+  name.vb: Task(Of TResult)
+  spec.csharp:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: <
+  - name: TResult
+  - name: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TResult
+  - name: )
+- uid: System.Threading.Tasks
+  commentId: N:System.Threading.Tasks
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Threading.Tasks
+  nameWithType: System.Threading.Tasks
+  fullName: System.Threading.Tasks
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Threading
+    name: Threading
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading
+  - name: .
+  - uid: System.Threading.Tasks
+    name: Tasks
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Threading
+    name: Threading
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading
+  - name: .
+  - uid: System.Threading.Tasks
+    name: Tasks
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks
+- uid: Mentor4U_Avalonia.DAL.ICrud`1.UpdateAsync*
+  commentId: Overload:Mentor4U_Avalonia.DAL.ICrud`1.UpdateAsync
+  href: Mentor4U_Avalonia.DAL.ICrud-1.html#Mentor4U_Avalonia_DAL_ICrud_1_UpdateAsync__0_
+  name: UpdateAsync
+  nameWithType: ICrud<TEntity>.UpdateAsync
+  fullName: Mentor4U_Avalonia.DAL.ICrud<TEntity>.UpdateAsync
+  nameWithType.vb: ICrud(Of TEntity).UpdateAsync
+  fullName.vb: Mentor4U_Avalonia.DAL.ICrud(Of TEntity).UpdateAsync
+- uid: Mentor4U_Avalonia.DAL.ICrud`1.DeleteAsync*
+  commentId: Overload:Mentor4U_Avalonia.DAL.ICrud`1.DeleteAsync
+  href: Mentor4U_Avalonia.DAL.ICrud-1.html#Mentor4U_Avalonia_DAL_ICrud_1_DeleteAsync_System_Int32_
+  name: DeleteAsync
+  nameWithType: ICrud<TEntity>.DeleteAsync
+  fullName: Mentor4U_Avalonia.DAL.ICrud<TEntity>.DeleteAsync
+  nameWithType.vb: ICrud(Of TEntity).DeleteAsync
+  fullName.vb: Mentor4U_Avalonia.DAL.ICrud(Of TEntity).DeleteAsync
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: int
+  nameWithType: int
+  fullName: int
+  nameWithType.vb: Integer
+  fullName.vb: Integer
+  name.vb: Integer
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Mentor4U_Avalonia.DAL.ICrud`1.GetAsync*
+  commentId: Overload:Mentor4U_Avalonia.DAL.ICrud`1.GetAsync
+  href: Mentor4U_Avalonia.DAL.ICrud-1.html#Mentor4U_Avalonia_DAL_ICrud_1_GetAsync_System_Int32_
+  name: GetAsync
+  nameWithType: ICrud<TEntity>.GetAsync
+  fullName: Mentor4U_Avalonia.DAL.ICrud<TEntity>.GetAsync
+  nameWithType.vb: ICrud(Of TEntity).GetAsync
+  fullName.vb: Mentor4U_Avalonia.DAL.ICrud(Of TEntity).GetAsync
+- uid: System.Threading.Tasks.Task{{TEntity}}
+  commentId: T:System.Threading.Tasks.Task{`0}
+  parent: System.Threading.Tasks
+  definition: System.Threading.Tasks.Task`1
+  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  name: Task<TEntity>
+  nameWithType: Task<TEntity>
+  fullName: System.Threading.Tasks.Task<TEntity>
+  nameWithType.vb: Task(Of TEntity)
+  fullName.vb: System.Threading.Tasks.Task(Of TEntity)
+  name.vb: Task(Of TEntity)
+  spec.csharp:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: <
+  - name: TEntity
+  - name: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TEntity
+  - name: )
+- uid: Mentor4U_Avalonia.DAL.ICrud`1.GetAllAsync*
+  commentId: Overload:Mentor4U_Avalonia.DAL.ICrud`1.GetAllAsync
+  href: Mentor4U_Avalonia.DAL.ICrud-1.html#Mentor4U_Avalonia_DAL_ICrud_1_GetAllAsync
+  name: GetAllAsync
+  nameWithType: ICrud<TEntity>.GetAllAsync
+  fullName: Mentor4U_Avalonia.DAL.ICrud<TEntity>.GetAllAsync
+  nameWithType.vb: ICrud(Of TEntity).GetAllAsync
+  fullName.vb: Mentor4U_Avalonia.DAL.ICrud(Of TEntity).GetAllAsync
+- uid: System.Threading.Tasks.Task{System.Collections.Generic.IEnumerable{{TEntity}}}
+  commentId: T:System.Threading.Tasks.Task{System.Collections.Generic.IEnumerable{`0}}
+  parent: System.Threading.Tasks
+  definition: System.Threading.Tasks.Task`1
+  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  name: Task<IEnumerable<TEntity>>
+  nameWithType: Task<IEnumerable<TEntity>>
+  fullName: System.Threading.Tasks.Task<System.Collections.Generic.IEnumerable<TEntity>>
+  nameWithType.vb: Task(Of IEnumerable(Of TEntity))
+  fullName.vb: System.Threading.Tasks.Task(Of System.Collections.Generic.IEnumerable(Of TEntity))
+  name.vb: Task(Of IEnumerable(Of TEntity))
+  spec.csharp:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: <
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: <
+  - name: TEntity
+  - name: '>'
+  - name: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TEntity
+  - name: )
+  - name: )

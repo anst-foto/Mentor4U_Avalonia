@@ -1,0 +1,109 @@
+### YamlMime:ManagedReference
+items:
+- uid: Mentor4U_Avalonia.Models.IModel
+  commentId: T:Mentor4U_Avalonia.Models.IModel
+  id: IModel
+  parent: Mentor4U_Avalonia.Models
+  children:
+  - Mentor4U_Avalonia.Models.IModel.Id
+  langs:
+  - csharp
+  - vb
+  name: IModel
+  nameWithType: IModel
+  fullName: Mentor4U_Avalonia.Models.IModel
+  type: Interface
+  source:
+    remote:
+      path: Mentor4U_Avalonia.Models/IModel.cs
+      branch: master
+      repo: https://github.com/anst-foto/Mentor4U_Avalonia.git
+    id: IModel
+    path: Mentor4U_Avalonia.Models/IModel.cs
+    startLine: 8
+  assemblies:
+  - Mentor4U_Avalonia.Models
+  namespace: Mentor4U_Avalonia.Models
+  summary: Интерфейс модели данных
+  example: []
+  syntax:
+    content: public interface IModel
+    content.vb: Public Interface IModel
+- uid: Mentor4U_Avalonia.Models.IModel.Id
+  commentId: P:Mentor4U_Avalonia.Models.IModel.Id
+  id: Id
+  parent: Mentor4U_Avalonia.Models.IModel
+  langs:
+  - csharp
+  - vb
+  name: Id
+  nameWithType: IModel.Id
+  fullName: Mentor4U_Avalonia.Models.IModel.Id
+  type: Property
+  source:
+    remote:
+      path: Mentor4U_Avalonia.Models/IModel.cs
+      branch: master
+      repo: https://github.com/anst-foto/Mentor4U_Avalonia.git
+    id: Id
+    path: Mentor4U_Avalonia.Models/IModel.cs
+    startLine: 13
+  assemblies:
+  - Mentor4U_Avalonia.Models
+  namespace: Mentor4U_Avalonia.Models
+  summary: Уникальный идентификатор
+  example: []
+  syntax:
+    content: int Id { get; set; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Property Id As Integer
+  overload: Mentor4U_Avalonia.Models.IModel.Id*
+references:
+- uid: Mentor4U_Avalonia.Models
+  commentId: N:Mentor4U_Avalonia.Models
+  href: Mentor4U_Avalonia.html
+  name: Mentor4U_Avalonia.Models
+  nameWithType: Mentor4U_Avalonia.Models
+  fullName: Mentor4U_Avalonia.Models
+  spec.csharp:
+  - uid: Mentor4U_Avalonia
+    name: Mentor4U_Avalonia
+    href: Mentor4U_Avalonia.html
+  - name: .
+  - uid: Mentor4U_Avalonia.Models
+    name: Models
+    href: Mentor4U_Avalonia.Models.html
+  spec.vb:
+  - uid: Mentor4U_Avalonia
+    name: Mentor4U_Avalonia
+    href: Mentor4U_Avalonia.html
+  - name: .
+  - uid: Mentor4U_Avalonia.Models
+    name: Models
+    href: Mentor4U_Avalonia.Models.html
+- uid: Mentor4U_Avalonia.Models.IModel.Id*
+  commentId: Overload:Mentor4U_Avalonia.Models.IModel.Id
+  href: Mentor4U_Avalonia.Models.IModel.html#Mentor4U_Avalonia_Models_IModel_Id
+  name: Id
+  nameWithType: IModel.Id
+  fullName: Mentor4U_Avalonia.Models.IModel.Id
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: int
+  nameWithType: int
+  fullName: int
+  nameWithType.vb: Integer
+  fullName.vb: Integer
+  name.vb: Integer
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System

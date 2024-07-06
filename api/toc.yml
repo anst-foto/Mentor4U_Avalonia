@@ -1,0 +1,32 @@
+### YamlMime:TableOfContent
+items:
+- uid: Mentor4U_Avalonia.BLL
+  name: Mentor4U_Avalonia.BLL
+  items:
+  - uid: Mentor4U_Avalonia.BLL.Roles
+    name: Roles
+- uid: Mentor4U_Avalonia.DAL
+  name: Mentor4U_Avalonia.DAL
+  items:
+  - uid: Mentor4U_Avalonia.DAL.DbHelper
+    name: DbHelper
+  - uid: Mentor4U_Avalonia.DAL.DbService`1
+    name: DbService<TEntity>
+  - uid: Mentor4U_Avalonia.DAL.ICrud`1
+    name: ICrud<TEntity>
+  - uid: Mentor4U_Avalonia.DAL.Roles
+    name: Roles
+- uid: Mentor4U_Avalonia.Models
+  name: Mentor4U_Avalonia.Models
+  items:
+  - uid: Mentor4U_Avalonia.Models.EmptyStringException
+    name: EmptyStringException
+  - uid: Mentor4U_Avalonia.Models.ExceptionExtensions
+    name: ExceptionExtensions
+  - uid: Mentor4U_Avalonia.Models.IModel
+    name: IModel
+  - uid: Mentor4U_Avalonia.Models.NegativeNumberException
+    name: NegativeNumberException
+  - uid: Mentor4U_Avalonia.Models.Role
+    name: Role
+memberLayout: SamePage

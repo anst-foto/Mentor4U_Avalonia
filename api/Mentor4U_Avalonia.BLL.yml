@@ -1,0 +1,23 @@
+### YamlMime:ManagedReference
+items:
+- uid: Mentor4U_Avalonia.BLL
+  commentId: N:Mentor4U_Avalonia.BLL
+  id: Mentor4U_Avalonia.BLL
+  children:
+  - Mentor4U_Avalonia.BLL.Roles
+  langs:
+  - csharp
+  - vb
+  name: Mentor4U_Avalonia.BLL
+  nameWithType: Mentor4U_Avalonia.BLL
+  fullName: Mentor4U_Avalonia.BLL
+  type: Namespace
+  assemblies:
+  - Mentor4U_Avalonia.BLL
+references:
+- uid: Mentor4U_Avalonia.BLL.Roles
+  commentId: T:Mentor4U_Avalonia.BLL.Roles
+  href: Mentor4U_Avalonia.BLL.Roles.html
+  name: Roles
+  nameWithType: Roles
+  fullName: Mentor4U_Avalonia.BLL.Roles

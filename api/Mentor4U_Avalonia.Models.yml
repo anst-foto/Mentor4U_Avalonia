@@ -1,0 +1,75 @@
+### YamlMime:ManagedReference
+items:
+- uid: Mentor4U_Avalonia.Models
+  commentId: N:Mentor4U_Avalonia.Models
+  id: Mentor4U_Avalonia.Models
+  children:
+  - Mentor4U_Avalonia.Models.EmptyStringException
+  - Mentor4U_Avalonia.Models.ExceptionExtensions
+  - Mentor4U_Avalonia.Models.IModel
+  - Mentor4U_Avalonia.Models.NegativeNumberException
+  - Mentor4U_Avalonia.Models.Role
+  langs:
+  - csharp
+  - vb
+  name: Mentor4U_Avalonia.Models
+  nameWithType: Mentor4U_Avalonia.Models
+  fullName: Mentor4U_Avalonia.Models
+  type: Namespace
+  assemblies:
+  - Mentor4U_Avalonia.Models
+references:
+- uid: Mentor4U_Avalonia.Models.NegativeNumberException
+  commentId: T:Mentor4U_Avalonia.Models.NegativeNumberException
+  href: Mentor4U_Avalonia.Models.NegativeNumberException.html
+  name: NegativeNumberException
+  nameWithType: NegativeNumberException
+  fullName: Mentor4U_Avalonia.Models.NegativeNumberException
+- uid: Mentor4U_Avalonia.Models.EmptyStringException
+  commentId: T:Mentor4U_Avalonia.Models.EmptyStringException
+  href: Mentor4U_Avalonia.Models.EmptyStringException.html
+  name: EmptyStringException
+  nameWithType: EmptyStringException
+  fullName: Mentor4U_Avalonia.Models.EmptyStringException
+- uid: Mentor4U_Avalonia.Models.ExceptionExtensions
+  commentId: T:Mentor4U_Avalonia.Models.ExceptionExtensions
+  href: Mentor4U_Avalonia.Models.ExceptionExtensions.html
+  name: ExceptionExtensions
+  nameWithType: ExceptionExtensions
+  fullName: Mentor4U_Avalonia.Models.ExceptionExtensions
+- uid: Mentor4U_Avalonia.Models.IModel
+  commentId: T:Mentor4U_Avalonia.Models.IModel
+  parent: Mentor4U_Avalonia.Models
+  href: Mentor4U_Avalonia.Models.IModel.html
+  name: IModel
+  nameWithType: IModel
+  fullName: Mentor4U_Avalonia.Models.IModel
+- uid: Mentor4U_Avalonia.Models.Role
+  commentId: T:Mentor4U_Avalonia.Models.Role
+  parent: Mentor4U_Avalonia.Models
+  href: Mentor4U_Avalonia.Models.Role.html
+  name: Role
+  nameWithType: Role
+  fullName: Mentor4U_Avalonia.Models.Role
+- uid: Mentor4U_Avalonia.Models
+  commentId: N:Mentor4U_Avalonia.Models
+  href: Mentor4U_Avalonia.html
+  name: Mentor4U_Avalonia.Models
+  nameWithType: Mentor4U_Avalonia.Models
+  fullName: Mentor4U_Avalonia.Models
+  spec.csharp:
+  - uid: Mentor4U_Avalonia
+    name: Mentor4U_Avalonia
+    href: Mentor4U_Avalonia.html
+  - name: .
+  - uid: Mentor4U_Avalonia.Models
+    name: Models
+    href: Mentor4U_Avalonia.Models.html
+  spec.vb:
+  - uid: Mentor4U_Avalonia
+    name: Mentor4U_Avalonia
+    href: Mentor4U_Avalonia.html
+  - name: .
+  - uid: Mentor4U_Avalonia.Models
+    name: Models
+    href: Mentor4U_Avalonia.Models.html

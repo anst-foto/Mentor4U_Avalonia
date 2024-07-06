@@ -1,0 +1,82 @@
+### YamlMime:ManagedReference
+items:
+- uid: Mentor4U_Avalonia.DAL
+  commentId: N:Mentor4U_Avalonia.DAL
+  id: Mentor4U_Avalonia.DAL
+  children:
+  - Mentor4U_Avalonia.DAL.DbHelper
+  - Mentor4U_Avalonia.DAL.DbService`1
+  - Mentor4U_Avalonia.DAL.ICrud`1
+  - Mentor4U_Avalonia.DAL.Roles
+  langs:
+  - csharp
+  - vb
+  name: Mentor4U_Avalonia.DAL
+  nameWithType: Mentor4U_Avalonia.DAL
+  fullName: Mentor4U_Avalonia.DAL
+  type: Namespace
+  assemblies:
+  - Mentor4U_Avalonia.DAL
+references:
+- uid: Mentor4U_Avalonia.DAL.DbHelper
+  commentId: T:Mentor4U_Avalonia.DAL.DbHelper
+  href: Mentor4U_Avalonia.DAL.DbHelper.html
+  name: DbHelper
+  nameWithType: DbHelper
+  fullName: Mentor4U_Avalonia.DAL.DbHelper
+- uid: Mentor4U_Avalonia.DAL.DbService`1
+  commentId: T:Mentor4U_Avalonia.DAL.DbService`1
+  href: Mentor4U_Avalonia.DAL.DbService-1.html
+  name: DbService<TEntity>
+  nameWithType: DbService<TEntity>
+  fullName: Mentor4U_Avalonia.DAL.DbService<TEntity>
+  nameWithType.vb: DbService(Of TEntity)
+  fullName.vb: Mentor4U_Avalonia.DAL.DbService(Of TEntity)
+  name.vb: DbService(Of TEntity)
+  spec.csharp:
+  - uid: Mentor4U_Avalonia.DAL.DbService`1
+    name: DbService
+    href: Mentor4U_Avalonia.DAL.DbService-1.html
+  - name: <
+  - name: TEntity
+  - name: '>'
+  spec.vb:
+  - uid: Mentor4U_Avalonia.DAL.DbService`1
+    name: DbService
+    href: Mentor4U_Avalonia.DAL.DbService-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TEntity
+  - name: )
+- uid: Mentor4U_Avalonia.DAL.ICrud`1
+  commentId: T:Mentor4U_Avalonia.DAL.ICrud`1
+  href: Mentor4U_Avalonia.DAL.ICrud-1.html
+  name: ICrud<TEntity>
+  nameWithType: ICrud<TEntity>
+  fullName: Mentor4U_Avalonia.DAL.ICrud<TEntity>
+  nameWithType.vb: ICrud(Of TEntity)
+  fullName.vb: Mentor4U_Avalonia.DAL.ICrud(Of TEntity)
+  name.vb: ICrud(Of TEntity)
+  spec.csharp:
+  - uid: Mentor4U_Avalonia.DAL.ICrud`1
+    name: ICrud
+    href: Mentor4U_Avalonia.DAL.ICrud-1.html
+  - name: <
+  - name: TEntity
+  - name: '>'
+  spec.vb:
+  - uid: Mentor4U_Avalonia.DAL.ICrud`1
+    name: ICrud
+    href: Mentor4U_Avalonia.DAL.ICrud-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TEntity
+  - name: )
+- uid: Mentor4U_Avalonia.DAL.Roles
+  commentId: T:Mentor4U_Avalonia.DAL.Roles
+  href: Mentor4U_Avalonia.DAL.Roles.html
+  name: Roles
+  nameWithType: Roles
+  fullName: Mentor4U_Avalonia.DAL.Roles

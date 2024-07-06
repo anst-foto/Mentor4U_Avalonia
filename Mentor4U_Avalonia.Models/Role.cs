@@ -3,9 +3,16 @@
 
 namespace Mentor4U_Avalonia.Models;
 
+/// <summary>
+/// 
+/// </summary>
 public record class Role : IModel
 {
     private int _id;
+    /// <summary>
+    /// Уникальный идентификатор
+    /// </summary>
+    /// <exception cref="NegativeNumberException">Исключение выбрасывается, если присвоить отрицательное или нулевое значение</exception>
     public int Id
     {
         get => _id;

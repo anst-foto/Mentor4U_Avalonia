@@ -1,0 +1,547 @@
+### YamlMime:XRefMap
+sorted: true
+references:
+- uid: Mentor4U_Avalonia.BLL
+  name: Mentor4U_Avalonia.BLL
+  href: api/Mentor4U_Avalonia.BLL.html
+  commentId: N:Mentor4U_Avalonia.BLL
+  fullName: Mentor4U_Avalonia.BLL
+  nameWithType: Mentor4U_Avalonia.BLL
+- uid: Mentor4U_Avalonia.BLL.Roles
+  name: Roles
+  href: api/Mentor4U_Avalonia.BLL.Roles.html
+  commentId: T:Mentor4U_Avalonia.BLL.Roles
+  fullName: Mentor4U_Avalonia.BLL.Roles
+  nameWithType: Roles
+- uid: Mentor4U_Avalonia.BLL.Roles.#ctor(Mentor4U_Avalonia.DAL.ICrud{Mentor4U_Avalonia.Models.Role})
+  name: Roles(ICrud<Role>)
+  href: api/Mentor4U_Avalonia.BLL.Roles.html#Mentor4U_Avalonia_BLL_Roles__ctor_Mentor4U_Avalonia_DAL_ICrud_Mentor4U_Avalonia_Models_Role__
+  commentId: M:Mentor4U_Avalonia.BLL.Roles.#ctor(Mentor4U_Avalonia.DAL.ICrud{Mentor4U_Avalonia.Models.Role})
+  name.vb: New(ICrud(Of Role))
+  fullName: Mentor4U_Avalonia.BLL.Roles.Roles(Mentor4U_Avalonia.DAL.ICrud<Mentor4U_Avalonia.Models.Role>)
+  fullName.vb: Mentor4U_Avalonia.BLL.Roles.New(Mentor4U_Avalonia.DAL.ICrud(Of Mentor4U_Avalonia.Models.Role))
+  nameWithType: Roles.Roles(ICrud<Role>)
+  nameWithType.vb: Roles.New(ICrud(Of Role))
+- uid: Mentor4U_Avalonia.BLL.Roles.#ctor*
+  name: Roles
+  href: api/Mentor4U_Avalonia.BLL.Roles.html#Mentor4U_Avalonia_BLL_Roles__ctor_
+  commentId: Overload:Mentor4U_Avalonia.BLL.Roles.#ctor
+  isSpec: "True"
+  name.vb: New
+  fullName: Mentor4U_Avalonia.BLL.Roles.Roles
+  fullName.vb: Mentor4U_Avalonia.BLL.Roles.New
+  nameWithType: Roles.Roles
+  nameWithType.vb: Roles.New
+- uid: Mentor4U_Avalonia.BLL.Roles.CreateAsync(Mentor4U_Avalonia.Models.Role)
+  name: CreateAsync(Role)
+  href: api/Mentor4U_Avalonia.BLL.Roles.html#Mentor4U_Avalonia_BLL_Roles_CreateAsync_Mentor4U_Avalonia_Models_Role_
+  commentId: M:Mentor4U_Avalonia.BLL.Roles.CreateAsync(Mentor4U_Avalonia.Models.Role)
+  fullName: Mentor4U_Avalonia.BLL.Roles.CreateAsync(Mentor4U_Avalonia.Models.Role)
+  nameWithType: Roles.CreateAsync(Role)
+- uid: Mentor4U_Avalonia.BLL.Roles.CreateAsync*
+  name: CreateAsync
+  href: api/Mentor4U_Avalonia.BLL.Roles.html#Mentor4U_Avalonia_BLL_Roles_CreateAsync_
+  commentId: Overload:Mentor4U_Avalonia.BLL.Roles.CreateAsync
+  isSpec: "True"
+  fullName: Mentor4U_Avalonia.BLL.Roles.CreateAsync
+  nameWithType: Roles.CreateAsync
+- uid: Mentor4U_Avalonia.BLL.Roles.DeleteAsync(Mentor4U_Avalonia.Models.Role)
+  name: DeleteAsync(Role)
+  href: api/Mentor4U_Avalonia.BLL.Roles.html#Mentor4U_Avalonia_BLL_Roles_DeleteAsync_Mentor4U_Avalonia_Models_Role_
+  commentId: M:Mentor4U_Avalonia.BLL.Roles.DeleteAsync(Mentor4U_Avalonia.Models.Role)
+  fullName: Mentor4U_Avalonia.BLL.Roles.DeleteAsync(Mentor4U_Avalonia.Models.Role)
+  nameWithType: Roles.DeleteAsync(Role)
+- uid: Mentor4U_Avalonia.BLL.Roles.DeleteAsync*
+  name: DeleteAsync
+  href: api/Mentor4U_Avalonia.BLL.Roles.html#Mentor4U_Avalonia_BLL_Roles_DeleteAsync_
+  commentId: Overload:Mentor4U_Avalonia.BLL.Roles.DeleteAsync
+  isSpec: "True"
+  fullName: Mentor4U_Avalonia.BLL.Roles.DeleteAsync
+  nameWithType: Roles.DeleteAsync
+- uid: Mentor4U_Avalonia.BLL.Roles.GetAllAsync
+  name: GetAllAsync()
+  href: api/Mentor4U_Avalonia.BLL.Roles.html#Mentor4U_Avalonia_BLL_Roles_GetAllAsync
+  commentId: M:Mentor4U_Avalonia.BLL.Roles.GetAllAsync
+  fullName: Mentor4U_Avalonia.BLL.Roles.GetAllAsync()
+  nameWithType: Roles.GetAllAsync()
+- uid: Mentor4U_Avalonia.BLL.Roles.GetAllAsync*
+  name: GetAllAsync
+  href: api/Mentor4U_Avalonia.BLL.Roles.html#Mentor4U_Avalonia_BLL_Roles_GetAllAsync_
+  commentId: Overload:Mentor4U_Avalonia.BLL.Roles.GetAllAsync
+  isSpec: "True"
+  fullName: Mentor4U_Avalonia.BLL.Roles.GetAllAsync
+  nameWithType: Roles.GetAllAsync
+- uid: Mentor4U_Avalonia.BLL.Roles.GetByIdAsync(System.Int32)
+  name: GetByIdAsync(int)
+  href: api/Mentor4U_Avalonia.BLL.Roles.html#Mentor4U_Avalonia_BLL_Roles_GetByIdAsync_System_Int32_
+  commentId: M:Mentor4U_Avalonia.BLL.Roles.GetByIdAsync(System.Int32)
+  name.vb: GetByIdAsync(Integer)
+  fullName: Mentor4U_Avalonia.BLL.Roles.GetByIdAsync(int)
+  fullName.vb: Mentor4U_Avalonia.BLL.Roles.GetByIdAsync(Integer)
+  nameWithType: Roles.GetByIdAsync(int)
+  nameWithType.vb: Roles.GetByIdAsync(Integer)
+- uid: Mentor4U_Avalonia.BLL.Roles.GetByIdAsync*
+  name: GetByIdAsync
+  href: api/Mentor4U_Avalonia.BLL.Roles.html#Mentor4U_Avalonia_BLL_Roles_GetByIdAsync_
+  commentId: Overload:Mentor4U_Avalonia.BLL.Roles.GetByIdAsync
+  isSpec: "True"
+  fullName: Mentor4U_Avalonia.BLL.Roles.GetByIdAsync
+  nameWithType: Roles.GetByIdAsync
+- uid: Mentor4U_Avalonia.BLL.Roles.GetByNameAsync(System.String)
+  name: GetByNameAsync(string)
+  href: api/Mentor4U_Avalonia.BLL.Roles.html#Mentor4U_Avalonia_BLL_Roles_GetByNameAsync_System_String_
+  commentId: M:Mentor4U_Avalonia.BLL.Roles.GetByNameAsync(System.String)
+  name.vb: GetByNameAsync(String)
+  fullName: Mentor4U_Avalonia.BLL.Roles.GetByNameAsync(string)
+  fullName.vb: Mentor4U_Avalonia.BLL.Roles.GetByNameAsync(String)
+  nameWithType: Roles.GetByNameAsync(string)
+  nameWithType.vb: Roles.GetByNameAsync(String)
+- uid: Mentor4U_Avalonia.BLL.Roles.GetByNameAsync*
+  name: GetByNameAsync
+  href: api/Mentor4U_Avalonia.BLL.Roles.html#Mentor4U_Avalonia_BLL_Roles_GetByNameAsync_
+  commentId: Overload:Mentor4U_Avalonia.BLL.Roles.GetByNameAsync
+  isSpec: "True"
+  fullName: Mentor4U_Avalonia.BLL.Roles.GetByNameAsync
+  nameWithType: Roles.GetByNameAsync
+- uid: Mentor4U_Avalonia.DAL
+  name: Mentor4U_Avalonia.DAL
+  href: api/Mentor4U_Avalonia.DAL.html
+  commentId: N:Mentor4U_Avalonia.DAL
+  fullName: Mentor4U_Avalonia.DAL
+  nameWithType: Mentor4U_Avalonia.DAL
+- uid: Mentor4U_Avalonia.DAL.DbHelper
+  name: DbHelper
+  href: api/Mentor4U_Avalonia.DAL.DbHelper.html
+  commentId: T:Mentor4U_Avalonia.DAL.DbHelper
+  fullName: Mentor4U_Avalonia.DAL.DbHelper
+  nameWithType: DbHelper
+- uid: Mentor4U_Avalonia.DAL.DbHelper.RoleTablesColumnNames
+  name: RoleTablesColumnNames
+  href: api/Mentor4U_Avalonia.DAL.DbHelper.html#Mentor4U_Avalonia_DAL_DbHelper_RoleTablesColumnNames
+  commentId: F:Mentor4U_Avalonia.DAL.DbHelper.RoleTablesColumnNames
+  fullName: Mentor4U_Avalonia.DAL.DbHelper.RoleTablesColumnNames
+  nameWithType: DbHelper.RoleTablesColumnNames
+- uid: Mentor4U_Avalonia.DAL.DbHelper.TableNames
+  name: TableNames
+  href: api/Mentor4U_Avalonia.DAL.DbHelper.html#Mentor4U_Avalonia_DAL_DbHelper_TableNames
+  commentId: F:Mentor4U_Avalonia.DAL.DbHelper.TableNames
+  fullName: Mentor4U_Avalonia.DAL.DbHelper.TableNames
+  nameWithType: DbHelper.TableNames
+- uid: Mentor4U_Avalonia.DAL.DbService`1
+  name: DbService<TEntity>
+  href: api/Mentor4U_Avalonia.DAL.DbService-1.html
+  commentId: T:Mentor4U_Avalonia.DAL.DbService`1
+  name.vb: DbService(Of TEntity)
+  fullName: Mentor4U_Avalonia.DAL.DbService<TEntity>
+  fullName.vb: Mentor4U_Avalonia.DAL.DbService(Of TEntity)
+  nameWithType: DbService<TEntity>
+  nameWithType.vb: DbService(Of TEntity)
+- uid: Mentor4U_Avalonia.DAL.DbService`1.ConnectAsync(System.String)
+  name: ConnectAsync(string)
+  href: api/Mentor4U_Avalonia.DAL.DbService-1.html#Mentor4U_Avalonia_DAL_DbService_1_ConnectAsync_System_String_
+  commentId: M:Mentor4U_Avalonia.DAL.DbService`1.ConnectAsync(System.String)
+  name.vb: ConnectAsync(String)
+  fullName: Mentor4U_Avalonia.DAL.DbService<TEntity>.ConnectAsync(string)
+  fullName.vb: Mentor4U_Avalonia.DAL.DbService(Of TEntity).ConnectAsync(String)
+  nameWithType: DbService<TEntity>.ConnectAsync(string)
+  nameWithType.vb: DbService(Of TEntity).ConnectAsync(String)
+- uid: Mentor4U_Avalonia.DAL.DbService`1.ConnectAsync*
+  name: ConnectAsync
+  href: api/Mentor4U_Avalonia.DAL.DbService-1.html#Mentor4U_Avalonia_DAL_DbService_1_ConnectAsync_
+  commentId: Overload:Mentor4U_Avalonia.DAL.DbService`1.ConnectAsync
+  isSpec: "True"
+  fullName: Mentor4U_Avalonia.DAL.DbService<TEntity>.ConnectAsync
+  fullName.vb: Mentor4U_Avalonia.DAL.DbService(Of TEntity).ConnectAsync
+  nameWithType: DbService<TEntity>.ConnectAsync
+  nameWithType.vb: DbService(Of TEntity).ConnectAsync
+- uid: Mentor4U_Avalonia.DAL.DbService`1.DisconnectAsync
+  name: DisconnectAsync()
+  href: api/Mentor4U_Avalonia.DAL.DbService-1.html#Mentor4U_Avalonia_DAL_DbService_1_DisconnectAsync
+  commentId: M:Mentor4U_Avalonia.DAL.DbService`1.DisconnectAsync
+  fullName: Mentor4U_Avalonia.DAL.DbService<TEntity>.DisconnectAsync()
+  fullName.vb: Mentor4U_Avalonia.DAL.DbService(Of TEntity).DisconnectAsync()
+  nameWithType: DbService<TEntity>.DisconnectAsync()
+  nameWithType.vb: DbService(Of TEntity).DisconnectAsync()
+- uid: Mentor4U_Avalonia.DAL.DbService`1.DisconnectAsync*
+  name: DisconnectAsync
+  href: api/Mentor4U_Avalonia.DAL.DbService-1.html#Mentor4U_Avalonia_DAL_DbService_1_DisconnectAsync_
+  commentId: Overload:Mentor4U_Avalonia.DAL.DbService`1.DisconnectAsync
+  isSpec: "True"
+  fullName: Mentor4U_Avalonia.DAL.DbService<TEntity>.DisconnectAsync
+  fullName.vb: Mentor4U_Avalonia.DAL.DbService(Of TEntity).DisconnectAsync
+  nameWithType: DbService<TEntity>.DisconnectAsync
+  nameWithType.vb: DbService(Of TEntity).DisconnectAsync
+- uid: Mentor4U_Avalonia.DAL.DbService`1.ExecuteNonQueryAsync(System.String,System.Object)
+  name: ExecuteNonQueryAsync(string, object?)
+  href: api/Mentor4U_Avalonia.DAL.DbService-1.html#Mentor4U_Avalonia_DAL_DbService_1_ExecuteNonQueryAsync_System_String_System_Object_
+  commentId: M:Mentor4U_Avalonia.DAL.DbService`1.ExecuteNonQueryAsync(System.String,System.Object)
+  name.vb: ExecuteNonQueryAsync(String, Object)
+  fullName: Mentor4U_Avalonia.DAL.DbService<TEntity>.ExecuteNonQueryAsync(string, object?)
+  fullName.vb: Mentor4U_Avalonia.DAL.DbService(Of TEntity).ExecuteNonQueryAsync(String, Object)
+  nameWithType: DbService<TEntity>.ExecuteNonQueryAsync(string, object?)
+  nameWithType.vb: DbService(Of TEntity).ExecuteNonQueryAsync(String, Object)
+- uid: Mentor4U_Avalonia.DAL.DbService`1.ExecuteNonQueryAsync*
+  name: ExecuteNonQueryAsync
+  href: api/Mentor4U_Avalonia.DAL.DbService-1.html#Mentor4U_Avalonia_DAL_DbService_1_ExecuteNonQueryAsync_
+  commentId: Overload:Mentor4U_Avalonia.DAL.DbService`1.ExecuteNonQueryAsync
+  isSpec: "True"
+  fullName: Mentor4U_Avalonia.DAL.DbService<TEntity>.ExecuteNonQueryAsync
+  fullName.vb: Mentor4U_Avalonia.DAL.DbService(Of TEntity).ExecuteNonQueryAsync
+  nameWithType: DbService<TEntity>.ExecuteNonQueryAsync
+  nameWithType.vb: DbService(Of TEntity).ExecuteNonQueryAsync
+- uid: Mentor4U_Avalonia.DAL.DbService`1.GetAllAsync
+  name: GetAllAsync()
+  href: api/Mentor4U_Avalonia.DAL.DbService-1.html#Mentor4U_Avalonia_DAL_DbService_1_GetAllAsync
+  commentId: M:Mentor4U_Avalonia.DAL.DbService`1.GetAllAsync
+  fullName: Mentor4U_Avalonia.DAL.DbService<TEntity>.GetAllAsync()
+  fullName.vb: Mentor4U_Avalonia.DAL.DbService(Of TEntity).GetAllAsync()
+  nameWithType: DbService<TEntity>.GetAllAsync()
+  nameWithType.vb: DbService(Of TEntity).GetAllAsync()
+- uid: Mentor4U_Avalonia.DAL.DbService`1.GetAllAsync*
+  name: GetAllAsync
+  href: api/Mentor4U_Avalonia.DAL.DbService-1.html#Mentor4U_Avalonia_DAL_DbService_1_GetAllAsync_
+  commentId: Overload:Mentor4U_Avalonia.DAL.DbService`1.GetAllAsync
+  isSpec: "True"
+  fullName: Mentor4U_Avalonia.DAL.DbService<TEntity>.GetAllAsync
+  fullName.vb: Mentor4U_Avalonia.DAL.DbService(Of TEntity).GetAllAsync
+  nameWithType: DbService<TEntity>.GetAllAsync
+  nameWithType.vb: DbService(Of TEntity).GetAllAsync
+- uid: Mentor4U_Avalonia.DAL.DbService`1.GetByIdAsync(System.Int32)
+  name: GetByIdAsync(int)
+  href: api/Mentor4U_Avalonia.DAL.DbService-1.html#Mentor4U_Avalonia_DAL_DbService_1_GetByIdAsync_System_Int32_
+  commentId: M:Mentor4U_Avalonia.DAL.DbService`1.GetByIdAsync(System.Int32)
+  name.vb: GetByIdAsync(Integer)
+  fullName: Mentor4U_Avalonia.DAL.DbService<TEntity>.GetByIdAsync(int)
+  fullName.vb: Mentor4U_Avalonia.DAL.DbService(Of TEntity).GetByIdAsync(Integer)
+  nameWithType: DbService<TEntity>.GetByIdAsync(int)
+  nameWithType.vb: DbService(Of TEntity).GetByIdAsync(Integer)
+- uid: Mentor4U_Avalonia.DAL.DbService`1.GetByIdAsync*
+  name: GetByIdAsync
+  href: api/Mentor4U_Avalonia.DAL.DbService-1.html#Mentor4U_Avalonia_DAL_DbService_1_GetByIdAsync_
+  commentId: Overload:Mentor4U_Avalonia.DAL.DbService`1.GetByIdAsync
+  isSpec: "True"
+  fullName: Mentor4U_Avalonia.DAL.DbService<TEntity>.GetByIdAsync
+  fullName.vb: Mentor4U_Avalonia.DAL.DbService(Of TEntity).GetByIdAsync
+  nameWithType: DbService<TEntity>.GetByIdAsync
+  nameWithType.vb: DbService(Of TEntity).GetByIdAsync
+- uid: Mentor4U_Avalonia.DAL.ICrud`1
+  name: ICrud<TEntity>
+  href: api/Mentor4U_Avalonia.DAL.ICrud-1.html
+  commentId: T:Mentor4U_Avalonia.DAL.ICrud`1
+  name.vb: ICrud(Of TEntity)
+  fullName: Mentor4U_Avalonia.DAL.ICrud<TEntity>
+  fullName.vb: Mentor4U_Avalonia.DAL.ICrud(Of TEntity)
+  nameWithType: ICrud<TEntity>
+  nameWithType.vb: ICrud(Of TEntity)
+- uid: Mentor4U_Avalonia.DAL.ICrud`1.DeleteAsync(System.Int32)
+  name: DeleteAsync(int)
+  href: api/Mentor4U_Avalonia.DAL.ICrud-1.html#Mentor4U_Avalonia_DAL_ICrud_1_DeleteAsync_System_Int32_
+  commentId: M:Mentor4U_Avalonia.DAL.ICrud`1.DeleteAsync(System.Int32)
+  name.vb: DeleteAsync(Integer)
+  fullName: Mentor4U_Avalonia.DAL.ICrud<TEntity>.DeleteAsync(int)
+  fullName.vb: Mentor4U_Avalonia.DAL.ICrud(Of TEntity).DeleteAsync(Integer)
+  nameWithType: ICrud<TEntity>.DeleteAsync(int)
+  nameWithType.vb: ICrud(Of TEntity).DeleteAsync(Integer)
+- uid: Mentor4U_Avalonia.DAL.ICrud`1.DeleteAsync*
+  name: DeleteAsync
+  href: api/Mentor4U_Avalonia.DAL.ICrud-1.html#Mentor4U_Avalonia_DAL_ICrud_1_DeleteAsync_
+  commentId: Overload:Mentor4U_Avalonia.DAL.ICrud`1.DeleteAsync
+  isSpec: "True"
+  fullName: Mentor4U_Avalonia.DAL.ICrud<TEntity>.DeleteAsync
+  fullName.vb: Mentor4U_Avalonia.DAL.ICrud(Of TEntity).DeleteAsync
+  nameWithType: ICrud<TEntity>.DeleteAsync
+  nameWithType.vb: ICrud(Of TEntity).DeleteAsync
+- uid: Mentor4U_Avalonia.DAL.ICrud`1.GetAllAsync
+  name: GetAllAsync()
+  href: api/Mentor4U_Avalonia.DAL.ICrud-1.html#Mentor4U_Avalonia_DAL_ICrud_1_GetAllAsync
+  commentId: M:Mentor4U_Avalonia.DAL.ICrud`1.GetAllAsync
+  fullName: Mentor4U_Avalonia.DAL.ICrud<TEntity>.GetAllAsync()
+  fullName.vb: Mentor4U_Avalonia.DAL.ICrud(Of TEntity).GetAllAsync()
+  nameWithType: ICrud<TEntity>.GetAllAsync()
+  nameWithType.vb: ICrud(Of TEntity).GetAllAsync()
+- uid: Mentor4U_Avalonia.DAL.ICrud`1.GetAllAsync*
+  name: GetAllAsync
+  href: api/Mentor4U_Avalonia.DAL.ICrud-1.html#Mentor4U_Avalonia_DAL_ICrud_1_GetAllAsync_
+  commentId: Overload:Mentor4U_Avalonia.DAL.ICrud`1.GetAllAsync
+  isSpec: "True"
+  fullName: Mentor4U_Avalonia.DAL.ICrud<TEntity>.GetAllAsync
+  fullName.vb: Mentor4U_Avalonia.DAL.ICrud(Of TEntity).GetAllAsync
+  nameWithType: ICrud<TEntity>.GetAllAsync
+  nameWithType.vb: ICrud(Of TEntity).GetAllAsync
+- uid: Mentor4U_Avalonia.DAL.ICrud`1.GetAsync(System.Int32)
+  name: GetAsync(int)
+  href: api/Mentor4U_Avalonia.DAL.ICrud-1.html#Mentor4U_Avalonia_DAL_ICrud_1_GetAsync_System_Int32_
+  commentId: M:Mentor4U_Avalonia.DAL.ICrud`1.GetAsync(System.Int32)
+  name.vb: GetAsync(Integer)
+  fullName: Mentor4U_Avalonia.DAL.ICrud<TEntity>.GetAsync(int)
+  fullName.vb: Mentor4U_Avalonia.DAL.ICrud(Of TEntity).GetAsync(Integer)
+  nameWithType: ICrud<TEntity>.GetAsync(int)
+  nameWithType.vb: ICrud(Of TEntity).GetAsync(Integer)
+- uid: Mentor4U_Avalonia.DAL.ICrud`1.GetAsync*
+  name: GetAsync
+  href: api/Mentor4U_Avalonia.DAL.ICrud-1.html#Mentor4U_Avalonia_DAL_ICrud_1_GetAsync_
+  commentId: Overload:Mentor4U_Avalonia.DAL.ICrud`1.GetAsync
+  isSpec: "True"
+  fullName: Mentor4U_Avalonia.DAL.ICrud<TEntity>.GetAsync
+  fullName.vb: Mentor4U_Avalonia.DAL.ICrud(Of TEntity).GetAsync
+  nameWithType: ICrud<TEntity>.GetAsync
+  nameWithType.vb: ICrud(Of TEntity).GetAsync
+- uid: Mentor4U_Avalonia.DAL.ICrud`1.InsertAsync(`0)
+  name: InsertAsync(TEntity)
+  href: api/Mentor4U_Avalonia.DAL.ICrud-1.html#Mentor4U_Avalonia_DAL_ICrud_1_InsertAsync__0_
+  commentId: M:Mentor4U_Avalonia.DAL.ICrud`1.InsertAsync(`0)
+  fullName: Mentor4U_Avalonia.DAL.ICrud<TEntity>.InsertAsync(TEntity)
+  fullName.vb: Mentor4U_Avalonia.DAL.ICrud(Of TEntity).InsertAsync(TEntity)
+  nameWithType: ICrud<TEntity>.InsertAsync(TEntity)
+  nameWithType.vb: ICrud(Of TEntity).InsertAsync(TEntity)
+- uid: Mentor4U_Avalonia.DAL.ICrud`1.InsertAsync*
+  name: InsertAsync
+  href: api/Mentor4U_Avalonia.DAL.ICrud-1.html#Mentor4U_Avalonia_DAL_ICrud_1_InsertAsync_
+  commentId: Overload:Mentor4U_Avalonia.DAL.ICrud`1.InsertAsync
+  isSpec: "True"
+  fullName: Mentor4U_Avalonia.DAL.ICrud<TEntity>.InsertAsync
+  fullName.vb: Mentor4U_Avalonia.DAL.ICrud(Of TEntity).InsertAsync
+  nameWithType: ICrud<TEntity>.InsertAsync
+  nameWithType.vb: ICrud(Of TEntity).InsertAsync
+- uid: Mentor4U_Avalonia.DAL.ICrud`1.UpdateAsync(`0)
+  name: UpdateAsync(TEntity)
+  href: api/Mentor4U_Avalonia.DAL.ICrud-1.html#Mentor4U_Avalonia_DAL_ICrud_1_UpdateAsync__0_
+  commentId: M:Mentor4U_Avalonia.DAL.ICrud`1.UpdateAsync(`0)
+  fullName: Mentor4U_Avalonia.DAL.ICrud<TEntity>.UpdateAsync(TEntity)
+  fullName.vb: Mentor4U_Avalonia.DAL.ICrud(Of TEntity).UpdateAsync(TEntity)
+  nameWithType: ICrud<TEntity>.UpdateAsync(TEntity)
+  nameWithType.vb: ICrud(Of TEntity).UpdateAsync(TEntity)
+- uid: Mentor4U_Avalonia.DAL.ICrud`1.UpdateAsync*
+  name: UpdateAsync
+  href: api/Mentor4U_Avalonia.DAL.ICrud-1.html#Mentor4U_Avalonia_DAL_ICrud_1_UpdateAsync_
+  commentId: Overload:Mentor4U_Avalonia.DAL.ICrud`1.UpdateAsync
+  isSpec: "True"
+  fullName: Mentor4U_Avalonia.DAL.ICrud<TEntity>.UpdateAsync
+  fullName.vb: Mentor4U_Avalonia.DAL.ICrud(Of TEntity).UpdateAsync
+  nameWithType: ICrud<TEntity>.UpdateAsync
+  nameWithType.vb: ICrud(Of TEntity).UpdateAsync
+- uid: Mentor4U_Avalonia.DAL.Roles
+  name: Roles
+  href: api/Mentor4U_Avalonia.DAL.Roles.html
+  commentId: T:Mentor4U_Avalonia.DAL.Roles
+  fullName: Mentor4U_Avalonia.DAL.Roles
+  nameWithType: Roles
+- uid: Mentor4U_Avalonia.DAL.Roles.#ctor(System.String)
+  name: Roles(string)
+  href: api/Mentor4U_Avalonia.DAL.Roles.html#Mentor4U_Avalonia_DAL_Roles__ctor_System_String_
+  commentId: M:Mentor4U_Avalonia.DAL.Roles.#ctor(System.String)
+  name.vb: New(String)
+  fullName: Mentor4U_Avalonia.DAL.Roles.Roles(string)
+  fullName.vb: Mentor4U_Avalonia.DAL.Roles.New(String)
+  nameWithType: Roles.Roles(string)
+  nameWithType.vb: Roles.New(String)
+- uid: Mentor4U_Avalonia.DAL.Roles.#ctor*
+  name: Roles
+  href: api/Mentor4U_Avalonia.DAL.Roles.html#Mentor4U_Avalonia_DAL_Roles__ctor_
+  commentId: Overload:Mentor4U_Avalonia.DAL.Roles.#ctor
+  isSpec: "True"
+  name.vb: New
+  fullName: Mentor4U_Avalonia.DAL.Roles.Roles
+  fullName.vb: Mentor4U_Avalonia.DAL.Roles.New
+  nameWithType: Roles.Roles
+  nameWithType.vb: Roles.New
+- uid: Mentor4U_Avalonia.DAL.Roles.DeleteAsync(System.Int32)
+  name: DeleteAsync(int)
+  href: api/Mentor4U_Avalonia.DAL.Roles.html#Mentor4U_Avalonia_DAL_Roles_DeleteAsync_System_Int32_
+  commentId: M:Mentor4U_Avalonia.DAL.Roles.DeleteAsync(System.Int32)
+  name.vb: DeleteAsync(Integer)
+  fullName: Mentor4U_Avalonia.DAL.Roles.DeleteAsync(int)
+  fullName.vb: Mentor4U_Avalonia.DAL.Roles.DeleteAsync(Integer)
+  nameWithType: Roles.DeleteAsync(int)
+  nameWithType.vb: Roles.DeleteAsync(Integer)
+- uid: Mentor4U_Avalonia.DAL.Roles.DeleteAsync*
+  name: DeleteAsync
+  href: api/Mentor4U_Avalonia.DAL.Roles.html#Mentor4U_Avalonia_DAL_Roles_DeleteAsync_
+  commentId: Overload:Mentor4U_Avalonia.DAL.Roles.DeleteAsync
+  isSpec: "True"
+  fullName: Mentor4U_Avalonia.DAL.Roles.DeleteAsync
+  nameWithType: Roles.DeleteAsync
+- uid: Mentor4U_Avalonia.DAL.Roles.GetAllAsync
+  name: GetAllAsync()
+  href: api/Mentor4U_Avalonia.DAL.Roles.html#Mentor4U_Avalonia_DAL_Roles_GetAllAsync
+  commentId: M:Mentor4U_Avalonia.DAL.Roles.GetAllAsync
+  fullName: Mentor4U_Avalonia.DAL.Roles.GetAllAsync()
+  nameWithType: Roles.GetAllAsync()
+- uid: Mentor4U_Avalonia.DAL.Roles.GetAllAsync*
+  name: GetAllAsync
+  href: api/Mentor4U_Avalonia.DAL.Roles.html#Mentor4U_Avalonia_DAL_Roles_GetAllAsync_
+  commentId: Overload:Mentor4U_Avalonia.DAL.Roles.GetAllAsync
+  isSpec: "True"
+  fullName: Mentor4U_Avalonia.DAL.Roles.GetAllAsync
+  nameWithType: Roles.GetAllAsync
+- uid: Mentor4U_Avalonia.DAL.Roles.GetAsync(System.Int32)
+  name: GetAsync(int)
+  href: api/Mentor4U_Avalonia.DAL.Roles.html#Mentor4U_Avalonia_DAL_Roles_GetAsync_System_Int32_
+  commentId: M:Mentor4U_Avalonia.DAL.Roles.GetAsync(System.Int32)
+  name.vb: GetAsync(Integer)
+  fullName: Mentor4U_Avalonia.DAL.Roles.GetAsync(int)
+  fullName.vb: Mentor4U_Avalonia.DAL.Roles.GetAsync(Integer)
+  nameWithType: Roles.GetAsync(int)
+  nameWithType.vb: Roles.GetAsync(Integer)
+- uid: Mentor4U_Avalonia.DAL.Roles.GetAsync*
+  name: GetAsync
+  href: api/Mentor4U_Avalonia.DAL.Roles.html#Mentor4U_Avalonia_DAL_Roles_GetAsync_
+  commentId: Overload:Mentor4U_Avalonia.DAL.Roles.GetAsync
+  isSpec: "True"
+  fullName: Mentor4U_Avalonia.DAL.Roles.GetAsync
+  nameWithType: Roles.GetAsync
+- uid: Mentor4U_Avalonia.DAL.Roles.InsertAsync(Mentor4U_Avalonia.Models.Role)
+  name: InsertAsync(Role)
+  href: api/Mentor4U_Avalonia.DAL.Roles.html#Mentor4U_Avalonia_DAL_Roles_InsertAsync_Mentor4U_Avalonia_Models_Role_
+  commentId: M:Mentor4U_Avalonia.DAL.Roles.InsertAsync(Mentor4U_Avalonia.Models.Role)
+  fullName: Mentor4U_Avalonia.DAL.Roles.InsertAsync(Mentor4U_Avalonia.Models.Role)
+  nameWithType: Roles.InsertAsync(Role)
+- uid: Mentor4U_Avalonia.DAL.Roles.InsertAsync*
+  name: InsertAsync
+  href: api/Mentor4U_Avalonia.DAL.Roles.html#Mentor4U_Avalonia_DAL_Roles_InsertAsync_
+  commentId: Overload:Mentor4U_Avalonia.DAL.Roles.InsertAsync
+  isSpec: "True"
+  fullName: Mentor4U_Avalonia.DAL.Roles.InsertAsync
+  nameWithType: Roles.InsertAsync
+- uid: Mentor4U_Avalonia.DAL.Roles.UpdateAsync(Mentor4U_Avalonia.Models.Role)
+  name: UpdateAsync(Role)
+  href: api/Mentor4U_Avalonia.DAL.Roles.html#Mentor4U_Avalonia_DAL_Roles_UpdateAsync_Mentor4U_Avalonia_Models_Role_
+  commentId: M:Mentor4U_Avalonia.DAL.Roles.UpdateAsync(Mentor4U_Avalonia.Models.Role)
+  fullName: Mentor4U_Avalonia.DAL.Roles.UpdateAsync(Mentor4U_Avalonia.Models.Role)
+  nameWithType: Roles.UpdateAsync(Role)
+- uid: Mentor4U_Avalonia.DAL.Roles.UpdateAsync*
+  name: UpdateAsync
+  href: api/Mentor4U_Avalonia.DAL.Roles.html#Mentor4U_Avalonia_DAL_Roles_UpdateAsync_
+  commentId: Overload:Mentor4U_Avalonia.DAL.Roles.UpdateAsync
+  isSpec: "True"
+  fullName: Mentor4U_Avalonia.DAL.Roles.UpdateAsync
+  nameWithType: Roles.UpdateAsync
+- uid: Mentor4U_Avalonia.Models
+  name: Mentor4U_Avalonia.Models
+  href: api/Mentor4U_Avalonia.Models.html
+  commentId: N:Mentor4U_Avalonia.Models
+  fullName: Mentor4U_Avalonia.Models
+  nameWithType: Mentor4U_Avalonia.Models
+- uid: Mentor4U_Avalonia.Models.EmptyStringException
+  name: EmptyStringException
+  href: api/Mentor4U_Avalonia.Models.EmptyStringException.html
+  commentId: T:Mentor4U_Avalonia.Models.EmptyStringException
+  fullName: Mentor4U_Avalonia.Models.EmptyStringException
+  nameWithType: EmptyStringException
+- uid: Mentor4U_Avalonia.Models.EmptyStringException.#ctor(System.String)
+  name: EmptyStringException(string)
+  href: api/Mentor4U_Avalonia.Models.EmptyStringException.html#Mentor4U_Avalonia_Models_EmptyStringException__ctor_System_String_
+  commentId: M:Mentor4U_Avalonia.Models.EmptyStringException.#ctor(System.String)
+  name.vb: New(String)
+  fullName: Mentor4U_Avalonia.Models.EmptyStringException.EmptyStringException(string)
+  fullName.vb: Mentor4U_Avalonia.Models.EmptyStringException.New(String)
+  nameWithType: EmptyStringException.EmptyStringException(string)
+  nameWithType.vb: EmptyStringException.New(String)
+- uid: Mentor4U_Avalonia.Models.EmptyStringException.#ctor*
+  name: EmptyStringException
+  href: api/Mentor4U_Avalonia.Models.EmptyStringException.html#Mentor4U_Avalonia_Models_EmptyStringException__ctor_
+  commentId: Overload:Mentor4U_Avalonia.Models.EmptyStringException.#ctor
+  isSpec: "True"
+  name.vb: New
+  fullName: Mentor4U_Avalonia.Models.EmptyStringException.EmptyStringException
+  fullName.vb: Mentor4U_Avalonia.Models.EmptyStringException.New
+  nameWithType: EmptyStringException.EmptyStringException
+  nameWithType.vb: EmptyStringException.New
+- uid: Mentor4U_Avalonia.Models.ExceptionExtensions
+  name: ExceptionExtensions
+  href: api/Mentor4U_Avalonia.Models.ExceptionExtensions.html
+  commentId: T:Mentor4U_Avalonia.Models.ExceptionExtensions
+  fullName: Mentor4U_Avalonia.Models.ExceptionExtensions
+  nameWithType: ExceptionExtensions
+- uid: Mentor4U_Avalonia.Models.ExceptionExtensions.LoggingIfException(Logger.ILogger,System.Action,System.String,System.String)
+  name: LoggingIfException(ILogger, Action, string, string)
+  href: api/Mentor4U_Avalonia.Models.ExceptionExtensions.html#Mentor4U_Avalonia_Models_ExceptionExtensions_LoggingIfException_Logger_ILogger_System_Action_System_String_System_String_
+  commentId: M:Mentor4U_Avalonia.Models.ExceptionExtensions.LoggingIfException(Logger.ILogger,System.Action,System.String,System.String)
+  name.vb: LoggingIfException(ILogger, Action, String, String)
+  fullName: Mentor4U_Avalonia.Models.ExceptionExtensions.LoggingIfException(Logger.ILogger, System.Action, string, string)
+  fullName.vb: Mentor4U_Avalonia.Models.ExceptionExtensions.LoggingIfException(Logger.ILogger, System.Action, String, String)
+  nameWithType: ExceptionExtensions.LoggingIfException(ILogger, Action, string, string)
+  nameWithType.vb: ExceptionExtensions.LoggingIfException(ILogger, Action, String, String)
+- uid: Mentor4U_Avalonia.Models.ExceptionExtensions.LoggingIfException*
+  name: LoggingIfException
+  href: api/Mentor4U_Avalonia.Models.ExceptionExtensions.html#Mentor4U_Avalonia_Models_ExceptionExtensions_LoggingIfException_
+  commentId: Overload:Mentor4U_Avalonia.Models.ExceptionExtensions.LoggingIfException
+  isSpec: "True"
+  fullName: Mentor4U_Avalonia.Models.ExceptionExtensions.LoggingIfException
+  nameWithType: ExceptionExtensions.LoggingIfException
+- uid: Mentor4U_Avalonia.Models.IModel
+  name: IModel
+  href: api/Mentor4U_Avalonia.Models.IModel.html
+  commentId: T:Mentor4U_Avalonia.Models.IModel
+  fullName: Mentor4U_Avalonia.Models.IModel
+  nameWithType: IModel
+- uid: Mentor4U_Avalonia.Models.IModel.Id
+  name: Id
+  href: api/Mentor4U_Avalonia.Models.IModel.html#Mentor4U_Avalonia_Models_IModel_Id
+  commentId: P:Mentor4U_Avalonia.Models.IModel.Id
+  fullName: Mentor4U_Avalonia.Models.IModel.Id
+  nameWithType: IModel.Id
+- uid: Mentor4U_Avalonia.Models.IModel.Id*
+  name: Id
+  href: api/Mentor4U_Avalonia.Models.IModel.html#Mentor4U_Avalonia_Models_IModel_Id_
+  commentId: Overload:Mentor4U_Avalonia.Models.IModel.Id
+  isSpec: "True"
+  fullName: Mentor4U_Avalonia.Models.IModel.Id
+  nameWithType: IModel.Id
+- uid: Mentor4U_Avalonia.Models.NegativeNumberException
+  name: NegativeNumberException
+  href: api/Mentor4U_Avalonia.Models.NegativeNumberException.html
+  commentId: T:Mentor4U_Avalonia.Models.NegativeNumberException
+  fullName: Mentor4U_Avalonia.Models.NegativeNumberException
+  nameWithType: NegativeNumberException
+- uid: Mentor4U_Avalonia.Models.NegativeNumberException.#ctor(System.String)
+  name: NegativeNumberException(string)
+  href: api/Mentor4U_Avalonia.Models.NegativeNumberException.html#Mentor4U_Avalonia_Models_NegativeNumberException__ctor_System_String_
+  commentId: M:Mentor4U_Avalonia.Models.NegativeNumberException.#ctor(System.String)
+  name.vb: New(String)
+  fullName: Mentor4U_Avalonia.Models.NegativeNumberException.NegativeNumberException(string)
+  fullName.vb: Mentor4U_Avalonia.Models.NegativeNumberException.New(String)
+  nameWithType: NegativeNumberException.NegativeNumberException(string)
+  nameWithType.vb: NegativeNumberException.New(String)
+- uid: Mentor4U_Avalonia.Models.NegativeNumberException.#ctor*
+  name: NegativeNumberException
+  href: api/Mentor4U_Avalonia.Models.NegativeNumberException.html#Mentor4U_Avalonia_Models_NegativeNumberException__ctor_
+  commentId: Overload:Mentor4U_Avalonia.Models.NegativeNumberException.#ctor
+  isSpec: "True"
+  name.vb: New
+  fullName: Mentor4U_Avalonia.Models.NegativeNumberException.NegativeNumberException
+  fullName.vb: Mentor4U_Avalonia.Models.NegativeNumberException.New
+  nameWithType: NegativeNumberException.NegativeNumberException
+  nameWithType.vb: NegativeNumberException.New
+- uid: Mentor4U_Avalonia.Models.Role
+  name: Role
+  href: api/Mentor4U_Avalonia.Models.Role.html
+  commentId: T:Mentor4U_Avalonia.Models.Role
+  fullName: Mentor4U_Avalonia.Models.Role
+  nameWithType: Role
+- uid: Mentor4U_Avalonia.Models.Role.Id
+  name: Id
+  href: api/Mentor4U_Avalonia.Models.Role.html#Mentor4U_Avalonia_Models_Role_Id
+  commentId: P:Mentor4U_Avalonia.Models.Role.Id
+  fullName: Mentor4U_Avalonia.Models.Role.Id
+  nameWithType: Role.Id
+- uid: Mentor4U_Avalonia.Models.Role.Id*
+  name: Id
+  href: api/Mentor4U_Avalonia.Models.Role.html#Mentor4U_Avalonia_Models_Role_Id_
+  commentId: Overload:Mentor4U_Avalonia.Models.Role.Id
+  isSpec: "True"
+  fullName: Mentor4U_Avalonia.Models.Role.Id
+  nameWithType: Role.Id
+- uid: Mentor4U_Avalonia.Models.Role.RoleName
+  name: RoleName
+  href: api/Mentor4U_Avalonia.Models.Role.html#Mentor4U_Avalonia_Models_Role_RoleName
+  commentId: P:Mentor4U_Avalonia.Models.Role.RoleName
+  fullName: Mentor4U_Avalonia.Models.Role.RoleName
+  nameWithType: Role.RoleName
+- uid: Mentor4U_Avalonia.Models.Role.RoleName*
+  name: RoleName
+  href: api/Mentor4U_Avalonia.Models.Role.html#Mentor4U_Avalonia_Models_Role_RoleName_
+  commentId: Overload:Mentor4U_Avalonia.Models.Role.RoleName
+  isSpec: "True"
+  fullName: Mentor4U_Avalonia.Models.Role.RoleName
+  nameWithType: Role.RoleName

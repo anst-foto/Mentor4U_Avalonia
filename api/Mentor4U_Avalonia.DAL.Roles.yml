@@ -1,0 +1,1101 @@
+### YamlMime:ManagedReference
+items:
+- uid: Mentor4U_Avalonia.DAL.Roles
+  commentId: T:Mentor4U_Avalonia.DAL.Roles
+  id: Roles
+  parent: Mentor4U_Avalonia.DAL
+  children:
+  - Mentor4U_Avalonia.DAL.Roles.#ctor(System.String)
+  - Mentor4U_Avalonia.DAL.Roles.DeleteAsync(System.Int32)
+  - Mentor4U_Avalonia.DAL.Roles.GetAllAsync
+  - Mentor4U_Avalonia.DAL.Roles.GetAsync(System.Int32)
+  - Mentor4U_Avalonia.DAL.Roles.InsertAsync(Mentor4U_Avalonia.Models.Role)
+  - Mentor4U_Avalonia.DAL.Roles.UpdateAsync(Mentor4U_Avalonia.Models.Role)
+  langs:
+  - csharp
+  - vb
+  name: Roles
+  nameWithType: Roles
+  fullName: Mentor4U_Avalonia.DAL.Roles
+  type: Class
+  source:
+    remote:
+      path: Mentor4U_Avalonia.DAL/Roles.cs
+      branch: master
+      repo: https://github.com/anst-foto/Mentor4U_Avalonia.git
+    id: Roles
+    path: Mentor4U_Avalonia.DAL/Roles.cs
+    startLine: 7
+  assemblies:
+  - Mentor4U_Avalonia.DAL
+  namespace: Mentor4U_Avalonia.DAL
+  syntax:
+    content: 'public class Roles : ICrud<Role>'
+    content.vb: Public Class Roles Implements ICrud(Of Role)
+  inheritance:
+  - System.Object
+  implements:
+  - Mentor4U_Avalonia.DAL.ICrud{Mentor4U_Avalonia.Models.Role}
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+- uid: Mentor4U_Avalonia.DAL.Roles.#ctor(System.String)
+  commentId: M:Mentor4U_Avalonia.DAL.Roles.#ctor(System.String)
+  id: '#ctor(System.String)'
+  parent: Mentor4U_Avalonia.DAL.Roles
+  langs:
+  - csharp
+  - vb
+  name: Roles(string)
+  nameWithType: Roles.Roles(string)
+  fullName: Mentor4U_Avalonia.DAL.Roles.Roles(string)
+  type: Constructor
+  source:
+    remote:
+      path: Mentor4U_Avalonia.DAL/Roles.cs
+      branch: master
+      repo: https://github.com/anst-foto/Mentor4U_Avalonia.git
+    id: .ctor
+    path: Mentor4U_Avalonia.DAL/Roles.cs
+    startLine: 10
+  assemblies:
+  - Mentor4U_Avalonia.DAL
+  namespace: Mentor4U_Avalonia.DAL
+  syntax:
+    content: public Roles(string connectionString)
+    parameters:
+    - id: connectionString
+      type: System.String
+    content.vb: Public Sub New(connectionString As String)
+  overload: Mentor4U_Avalonia.DAL.Roles.#ctor*
+  nameWithType.vb: Roles.New(String)
+  fullName.vb: Mentor4U_Avalonia.DAL.Roles.New(String)
+  name.vb: New(String)
+- uid: Mentor4U_Avalonia.DAL.Roles.InsertAsync(Mentor4U_Avalonia.Models.Role)
+  commentId: M:Mentor4U_Avalonia.DAL.Roles.InsertAsync(Mentor4U_Avalonia.Models.Role)
+  id: InsertAsync(Mentor4U_Avalonia.Models.Role)
+  parent: Mentor4U_Avalonia.DAL.Roles
+  langs:
+  - csharp
+  - vb
+  name: InsertAsync(Role)
+  nameWithType: Roles.InsertAsync(Role)
+  fullName: Mentor4U_Avalonia.DAL.Roles.InsertAsync(Mentor4U_Avalonia.Models.Role)
+  type: Method
+  source:
+    remote:
+      path: Mentor4U_Avalonia.DAL/Roles.cs
+      branch: master
+      repo: https://github.com/anst-foto/Mentor4U_Avalonia.git
+    id: InsertAsync
+    path: Mentor4U_Avalonia.DAL/Roles.cs
+    startLine: 17
+  assemblies:
+  - Mentor4U_Avalonia.DAL
+  namespace: Mentor4U_Avalonia.DAL
+  example: []
+  syntax:
+    content: public Task<bool> InsertAsync(Role entity)
+    parameters:
+    - id: entity
+      type: Mentor4U_Avalonia.Models.Role
+    return:
+      type: System.Threading.Tasks.Task{System.Boolean}
+    content.vb: Public Function InsertAsync(entity As Role) As Task(Of Boolean)
+  overload: Mentor4U_Avalonia.DAL.Roles.InsertAsync*
+  implements:
+  - Mentor4U_Avalonia.DAL.ICrud{Mentor4U_Avalonia.Models.Role}.InsertAsync(Mentor4U_Avalonia.Models.Role)
+- uid: Mentor4U_Avalonia.DAL.Roles.UpdateAsync(Mentor4U_Avalonia.Models.Role)
+  commentId: M:Mentor4U_Avalonia.DAL.Roles.UpdateAsync(Mentor4U_Avalonia.Models.Role)
+  id: UpdateAsync(Mentor4U_Avalonia.Models.Role)
+  parent: Mentor4U_Avalonia.DAL.Roles
+  langs:
+  - csharp
+  - vb
+  name: UpdateAsync(Role)
+  nameWithType: Roles.UpdateAsync(Role)
+  fullName: Mentor4U_Avalonia.DAL.Roles.UpdateAsync(Mentor4U_Avalonia.Models.Role)
+  type: Method
+  source:
+    remote:
+      path: Mentor4U_Avalonia.DAL/Roles.cs
+      branch: master
+      repo: https://github.com/anst-foto/Mentor4U_Avalonia.git
+    id: UpdateAsync
+    path: Mentor4U_Avalonia.DAL/Roles.cs
+    startLine: 32
+  assemblies:
+  - Mentor4U_Avalonia.DAL
+  namespace: Mentor4U_Avalonia.DAL
+  example: []
+  syntax:
+    content: public Task<bool> UpdateAsync(Role entity)
+    parameters:
+    - id: entity
+      type: Mentor4U_Avalonia.Models.Role
+    return:
+      type: System.Threading.Tasks.Task{System.Boolean}
+    content.vb: Public Function UpdateAsync(entity As Role) As Task(Of Boolean)
+  overload: Mentor4U_Avalonia.DAL.Roles.UpdateAsync*
+  implements:
+  - Mentor4U_Avalonia.DAL.ICrud{Mentor4U_Avalonia.Models.Role}.UpdateAsync(Mentor4U_Avalonia.Models.Role)
+- uid: Mentor4U_Avalonia.DAL.Roles.DeleteAsync(System.Int32)
+  commentId: M:Mentor4U_Avalonia.DAL.Roles.DeleteAsync(System.Int32)
+  id: DeleteAsync(System.Int32)
+  parent: Mentor4U_Avalonia.DAL.Roles
+  langs:
+  - csharp
+  - vb
+  name: DeleteAsync(int)
+  nameWithType: Roles.DeleteAsync(int)
+  fullName: Mentor4U_Avalonia.DAL.Roles.DeleteAsync(int)
+  type: Method
+  source:
+    remote:
+      path: Mentor4U_Avalonia.DAL/Roles.cs
+      branch: master
+      repo: https://github.com/anst-foto/Mentor4U_Avalonia.git
+    id: DeleteAsync
+    path: Mentor4U_Avalonia.DAL/Roles.cs
+    startLine: 37
+  assemblies:
+  - Mentor4U_Avalonia.DAL
+  namespace: Mentor4U_Avalonia.DAL
+  example: []
+  syntax:
+    content: public Task<bool> DeleteAsync(int id)
+    parameters:
+    - id: id
+      type: System.Int32
+    return:
+      type: System.Threading.Tasks.Task{System.Boolean}
+    content.vb: Public Function DeleteAsync(id As Integer) As Task(Of Boolean)
+  overload: Mentor4U_Avalonia.DAL.Roles.DeleteAsync*
+  implements:
+  - Mentor4U_Avalonia.DAL.ICrud{Mentor4U_Avalonia.Models.Role}.DeleteAsync(System.Int32)
+  nameWithType.vb: Roles.DeleteAsync(Integer)
+  fullName.vb: Mentor4U_Avalonia.DAL.Roles.DeleteAsync(Integer)
+  name.vb: DeleteAsync(Integer)
+- uid: Mentor4U_Avalonia.DAL.Roles.GetAsync(System.Int32)
+  commentId: M:Mentor4U_Avalonia.DAL.Roles.GetAsync(System.Int32)
+  id: GetAsync(System.Int32)
+  parent: Mentor4U_Avalonia.DAL.Roles
+  langs:
+  - csharp
+  - vb
+  name: GetAsync(int)
+  nameWithType: Roles.GetAsync(int)
+  fullName: Mentor4U_Avalonia.DAL.Roles.GetAsync(int)
+  type: Method
+  source:
+    remote:
+      path: Mentor4U_Avalonia.DAL/Roles.cs
+      branch: master
+      repo: https://github.com/anst-foto/Mentor4U_Avalonia.git
+    id: GetAsync
+    path: Mentor4U_Avalonia.DAL/Roles.cs
+    startLine: 51
+  assemblies:
+  - Mentor4U_Avalonia.DAL
+  namespace: Mentor4U_Avalonia.DAL
+  example: []
+  syntax:
+    content: public Task<Role?> GetAsync(int id)
+    parameters:
+    - id: id
+      type: System.Int32
+    return:
+      type: System.Threading.Tasks.Task{Mentor4U_Avalonia.Models.Role}
+    content.vb: Public Function GetAsync(id As Integer) As Task(Of Role)
+  overload: Mentor4U_Avalonia.DAL.Roles.GetAsync*
+  implements:
+  - Mentor4U_Avalonia.DAL.ICrud{Mentor4U_Avalonia.Models.Role}.GetAsync(System.Int32)
+  nameWithType.vb: Roles.GetAsync(Integer)
+  fullName.vb: Mentor4U_Avalonia.DAL.Roles.GetAsync(Integer)
+  name.vb: GetAsync(Integer)
+- uid: Mentor4U_Avalonia.DAL.Roles.GetAllAsync
+  commentId: M:Mentor4U_Avalonia.DAL.Roles.GetAllAsync
+  id: GetAllAsync
+  parent: Mentor4U_Avalonia.DAL.Roles
+  langs:
+  - csharp
+  - vb
+  name: GetAllAsync()
+  nameWithType: Roles.GetAllAsync()
+  fullName: Mentor4U_Avalonia.DAL.Roles.GetAllAsync()
+  type: Method
+  source:
+    remote:
+      path: Mentor4U_Avalonia.DAL/Roles.cs
+      branch: master
+      repo: https://github.com/anst-foto/Mentor4U_Avalonia.git
+    id: GetAllAsync
+    path: Mentor4U_Avalonia.DAL/Roles.cs
+    startLine: 60
+  assemblies:
+  - Mentor4U_Avalonia.DAL
+  namespace: Mentor4U_Avalonia.DAL
+  example: []
+  syntax:
+    content: public Task<IEnumerable<Role>?> GetAllAsync()
+    return:
+      type: System.Threading.Tasks.Task{System.Collections.Generic.IEnumerable{Mentor4U_Avalonia.Models.Role}}
+    content.vb: Public Function GetAllAsync() As Task(Of IEnumerable(Of Role))
+  overload: Mentor4U_Avalonia.DAL.Roles.GetAllAsync*
+  implements:
+  - Mentor4U_Avalonia.DAL.ICrud{Mentor4U_Avalonia.Models.Role}.GetAllAsync
+references:
+- uid: Mentor4U_Avalonia.DAL
+  commentId: N:Mentor4U_Avalonia.DAL
+  href: Mentor4U_Avalonia.html
+  name: Mentor4U_Avalonia.DAL
+  nameWithType: Mentor4U_Avalonia.DAL
+  fullName: Mentor4U_Avalonia.DAL
+  spec.csharp:
+  - uid: Mentor4U_Avalonia
+    name: Mentor4U_Avalonia
+    href: Mentor4U_Avalonia.html
+  - name: .
+  - uid: Mentor4U_Avalonia.DAL
+    name: DAL
+    href: Mentor4U_Avalonia.DAL.html
+  spec.vb:
+  - uid: Mentor4U_Avalonia
+    name: Mentor4U_Avalonia
+    href: Mentor4U_Avalonia.html
+  - name: .
+  - uid: Mentor4U_Avalonia.DAL
+    name: DAL
+    href: Mentor4U_Avalonia.DAL.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: Mentor4U_Avalonia.DAL.ICrud{Mentor4U_Avalonia.Models.Role}
+  commentId: T:Mentor4U_Avalonia.DAL.ICrud{Mentor4U_Avalonia.Models.Role}
+  parent: Mentor4U_Avalonia.DAL
+  definition: Mentor4U_Avalonia.DAL.ICrud`1
+  href: Mentor4U_Avalonia.DAL.ICrud-1.html
+  name: ICrud<Role>
+  nameWithType: ICrud<Role>
+  fullName: Mentor4U_Avalonia.DAL.ICrud<Mentor4U_Avalonia.Models.Role>
+  nameWithType.vb: ICrud(Of Role)
+  fullName.vb: Mentor4U_Avalonia.DAL.ICrud(Of Mentor4U_Avalonia.Models.Role)
+  name.vb: ICrud(Of Role)
+  spec.csharp:
+  - uid: Mentor4U_Avalonia.DAL.ICrud`1
+    name: ICrud
+    href: Mentor4U_Avalonia.DAL.ICrud-1.html
+  - name: <
+  - uid: Mentor4U_Avalonia.Models.Role
+    name: Role
+    href: Mentor4U_Avalonia.Models.Role.html
+  - name: '>'
+  spec.vb:
+  - uid: Mentor4U_Avalonia.DAL.ICrud`1
+    name: ICrud
+    href: Mentor4U_Avalonia.DAL.ICrud-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Mentor4U_Avalonia.Models.Role
+    name: Role
+    href: Mentor4U_Avalonia.Models.Role.html
+  - name: )
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Mentor4U_Avalonia.DAL.ICrud`1
+  commentId: T:Mentor4U_Avalonia.DAL.ICrud`1
+  href: Mentor4U_Avalonia.DAL.ICrud-1.html
+  name: ICrud<TEntity>
+  nameWithType: ICrud<TEntity>
+  fullName: Mentor4U_Avalonia.DAL.ICrud<TEntity>
+  nameWithType.vb: ICrud(Of TEntity)
+  fullName.vb: Mentor4U_Avalonia.DAL.ICrud(Of TEntity)
+  name.vb: ICrud(Of TEntity)
+  spec.csharp:
+  - uid: Mentor4U_Avalonia.DAL.ICrud`1
+    name: ICrud
+    href: Mentor4U_Avalonia.DAL.ICrud-1.html
+  - name: <
+  - name: TEntity
+  - name: '>'
+  spec.vb:
+  - uid: Mentor4U_Avalonia.DAL.ICrud`1
+    name: ICrud
+    href: Mentor4U_Avalonia.DAL.ICrud-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TEntity
+  - name: )
+- uid: Mentor4U_Avalonia.DAL.Roles.#ctor*
+  commentId: Overload:Mentor4U_Avalonia.DAL.Roles.#ctor
+  href: Mentor4U_Avalonia.DAL.Roles.html#Mentor4U_Avalonia_DAL_Roles__ctor_System_String_
+  name: Roles
+  nameWithType: Roles.Roles
+  fullName: Mentor4U_Avalonia.DAL.Roles.Roles
+  nameWithType.vb: Roles.New
+  fullName.vb: Mentor4U_Avalonia.DAL.Roles.New
+  name.vb: New
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: Mentor4U_Avalonia.DAL.Roles.InsertAsync*
+  commentId: Overload:Mentor4U_Avalonia.DAL.Roles.InsertAsync
+  href: Mentor4U_Avalonia.DAL.Roles.html#Mentor4U_Avalonia_DAL_Roles_InsertAsync_Mentor4U_Avalonia_Models_Role_
+  name: InsertAsync
+  nameWithType: Roles.InsertAsync
+  fullName: Mentor4U_Avalonia.DAL.Roles.InsertAsync
+- uid: Mentor4U_Avalonia.DAL.ICrud{Mentor4U_Avalonia.Models.Role}.InsertAsync(Mentor4U_Avalonia.Models.Role)
+  commentId: M:Mentor4U_Avalonia.DAL.ICrud{Mentor4U_Avalonia.Models.Role}.InsertAsync(Mentor4U_Avalonia.Models.Role)
+  parent: Mentor4U_Avalonia.DAL.ICrud{Mentor4U_Avalonia.Models.Role}
+  definition: Mentor4U_Avalonia.DAL.ICrud`1.InsertAsync(`0)
+  href: Mentor4U_Avalonia.DAL.ICrud-1.html#Mentor4U_Avalonia_DAL_ICrud_1_InsertAsync__0_
+  name: InsertAsync(Role)
+  nameWithType: ICrud<Role>.InsertAsync(Role)
+  fullName: Mentor4U_Avalonia.DAL.ICrud<Mentor4U_Avalonia.Models.Role>.InsertAsync(Mentor4U_Avalonia.Models.Role)
+  nameWithType.vb: ICrud(Of Role).InsertAsync(Role)
+  fullName.vb: Mentor4U_Avalonia.DAL.ICrud(Of Mentor4U_Avalonia.Models.Role).InsertAsync(Mentor4U_Avalonia.Models.Role)
+  spec.csharp:
+  - uid: Mentor4U_Avalonia.DAL.ICrud{Mentor4U_Avalonia.Models.Role}.InsertAsync(Mentor4U_Avalonia.Models.Role)
+    name: InsertAsync
+    href: Mentor4U_Avalonia.DAL.ICrud-1.html#Mentor4U_Avalonia_DAL_ICrud_1_InsertAsync__0_
+  - name: (
+  - uid: Mentor4U_Avalonia.Models.Role
+    name: Role
+    href: Mentor4U_Avalonia.Models.Role.html
+  - name: )
+  spec.vb:
+  - uid: Mentor4U_Avalonia.DAL.ICrud{Mentor4U_Avalonia.Models.Role}.InsertAsync(Mentor4U_Avalonia.Models.Role)
+    name: InsertAsync
+    href: Mentor4U_Avalonia.DAL.ICrud-1.html#Mentor4U_Avalonia_DAL_ICrud_1_InsertAsync__0_
+  - name: (
+  - uid: Mentor4U_Avalonia.Models.Role
+    name: Role
+    href: Mentor4U_Avalonia.Models.Role.html
+  - name: )
+- uid: Mentor4U_Avalonia.Models.Role
+  commentId: T:Mentor4U_Avalonia.Models.Role
+  parent: Mentor4U_Avalonia.Models
+  href: Mentor4U_Avalonia.Models.Role.html
+  name: Role
+  nameWithType: Role
+  fullName: Mentor4U_Avalonia.Models.Role
+- uid: System.Threading.Tasks.Task{System.Boolean}
+  commentId: T:System.Threading.Tasks.Task{System.Boolean}
+  parent: System.Threading.Tasks
+  definition: System.Threading.Tasks.Task`1
+  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  name: Task<bool>
+  nameWithType: Task<bool>
+  fullName: System.Threading.Tasks.Task<bool>
+  nameWithType.vb: Task(Of Boolean)
+  fullName.vb: System.Threading.Tasks.Task(Of Boolean)
+  name.vb: Task(Of Boolean)
+  spec.csharp:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: <
+  - uid: System.Boolean
+    name: bool
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.Boolean
+    name: Boolean
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: )
+- uid: Mentor4U_Avalonia.DAL.ICrud`1.InsertAsync(`0)
+  commentId: M:Mentor4U_Avalonia.DAL.ICrud`1.InsertAsync(`0)
+  href: Mentor4U_Avalonia.DAL.ICrud-1.html#Mentor4U_Avalonia_DAL_ICrud_1_InsertAsync__0_
+  name: InsertAsync(TEntity)
+  nameWithType: ICrud<TEntity>.InsertAsync(TEntity)
+  fullName: Mentor4U_Avalonia.DAL.ICrud<TEntity>.InsertAsync(TEntity)
+  nameWithType.vb: ICrud(Of TEntity).InsertAsync(TEntity)
+  fullName.vb: Mentor4U_Avalonia.DAL.ICrud(Of TEntity).InsertAsync(TEntity)
+  spec.csharp:
+  - uid: Mentor4U_Avalonia.DAL.ICrud`1.InsertAsync(`0)
+    name: InsertAsync
+    href: Mentor4U_Avalonia.DAL.ICrud-1.html#Mentor4U_Avalonia_DAL_ICrud_1_InsertAsync__0_
+  - name: (
+  - name: TEntity
+  - name: )
+  spec.vb:
+  - uid: Mentor4U_Avalonia.DAL.ICrud`1.InsertAsync(`0)
+    name: InsertAsync
+    href: Mentor4U_Avalonia.DAL.ICrud-1.html#Mentor4U_Avalonia_DAL_ICrud_1_InsertAsync__0_
+  - name: (
+  - name: TEntity
+  - name: )
+- uid: Mentor4U_Avalonia.Models
+  commentId: N:Mentor4U_Avalonia.Models
+  href: Mentor4U_Avalonia.html
+  name: Mentor4U_Avalonia.Models
+  nameWithType: Mentor4U_Avalonia.Models
+  fullName: Mentor4U_Avalonia.Models
+  spec.csharp:
+  - uid: Mentor4U_Avalonia
+    name: Mentor4U_Avalonia
+    href: Mentor4U_Avalonia.html
+  - name: .
+  - uid: Mentor4U_Avalonia.Models
+    name: Models
+    href: Mentor4U_Avalonia.Models.html
+  spec.vb:
+  - uid: Mentor4U_Avalonia
+    name: Mentor4U_Avalonia
+    href: Mentor4U_Avalonia.html
+  - name: .
+  - uid: Mentor4U_Avalonia.Models
+    name: Models
+    href: Mentor4U_Avalonia.Models.html
+- uid: System.Threading.Tasks.Task`1
+  commentId: T:System.Threading.Tasks.Task`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  name: Task<TResult>
+  nameWithType: Task<TResult>
+  fullName: System.Threading.Tasks.Task<TResult>
+  nameWithType.vb: Task(Of TResult)
+  fullName.vb: System.Threading.Tasks.Task(Of TResult)
+  name.vb: Task(Of TResult)
+  spec.csharp:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: <
+  - name: TResult
+  - name: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TResult
+  - name: )
+- uid: System.Threading.Tasks
+  commentId: N:System.Threading.Tasks
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Threading.Tasks
+  nameWithType: System.Threading.Tasks
+  fullName: System.Threading.Tasks
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Threading
+    name: Threading
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading
+  - name: .
+  - uid: System.Threading.Tasks
+    name: Tasks
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Threading
+    name: Threading
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading
+  - name: .
+  - uid: System.Threading.Tasks
+    name: Tasks
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks
+- uid: Mentor4U_Avalonia.DAL.Roles.UpdateAsync*
+  commentId: Overload:Mentor4U_Avalonia.DAL.Roles.UpdateAsync
+  href: Mentor4U_Avalonia.DAL.Roles.html#Mentor4U_Avalonia_DAL_Roles_UpdateAsync_Mentor4U_Avalonia_Models_Role_
+  name: UpdateAsync
+  nameWithType: Roles.UpdateAsync
+  fullName: Mentor4U_Avalonia.DAL.Roles.UpdateAsync
+- uid: Mentor4U_Avalonia.DAL.ICrud{Mentor4U_Avalonia.Models.Role}.UpdateAsync(Mentor4U_Avalonia.Models.Role)
+  commentId: M:Mentor4U_Avalonia.DAL.ICrud{Mentor4U_Avalonia.Models.Role}.UpdateAsync(Mentor4U_Avalonia.Models.Role)
+  parent: Mentor4U_Avalonia.DAL.ICrud{Mentor4U_Avalonia.Models.Role}
+  definition: Mentor4U_Avalonia.DAL.ICrud`1.UpdateAsync(`0)
+  href: Mentor4U_Avalonia.DAL.ICrud-1.html#Mentor4U_Avalonia_DAL_ICrud_1_UpdateAsync__0_
+  name: UpdateAsync(Role)
+  nameWithType: ICrud<Role>.UpdateAsync(Role)
+  fullName: Mentor4U_Avalonia.DAL.ICrud<Mentor4U_Avalonia.Models.Role>.UpdateAsync(Mentor4U_Avalonia.Models.Role)
+  nameWithType.vb: ICrud(Of Role).UpdateAsync(Role)
+  fullName.vb: Mentor4U_Avalonia.DAL.ICrud(Of Mentor4U_Avalonia.Models.Role).UpdateAsync(Mentor4U_Avalonia.Models.Role)
+  spec.csharp:
+  - uid: Mentor4U_Avalonia.DAL.ICrud{Mentor4U_Avalonia.Models.Role}.UpdateAsync(Mentor4U_Avalonia.Models.Role)
+    name: UpdateAsync
+    href: Mentor4U_Avalonia.DAL.ICrud-1.html#Mentor4U_Avalonia_DAL_ICrud_1_UpdateAsync__0_
+  - name: (
+  - uid: Mentor4U_Avalonia.Models.Role
+    name: Role
+    href: Mentor4U_Avalonia.Models.Role.html
+  - name: )
+  spec.vb:
+  - uid: Mentor4U_Avalonia.DAL.ICrud{Mentor4U_Avalonia.Models.Role}.UpdateAsync(Mentor4U_Avalonia.Models.Role)
+    name: UpdateAsync
+    href: Mentor4U_Avalonia.DAL.ICrud-1.html#Mentor4U_Avalonia_DAL_ICrud_1_UpdateAsync__0_
+  - name: (
+  - uid: Mentor4U_Avalonia.Models.Role
+    name: Role
+    href: Mentor4U_Avalonia.Models.Role.html
+  - name: )
+- uid: Mentor4U_Avalonia.DAL.ICrud`1.UpdateAsync(`0)
+  commentId: M:Mentor4U_Avalonia.DAL.ICrud`1.UpdateAsync(`0)
+  href: Mentor4U_Avalonia.DAL.ICrud-1.html#Mentor4U_Avalonia_DAL_ICrud_1_UpdateAsync__0_
+  name: UpdateAsync(TEntity)
+  nameWithType: ICrud<TEntity>.UpdateAsync(TEntity)
+  fullName: Mentor4U_Avalonia.DAL.ICrud<TEntity>.UpdateAsync(TEntity)
+  nameWithType.vb: ICrud(Of TEntity).UpdateAsync(TEntity)
+  fullName.vb: Mentor4U_Avalonia.DAL.ICrud(Of TEntity).UpdateAsync(TEntity)
+  spec.csharp:
+  - uid: Mentor4U_Avalonia.DAL.ICrud`1.UpdateAsync(`0)
+    name: UpdateAsync
+    href: Mentor4U_Avalonia.DAL.ICrud-1.html#Mentor4U_Avalonia_DAL_ICrud_1_UpdateAsync__0_
+  - name: (
+  - name: TEntity
+  - name: )
+  spec.vb:
+  - uid: Mentor4U_Avalonia.DAL.ICrud`1.UpdateAsync(`0)
+    name: UpdateAsync
+    href: Mentor4U_Avalonia.DAL.ICrud-1.html#Mentor4U_Avalonia_DAL_ICrud_1_UpdateAsync__0_
+  - name: (
+  - name: TEntity
+  - name: )
+- uid: Mentor4U_Avalonia.DAL.Roles.DeleteAsync*
+  commentId: Overload:Mentor4U_Avalonia.DAL.Roles.DeleteAsync
+  href: Mentor4U_Avalonia.DAL.Roles.html#Mentor4U_Avalonia_DAL_Roles_DeleteAsync_System_Int32_
+  name: DeleteAsync
+  nameWithType: Roles.DeleteAsync
+  fullName: Mentor4U_Avalonia.DAL.Roles.DeleteAsync
+- uid: Mentor4U_Avalonia.DAL.ICrud{Mentor4U_Avalonia.Models.Role}.DeleteAsync(System.Int32)
+  commentId: M:Mentor4U_Avalonia.DAL.ICrud{Mentor4U_Avalonia.Models.Role}.DeleteAsync(System.Int32)
+  parent: Mentor4U_Avalonia.DAL.ICrud{Mentor4U_Avalonia.Models.Role}
+  definition: Mentor4U_Avalonia.DAL.ICrud`1.DeleteAsync(System.Int32)
+  href: Mentor4U_Avalonia.DAL.ICrud-1.html#Mentor4U_Avalonia_DAL_ICrud_1_DeleteAsync_System_Int32_
+  name: DeleteAsync(int)
+  nameWithType: ICrud<Role>.DeleteAsync(int)
+  fullName: Mentor4U_Avalonia.DAL.ICrud<Mentor4U_Avalonia.Models.Role>.DeleteAsync(int)
+  nameWithType.vb: ICrud(Of Role).DeleteAsync(Integer)
+  fullName.vb: Mentor4U_Avalonia.DAL.ICrud(Of Mentor4U_Avalonia.Models.Role).DeleteAsync(Integer)
+  name.vb: DeleteAsync(Integer)
+  spec.csharp:
+  - uid: Mentor4U_Avalonia.DAL.ICrud{Mentor4U_Avalonia.Models.Role}.DeleteAsync(System.Int32)
+    name: DeleteAsync
+    href: Mentor4U_Avalonia.DAL.ICrud-1.html#Mentor4U_Avalonia_DAL_ICrud_1_DeleteAsync_System_Int32_
+  - name: (
+  - uid: System.Int32
+    name: int
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: )
+  spec.vb:
+  - uid: Mentor4U_Avalonia.DAL.ICrud{Mentor4U_Avalonia.Models.Role}.DeleteAsync(System.Int32)
+    name: DeleteAsync
+    href: Mentor4U_Avalonia.DAL.ICrud-1.html#Mentor4U_Avalonia_DAL_ICrud_1_DeleteAsync_System_Int32_
+  - name: (
+  - uid: System.Int32
+    name: Integer
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: )
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: int
+  nameWithType: int
+  fullName: int
+  nameWithType.vb: Integer
+  fullName.vb: Integer
+  name.vb: Integer
+- uid: Mentor4U_Avalonia.DAL.ICrud`1.DeleteAsync(System.Int32)
+  commentId: M:Mentor4U_Avalonia.DAL.ICrud`1.DeleteAsync(System.Int32)
+  isExternal: true
+  href: Mentor4U_Avalonia.DAL.ICrud-1.html#Mentor4U_Avalonia_DAL_ICrud_1_DeleteAsync_System_Int32_
+  name: DeleteAsync(int)
+  nameWithType: ICrud<TEntity>.DeleteAsync(int)
+  fullName: Mentor4U_Avalonia.DAL.ICrud<TEntity>.DeleteAsync(int)
+  nameWithType.vb: ICrud(Of TEntity).DeleteAsync(Integer)
+  fullName.vb: Mentor4U_Avalonia.DAL.ICrud(Of TEntity).DeleteAsync(Integer)
+  name.vb: DeleteAsync(Integer)
+  spec.csharp:
+  - uid: Mentor4U_Avalonia.DAL.ICrud`1.DeleteAsync(System.Int32)
+    name: DeleteAsync
+    href: Mentor4U_Avalonia.DAL.ICrud-1.html#Mentor4U_Avalonia_DAL_ICrud_1_DeleteAsync_System_Int32_
+  - name: (
+  - uid: System.Int32
+    name: int
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: )
+  spec.vb:
+  - uid: Mentor4U_Avalonia.DAL.ICrud`1.DeleteAsync(System.Int32)
+    name: DeleteAsync
+    href: Mentor4U_Avalonia.DAL.ICrud-1.html#Mentor4U_Avalonia_DAL_ICrud_1_DeleteAsync_System_Int32_
+  - name: (
+  - uid: System.Int32
+    name: Integer
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: )
+- uid: Mentor4U_Avalonia.DAL.Roles.GetAsync*
+  commentId: Overload:Mentor4U_Avalonia.DAL.Roles.GetAsync
+  href: Mentor4U_Avalonia.DAL.Roles.html#Mentor4U_Avalonia_DAL_Roles_GetAsync_System_Int32_
+  name: GetAsync
+  nameWithType: Roles.GetAsync
+  fullName: Mentor4U_Avalonia.DAL.Roles.GetAsync
+- uid: Mentor4U_Avalonia.DAL.ICrud{Mentor4U_Avalonia.Models.Role}.GetAsync(System.Int32)
+  commentId: M:Mentor4U_Avalonia.DAL.ICrud{Mentor4U_Avalonia.Models.Role}.GetAsync(System.Int32)
+  parent: Mentor4U_Avalonia.DAL.ICrud{Mentor4U_Avalonia.Models.Role}
+  definition: Mentor4U_Avalonia.DAL.ICrud`1.GetAsync(System.Int32)
+  href: Mentor4U_Avalonia.DAL.ICrud-1.html#Mentor4U_Avalonia_DAL_ICrud_1_GetAsync_System_Int32_
+  name: GetAsync(int)
+  nameWithType: ICrud<Role>.GetAsync(int)
+  fullName: Mentor4U_Avalonia.DAL.ICrud<Mentor4U_Avalonia.Models.Role>.GetAsync(int)
+  nameWithType.vb: ICrud(Of Role).GetAsync(Integer)
+  fullName.vb: Mentor4U_Avalonia.DAL.ICrud(Of Mentor4U_Avalonia.Models.Role).GetAsync(Integer)
+  name.vb: GetAsync(Integer)
+  spec.csharp:
+  - uid: Mentor4U_Avalonia.DAL.ICrud{Mentor4U_Avalonia.Models.Role}.GetAsync(System.Int32)
+    name: GetAsync
+    href: Mentor4U_Avalonia.DAL.ICrud-1.html#Mentor4U_Avalonia_DAL_ICrud_1_GetAsync_System_Int32_
+  - name: (
+  - uid: System.Int32
+    name: int
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: )
+  spec.vb:
+  - uid: Mentor4U_Avalonia.DAL.ICrud{Mentor4U_Avalonia.Models.Role}.GetAsync(System.Int32)
+    name: GetAsync
+    href: Mentor4U_Avalonia.DAL.ICrud-1.html#Mentor4U_Avalonia_DAL_ICrud_1_GetAsync_System_Int32_
+  - name: (
+  - uid: System.Int32
+    name: Integer
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: )
+- uid: System.Threading.Tasks.Task{Mentor4U_Avalonia.Models.Role}
+  commentId: T:System.Threading.Tasks.Task{Mentor4U_Avalonia.Models.Role}
+  parent: System.Threading.Tasks
+  definition: System.Threading.Tasks.Task`1
+  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  name: Task<Role>
+  nameWithType: Task<Role>
+  fullName: System.Threading.Tasks.Task<Mentor4U_Avalonia.Models.Role>
+  nameWithType.vb: Task(Of Role)
+  fullName.vb: System.Threading.Tasks.Task(Of Mentor4U_Avalonia.Models.Role)
+  name.vb: Task(Of Role)
+  spec.csharp:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: <
+  - uid: Mentor4U_Avalonia.Models.Role
+    name: Role
+    href: Mentor4U_Avalonia.Models.Role.html
+  - name: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Mentor4U_Avalonia.Models.Role
+    name: Role
+    href: Mentor4U_Avalonia.Models.Role.html
+  - name: )
+- uid: Mentor4U_Avalonia.DAL.ICrud`1.GetAsync(System.Int32)
+  commentId: M:Mentor4U_Avalonia.DAL.ICrud`1.GetAsync(System.Int32)
+  isExternal: true
+  href: Mentor4U_Avalonia.DAL.ICrud-1.html#Mentor4U_Avalonia_DAL_ICrud_1_GetAsync_System_Int32_
+  name: GetAsync(int)
+  nameWithType: ICrud<TEntity>.GetAsync(int)
+  fullName: Mentor4U_Avalonia.DAL.ICrud<TEntity>.GetAsync(int)
+  nameWithType.vb: ICrud(Of TEntity).GetAsync(Integer)
+  fullName.vb: Mentor4U_Avalonia.DAL.ICrud(Of TEntity).GetAsync(Integer)
+  name.vb: GetAsync(Integer)
+  spec.csharp:
+  - uid: Mentor4U_Avalonia.DAL.ICrud`1.GetAsync(System.Int32)
+    name: GetAsync
+    href: Mentor4U_Avalonia.DAL.ICrud-1.html#Mentor4U_Avalonia_DAL_ICrud_1_GetAsync_System_Int32_
+  - name: (
+  - uid: System.Int32
+    name: int
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: )
+  spec.vb:
+  - uid: Mentor4U_Avalonia.DAL.ICrud`1.GetAsync(System.Int32)
+    name: GetAsync
+    href: Mentor4U_Avalonia.DAL.ICrud-1.html#Mentor4U_Avalonia_DAL_ICrud_1_GetAsync_System_Int32_
+  - name: (
+  - uid: System.Int32
+    name: Integer
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: )
+- uid: Mentor4U_Avalonia.DAL.Roles.GetAllAsync*
+  commentId: Overload:Mentor4U_Avalonia.DAL.Roles.GetAllAsync
+  href: Mentor4U_Avalonia.DAL.Roles.html#Mentor4U_Avalonia_DAL_Roles_GetAllAsync
+  name: GetAllAsync
+  nameWithType: Roles.GetAllAsync
+  fullName: Mentor4U_Avalonia.DAL.Roles.GetAllAsync
+- uid: Mentor4U_Avalonia.DAL.ICrud{Mentor4U_Avalonia.Models.Role}.GetAllAsync
+  commentId: M:Mentor4U_Avalonia.DAL.ICrud{Mentor4U_Avalonia.Models.Role}.GetAllAsync
+  parent: Mentor4U_Avalonia.DAL.ICrud{Mentor4U_Avalonia.Models.Role}
+  definition: Mentor4U_Avalonia.DAL.ICrud`1.GetAllAsync
+  href: Mentor4U_Avalonia.DAL.ICrud-1.html#Mentor4U_Avalonia_DAL_ICrud_1_GetAllAsync
+  name: GetAllAsync()
+  nameWithType: ICrud<Role>.GetAllAsync()
+  fullName: Mentor4U_Avalonia.DAL.ICrud<Mentor4U_Avalonia.Models.Role>.GetAllAsync()
+  nameWithType.vb: ICrud(Of Role).GetAllAsync()
+  fullName.vb: Mentor4U_Avalonia.DAL.ICrud(Of Mentor4U_Avalonia.Models.Role).GetAllAsync()
+  spec.csharp:
+  - uid: Mentor4U_Avalonia.DAL.ICrud{Mentor4U_Avalonia.Models.Role}.GetAllAsync
+    name: GetAllAsync
+    href: Mentor4U_Avalonia.DAL.ICrud-1.html#Mentor4U_Avalonia_DAL_ICrud_1_GetAllAsync
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: Mentor4U_Avalonia.DAL.ICrud{Mentor4U_Avalonia.Models.Role}.GetAllAsync
+    name: GetAllAsync
+    href: Mentor4U_Avalonia.DAL.ICrud-1.html#Mentor4U_Avalonia_DAL_ICrud_1_GetAllAsync
+  - name: (
+  - name: )
+- uid: System.Threading.Tasks.Task{System.Collections.Generic.IEnumerable{Mentor4U_Avalonia.Models.Role}}
+  commentId: T:System.Threading.Tasks.Task{System.Collections.Generic.IEnumerable{Mentor4U_Avalonia.Models.Role}}
+  parent: System.Threading.Tasks
+  definition: System.Threading.Tasks.Task`1
+  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  name: Task<IEnumerable<Role>>
+  nameWithType: Task<IEnumerable<Role>>
+  fullName: System.Threading.Tasks.Task<System.Collections.Generic.IEnumerable<Mentor4U_Avalonia.Models.Role>>
+  nameWithType.vb: Task(Of IEnumerable(Of Role))
+  fullName.vb: System.Threading.Tasks.Task(Of System.Collections.Generic.IEnumerable(Of Mentor4U_Avalonia.Models.Role))
+  name.vb: Task(Of IEnumerable(Of Role))
+  spec.csharp:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: <
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: <
+  - uid: Mentor4U_Avalonia.Models.Role
+    name: Role
+    href: Mentor4U_Avalonia.Models.Role.html
+  - name: '>'
+  - name: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Mentor4U_Avalonia.Models.Role
+    name: Role
+    href: Mentor4U_Avalonia.Models.Role.html
+  - name: )
+  - name: )
+- uid: Mentor4U_Avalonia.DAL.ICrud`1.GetAllAsync
+  commentId: M:Mentor4U_Avalonia.DAL.ICrud`1.GetAllAsync
+  href: Mentor4U_Avalonia.DAL.ICrud-1.html#Mentor4U_Avalonia_DAL_ICrud_1_GetAllAsync
+  name: GetAllAsync()
+  nameWithType: ICrud<TEntity>.GetAllAsync()
+  fullName: Mentor4U_Avalonia.DAL.ICrud<TEntity>.GetAllAsync()
+  nameWithType.vb: ICrud(Of TEntity).GetAllAsync()
+  fullName.vb: Mentor4U_Avalonia.DAL.ICrud(Of TEntity).GetAllAsync()
+  spec.csharp:
+  - uid: Mentor4U_Avalonia.DAL.ICrud`1.GetAllAsync
+    name: GetAllAsync
+    href: Mentor4U_Avalonia.DAL.ICrud-1.html#Mentor4U_Avalonia_DAL_ICrud_1_GetAllAsync
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: Mentor4U_Avalonia.DAL.ICrud`1.GetAllAsync
+    name: GetAllAsync
+    href: Mentor4U_Avalonia.DAL.ICrud-1.html#Mentor4U_Avalonia_DAL_ICrud_1_GetAllAsync
+  - name: (
+  - name: )
