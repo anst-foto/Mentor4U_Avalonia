@@ -9,27 +9,24 @@
     </PropertyGroup>
 
     <ItemGroup>
-        <AvaloniaResource Include="Assets\**"/>
-    </ItemGroup>
-
-    <ItemGroup>
         <PackageReference Include="Avalonia" Version="11.0.10"/>
         <PackageReference Include="Avalonia.Desktop" Version="11.0.10"/>
         <PackageReference Include="Avalonia.Themes.Fluent" Version="11.0.10"/>
         <PackageReference Include="Avalonia.Fonts.Inter" Version="11.0.10"/>
+        <PackageReference Include="Avalonia.ReactiveUI" Version="11.0.10"/>
+		<PackageReference Include="Avalonia.Controls.DataGrid" Version="11.0.10" />
+
         <!--Condition below is needed to remove Avalonia.Diagnostics package from build output in Release configuration.-->
         <PackageReference Condition="'$(Configuration)' == 'Debug'" Include="Avalonia.Diagnostics" Version="11.0.10"/>
-        <PackageReference Include="Avalonia.ReactiveUI" Version="11.0.10"/>
-        <PackageReference Include="MessageBox.Avalonia" Version="3.1.5.1" />
-		<PackageReference Include="Avalonia.Controls.DataGrid" Version="11.0.10" />
     </ItemGroup>
 
     <ItemGroup>
-      <UpToDateCheckInput Remove="Controls\InputControl.axaml" />
+        <ProjectReference Include="..\Mentor4U_Avalonia.BLL\Mentor4U_Avalonia.BLL.csproj" />
+        <ProjectReference Include="..\Mentor4U_Avalonia.Components\Mentor4U_Avalonia.Components.csproj" />
     </ItemGroup>
 
     <ItemGroup>
-      <AdditionalFiles Include="Views\Controls\InputControl.axaml" />
+        <AvaloniaResource Include="Assets\**"/>
     </ItemGroup>
 
     <ItemGroup>
@@ -41,10 +38,6 @@
         <DependentUpon>StartWindow.axaml</DependentUpon>
         <SubType>Code</SubType>
       </Compile>
-    </ItemGroup>
-
-    <ItemGroup>
-      <ProjectReference Include="..\Mentor4U_Avalonia.BLL\Mentor4U_Avalonia.BLL.csproj" />
     </ItemGroup>
 
     <ItemGroup>

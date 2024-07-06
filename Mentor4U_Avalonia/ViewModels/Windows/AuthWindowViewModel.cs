@@ -3,7 +3,7 @@
 
 using System.Reactive;
 using System.Threading.Tasks;
-using Mentor4U_Avalonia.ViewModels.Controls;
+using Mentor4U_Avalonia.Components.ViewModel;
 using MsBox.Avalonia;
 using ReactiveUI;
 

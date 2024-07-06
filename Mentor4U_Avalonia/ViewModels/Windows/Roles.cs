@@ -6,8 +6,9 @@ using System.Collections.ObjectModel;
 using System.Reactive;
 using System.Threading.Tasks;
 using DynamicData;
+using Mentor4U_Avalonia.Components;
+using Mentor4U_Avalonia.Components.ViewModel;
 using Mentor4U_Avalonia.Models;
-using Mentor4U_Avalonia.ViewModels.Controls;
 using MsBox.Avalonia;
 using ReactiveUI;
 
@@ -19,17 +20,19 @@ public class Roles : ViewModelBase
 
     private readonly BLL.Roles _roles;
     
-    public InputControlViewModel InputSearch { get; set; } = new()
+    public InputControlWithButtonViewModel InputSearch { get; set; } = new()
     {
         Label = "Search",
         Watermark =  "Search",
-        IsFloatingWatermark = false
+        IsFloatingWatermark = false,
+        Button = "Search"
     };
-    public InputControlViewModel InputNew { get; set; } = new()
+    public InputControlWithButtonViewModel InputNew { get; set; } = new()
     {
         Label = "New",
         Watermark =  "Add new role",
-        IsFloatingWatermark = false
+        IsFloatingWatermark = false,
+        Button = "Save"
     };
 
     public ObservableCollection<Models.Role> RolesCollection { get; set; } = [];
@@ -40,10 +43,8 @@ public class Roles : ViewModelBase
         get => _selectedRole;
         set => this.RaiseAndSetIfChanged(ref _selectedRole, value);
     }
-
-    public ReactiveCommand<Unit, Unit> SearchCommand { get; }
+    
     public ReactiveCommand<Unit, Unit> ViewAllCommand { get; }
-    public ReactiveCommand<Unit, Unit> NewCommand { get; }
     public ReactiveCommand<Role, Unit> DeleteCommand { get; }
 
     public Roles()
@@ -51,18 +52,18 @@ public class Roles : ViewModelBase
         _roles = new BLL.Roles(new DAL.Roles(ConnectionString));
         
         var canExecuteSearchCommand = this.WhenAnyValue(
-            property1: p1 => p1.InputSearch.Input,
+            property1: p1 => p1.InputSearch.InputComponent.Input,
             selector: p1 => !string.IsNullOrWhiteSpace(p1));
         var canExecuteNewCommand = this.WhenAnyValue(
-            property1: p1 => p1.InputNew.Input,
+            property1: p1 => p1.InputNew.InputComponent.Input,
             selector: p1 => !string.IsNullOrWhiteSpace(p1));
         
-        SearchCommand = ReactiveCommand.CreateFromTask(
+        InputSearch.Command = ReactiveCommand.CreateFromTask(
             execute: async () =>
             {
                 try
                 {
-                    var input = InputSearch.Input;
+                    var input = InputSearch.InputComponent.Input;
 
                     Models.Role? role;
                     if (int.TryParse(input, out var id))
@@ -73,23 +74,43 @@ public class Roles : ViewModelBase
                     {
                         role = await _roles.GetByNameAsync(input);
                     }
-
-                    await MessageBoxManager
-                        .GetMessageBoxStandard(
-                            title: $"{App.Current.Resources["AppTitle"]} - Roles",
-                            text: $"{role.Id} - {role.RoleName}")
-                        .ShowAsync();
+                    
+                    await ShowInfo($"{role.Id} - {role.RoleName}");
                 }
                 catch (Exception ex)
                 {
-                    await MessageBoxManager
-                        .GetMessageBoxStandard(
-                            title: $"{App.Current.Resources["AppTitle"]} - Roles",
-                            text: $"{ex.Message}")
-                        .ShowAsync();
+                    await ShowError(ex.Message);
                 }
             },
             canExecute: canExecuteSearchCommand);
+        InputNew.Command = ReactiveCommand.CreateFromTask(
+            execute: async () =>
+            {
+                try
+                {
+                    var input = InputNew.InputComponent.Input;
+
+                    var role = new Models.Role()
+                    {
+                        RoleName  = input!
+                    };
+                    var result = await _roles.CreateAsync(role);
+                    if (result is not null)
+                    {
+                        await ShowInfo($"{role.Id} - {role.RoleName}");
+                        await UpdateRolesCollectionAsync();
+                    }
+                    else
+                    {
+                        await ShowInfo($"Роль с именем {role.RoleName} не создалась");
+                    }
+                }
+                catch (Exception ex)
+                {
+                    await ShowError(ex.Message);
+                }
+            },
+            canExecute: canExecuteNewCommand);
 
         ViewAllCommand = ReactiveCommand.CreateFromTask(
             execute: async () => 
@@ -100,56 +121,10 @@ public class Roles : ViewModelBase
                 }
                 catch (Exception ex)
                 {
-                    await MessageBoxManager
-                        .GetMessageBoxStandard(
-                            title: $"{App.Current.Resources["AppTitle"]} - Roles",
-                            text: $"{ex.Message}")
-                        .ShowAsync();
+                    await ShowError(ex.Message);
                 }
             });
         
-        NewCommand = ReactiveCommand.CreateFromTask(
-            execute: async () =>
-            {
-                try
-                {
-                    var input = InputNew.Input;
-
-                    var role = new Models.Role()
-                    {
-                        RoleName  = input!
-                    };
-                    var result = await _roles.CreateAsync(role);
-                    if (result is not null)
-                    {
-                        await MessageBoxManager
-                            .GetMessageBoxStandard(
-                                title: $"{App.Current.Resources["AppTitle"]} - Roles",
-                                text: $"{result.Id} - {result.RoleName}")
-                            .ShowAsync();
-                        
-                        await UpdateRolesCollectionAsync();
-                    }
-                    else
-                    {
-                        await MessageBoxManager
-                            .GetMessageBoxStandard(
-                                title: $"{App.Current.Resources["AppTitle"]} - Roles",
-                                text: $"Роль с именем {role.RoleName} не создалась")
-                            .ShowAsync();
-                    }
-                }
-                catch (Exception ex)
-                {
-                    await MessageBoxManager
-                        .GetMessageBoxStandard(
-                            title: $"{App.Current.Resources["AppTitle"]} - Roles",
-                            text: $"{ex.Message}")
-                        .ShowAsync();
-                }
-            },
-            canExecute: canExecuteNewCommand);
-
         DeleteCommand = ReactiveCommand.CreateFromTask<Role, Unit>(
             execute: async (role) =>
             {
@@ -160,11 +135,7 @@ public class Roles : ViewModelBase
                 }
                 catch (Exception ex)
                 {
-                    await MessageBoxManager
-                        .GetMessageBoxStandard(
-                            title: $"{App.Current.Resources["AppTitle"]} - Roles",
-                            text: $"{ex.Message}")
-                        .ShowAsync();
+                    await ShowError(ex.Message);
                 }
 
                 return default;
@@ -176,5 +147,19 @@ public class Roles : ViewModelBase
         var collection = await _roles.GetAllAsync();
         RolesCollection.Clear();
         RolesCollection.AddRange(collection);
+    }
+
+    private static async Task ShowError(string message)
+    {
+        await MessageBox.ShowError(
+            title: $"{App.Current.Resources["AppTitle"]} - Roles",
+            text: message);
+    }
+
+    private static async Task ShowInfo(string message)
+    {
+        await MessageBox.ShowInfo(
+            title: $"{App.Current.Resources["AppTitle"]} - Roles",
+            text: message);
     }
 }

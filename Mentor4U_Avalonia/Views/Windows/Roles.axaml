@@ -3,33 +3,50 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:vm="using:Mentor4U_Avalonia.ViewModels.Windows"
-        xmlns:controls="clr-namespace:Mentor4U_Avalonia.Views.Controls"
-        
+        xmlns:component="clr-namespace:Mentor4U_Avalonia.Components;assembly=Mentor4U_Avalonia.Components"
+
         mc:Ignorable="d" 
         d:DesignWidth="{StaticResource WindowWidth}" 
         d:DesignHeight="{StaticResource WindowHeight}"
         
+        Title="Roles"
         Width="{StaticResource WindowWidth}" 
         Height="{StaticResource WindowHeight}"
         
         x:Class="Mentor4U_Avalonia.Views.Windows.Roles"
-        Title="Roles"
         x:DataType="vm:Roles">
     
     <Window.DataContext>
         <vm:Roles/>
     </Window.DataContext>
+	
+	<Window.Styles>
+		<StyleInclude Source="../../Styles/RolesStyles.axaml"/>
+	</Window.Styles>
     
     <StackPanel>
-        <controls:InputControl x:Name="InputControlSearch" 
-                               DataContext="{Binding InputSearch}"/>
-        <Button x:Name="ButtonSearch"
-                Content="Search"
-                Command="{Binding SearchCommand}"/>
-		
-		<Button x:Name="ButtonViewAll"
-				Content="View all"
-				Command="{Binding ViewAllCommand}"/>
+	    <DockPanel LastChildFill="False">
+		    <Button x:Name="ButtonViewAll"
+		            Content="View all"
+		            Command="{Binding ViewAllCommand}"
+		            DockPanel.Dock="Left"/>
+		    
+		    <!--
+		    <StackPanel Orientation="Horizontal"
+		                DockPanel.Dock="Right">
+			    <component:InputControl x:Name="InputControlSearch" 
+			                            DataContext="{Binding InputSearch}"
+			                            Width="300"/>
+			    <Button x:Name="ButtonSearch"
+			            Content="Search"
+			            Command="{Binding SearchCommand}"/>
+		    </StackPanel>
+		    -->
+		    <component:InputControlWithButton x:Name="InputControlSearch"
+		                                      DataContext="{Binding InputSearch}"
+		                                      Width="300"
+		                                      DockPanel.Dock="Right"/>
+	    </DockPanel>
 
 		<DataGrid x:Name="TableRoles"
 				  ItemsSource="{Binding RolesCollection}"
@@ -56,10 +73,16 @@
 			</DataGrid.Columns>
 		</DataGrid>
         
-        <controls:InputControl x:Name="InputControlNew" 
-                               DataContext="{Binding InputNew}"/>
-        <Button x:Name="ButtonNew"
-                Content="Save"
-                Command="{Binding NewCommand}"/>
+	    <!--
+	    <StackPanel Orientation="Horizontal">
+		    <component:InputControl x:Name="InputControlNew" 
+		                            DataContext="{Binding InputNew}"/>
+		    <Button x:Name="ButtonNew"
+		            Content="Save"
+		            Command="{Binding NewCommand}"/>
+	    </StackPanel>
+	    -->
+	    <component:InputControlWithButton x:Name="InputControlNew"
+	                                      DataContext="{Binding InputNew}"/>
     </StackPanel>
 </Window>
