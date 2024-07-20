@@ -18,9 +18,9 @@ public partial class App : Application
     {
         if (ApplicationLifetime is IClassicDesktopStyleApplicationLifetime desktop)
         {
-            desktop.MainWindow = new Views.Windows.Roles()
+            desktop.MainWindow = new Views.Windows.StartWindow()
             {
-                DataContext = new ViewModels.Windows.Roles(),
+                DataContext = new ViewModels.Windows.StartWindowViewModel(),
             };
         }
 

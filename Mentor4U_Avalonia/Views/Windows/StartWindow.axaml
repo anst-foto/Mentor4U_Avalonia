@@ -3,6 +3,7 @@
         xmlns:vm="using:Mentor4U_Avalonia.ViewModels.Windows"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:heroIcons="clr-namespace:HeroIconsAvalonia.Controls;assembly=HeroIconsAvalonia"
 
         mc:Ignorable="d" 
         d:DesignWidth="{StaticResource WindowWidth}" 
@@ -18,7 +19,11 @@
         CanResize="False" SystemDecorations="BorderOnly"
         
         Width="{StaticResource WindowWidth}" 
-        Height="{StaticResource WindowHeight}">
+        Height="{StaticResource WindowHeight}"
+        
+        PointerPressed="Window_OnPointerPressed"
+        PointerMoved="Window_OnPointerMoved"
+        PointerReleased="Window_OnPointerReleased">
 
     <Design.DataContext>
         <vm:StartWindowViewModel/>
@@ -33,7 +38,8 @@
     </Window.Resources>
     
     <Window.Styles>
-        <StyleInclude Source="../../Styles.axaml"/>
+        <StyleInclude Source="../../Styles/BaseStyles.axaml"/>
+        <StyleInclude Source="../../Styles/StartWindowStyles.axaml"/>
     </Window.Styles>
     
     <Window.Background>
@@ -45,14 +51,20 @@
 
         <StackPanel Grid.Row="0"
                     HorizontalAlignment="Right">
-            <Button x:Name="ButtonClose"
+            <!--<Button x:Name="ButtonClose"
                     Content="{StaticResource ResourceKey=IconClose}"
-                    Command="{Binding Path=CloseWindow}"/>
+                    Command="{Binding Path=CloseWindow}"/>-->
+            <Button x:Name="ButtonClose"
+                    Command="{Binding Path=CloseWindow}">
+                <heroIcons:HeroIcon Type="XCircle" />
+            </Button>
         </StackPanel>
         
         <StackPanel Grid.Row="1">
-            <TextBlock Text="Ментор для вас"/>
-            <TextBlock Text="Сервис для поиска ментора и для поиска учеников"/>
+            <TextBlock Text="Ментор для вас"
+                       Classes="header"/>
+            <TextBlock Text="Сервис для поиска ментора и для поиска учеников"
+                       Classes="subheader"/>
         </StackPanel>
         
         <StackPanel Grid.Row="2">

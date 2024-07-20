@@ -20,32 +20,15 @@
         <vm:AuthWindowViewModel/>
     </Window.DataContext>
     
-    <!--<Window.Resources>
-        <ucvm:InputControlViewModel x:Key="ControlViewModelLogin" Label="Login" Watermark="Введите логин" IsFloatingWatermark="False" />
-        <ucvm:InputControlViewModel x:Key="ControlViewModelPassword" Label="Password" Watermark="Введите пароль" IsFloatingWatermark="True" />
-    </Window.Resources>-->
+    <Window.Styles>
+        <StyleInclude Source="../../Styles/BaseStyles.axaml"/>
+        <StyleInclude Source="../../Styles/AuthWindowStyles.axaml"/>
+    </Window.Styles>
     
     <StackPanel>
-        <!--<StackPanel Orientation="Horizontal">
-            <Label Content="Login"
-                   Target="{Binding ElementName=InputName}"/>
-            <TextBox x:Name="InputName"
-                     Text="{Binding Login}"
-                     Watermark="Введите логин"
-                     UseFloatingWatermark="False"/>
-        </StackPanel>-->
         <component:InputControl x:Name="InputControlLogin" 
                                 DataContext="{Binding InputLogin}"/>
         
-        <!--<StackPanel Orientation="Horizontal">
-            <Label Content="Password"
-                   Target="{Binding ElementName=InputPassword}"/>
-            <TextBox x:Name="InputPassword"
-                     Text="{Binding Password}"
-                     PasswordChar="*"
-                     Watermark="Введите пароль"
-                     UseFloatingWatermark="True"/>
-        </StackPanel>-->
         <component:InputControl x:Name="InputControlPassword"
                                 DataContext="{Binding InputPassword}"/>
         

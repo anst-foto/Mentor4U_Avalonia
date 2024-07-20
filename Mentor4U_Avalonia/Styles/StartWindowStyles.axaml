@@ -1,0 +1,44 @@
+﻿<Styles xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+        
+        <Style Selector="TextBlock">
+                <Setter Property="Foreground" Value="Black"/>
+                <Setter Property="HorizontalAlignment" Value="Center"/>
+                
+                <Style Selector="^.header">
+                        <Setter Property="FontSize" Value="50"/>
+                </Style>
+                
+                <Style Selector="^.subheader">
+                        <Setter Property="FontSize" Value="20"/>
+                        <Setter Property="TextWrapping" Value="WrapWithOverflow"/>
+                </Style>
+        </Style>
+        
+        <Style Selector="Button">
+                <Style Selector="^:pointerover /template/ ContentPresenter">
+                        <Setter Property="Background" Value="DarkViolet"/>
+                </Style>
+        
+                <Style Selector="^.open">
+                        <Setter Property="HorizontalAlignment" Value="Center"/>
+                        <Setter Property="HorizontalContentAlignment" Value="Center"/>
+                        
+                        <Style Selector="^ /template/ ContentPresenter">
+                                <Setter Property="Background" Value="Blue"/>
+                        </Style>
+                        
+                        <Style Selector="^:pointerover /template/ ContentPresenter">
+                                <Setter Property="Background" Value="DarkViolet"/>
+                        </Style>
+                        
+                        <Style Selector="^:pressed /template/ ContentPresenter">
+                                <Setter Property="TextBlock.Foreground" Value="Red"/>
+                        </Style>
+                </Style>
+        </Style>
+        
+        <Style Selector="StackPanel:nth-last-child(1) > Button">
+                <Setter Property="Width" Value="145"/>
+        </Style>
+</Styles>
