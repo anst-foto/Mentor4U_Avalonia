@@ -1,52 +1,52 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
-    <PropertyGroup>
-        <OutputType>WinExe</OutputType>
-        <TargetFramework>net8.0</TargetFramework>
-        <Nullable>enable</Nullable>
-        <BuiltInComInteropSupport>true</BuiltInComInteropSupport>
-        <ApplicationManifest>app.manifest</ApplicationManifest>
-        <AvaloniaUseCompiledBindingsByDefault>true</AvaloniaUseCompiledBindingsByDefault>
-    </PropertyGroup>
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net8.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <BuiltInComInteropSupport>true</BuiltInComInteropSupport>
+    <ApplicationManifest>app.manifest</ApplicationManifest>
+    <AvaloniaUseCompiledBindingsByDefault>true</AvaloniaUseCompiledBindingsByDefault>
+  </PropertyGroup>
 
-    <ItemGroup>
-        <PackageReference Include="Avalonia" Version="11.0.10"/>
-        <PackageReference Include="Avalonia.Desktop" Version="11.0.10"/>
-        <!--<PackageReference Include="Avalonia.Themes.Fluent" Version="11.0.10"/>-->
-        <PackageReference Include="Avalonia.Fonts.Inter" Version="11.0.10"/>
-        <PackageReference Include="Avalonia.ReactiveUI" Version="11.0.10"/>
-		<PackageReference Include="Avalonia.Controls.DataGrid" Version="11.0.10" />
+  <ItemGroup>
+    <PackageReference Include="Avalonia" Version="11.0.10"/>
+    <PackageReference Include="Avalonia.Desktop" Version="11.0.10"/>
+    <!--<PackageReference Include="Avalonia.Themes.Fluent" Version="11.0.10"/>-->
+    <PackageReference Include="Avalonia.Fonts.Inter" Version="11.0.10"/>
+    <PackageReference Include="Avalonia.ReactiveUI" Version="11.0.10"/>
+    <PackageReference Include="Avalonia.Controls.DataGrid" Version="11.0.10"/>
 
-        <PackageReference Include="HeroIcons.Avalonia" Version="1.0.2" />
-        <PackageReference Include="Semi.Avalonia" Version="11.0.7.4" />
-        <PackageReference Include="Semi.Avalonia.DataGrid" Version="11.0.7.2" />
+    <PackageReference Include="HeroIcons.Avalonia" Version="1.0.2"/>
+    <PackageReference Include="Semi.Avalonia" Version="11.0.7.4"/>
+    <PackageReference Include="Semi.Avalonia.DataGrid" Version="11.0.7.2"/>
 
-        <!--Condition below is needed to remove Avalonia.Diagnostics package from build output in Release configuration.-->
-        <PackageReference Condition="'$(Configuration)' == 'Debug'" Include="Avalonia.Diagnostics" Version="11.0.10"/>
-    </ItemGroup>
+    <!--Condition below is needed to remove Avalonia.Diagnostics package from build output in Release configuration.-->
+    <PackageReference Condition="'$(Configuration)' == 'Debug'" Include="Avalonia.Diagnostics" Version="11.0.10"/>
+  </ItemGroup>
 
-    <ItemGroup>
-        <ProjectReference Include="..\Mentor4U_Avalonia.BLL\Mentor4U_Avalonia.BLL.csproj" />
-        <ProjectReference Include="..\Mentor4U_Avalonia.Components\Mentor4U_Avalonia.Components.csproj" />
-    </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Mentor4U_Avalonia.BLL\Mentor4U_Avalonia.BLL.csproj"/>
+    <ProjectReference Include="..\Mentor4U_Avalonia.Components\Mentor4U_Avalonia.Components.csproj"/>
+  </ItemGroup>
 
-    <ItemGroup>
-        <AvaloniaResource Include="Assets\**"/>
-    </ItemGroup>
+  <ItemGroup>
+    <AvaloniaResource Include="Assets\**"/>
+  </ItemGroup>
 
-    <ItemGroup>
-      <Compile Update="Views\Windows\AuthWindow.axaml.cs">
-        <DependentUpon>AuthWindow.axaml</DependentUpon>
-        <SubType>Code</SubType>
-      </Compile>
-      <Compile Update="Views\Windows\StartWindow.axaml.cs">
-        <DependentUpon>StartWindow.axaml</DependentUpon>
-        <SubType>Code</SubType>
-      </Compile>
-    </ItemGroup>
+  <ItemGroup>
+    <Compile Update="Views\Windows\AuthWindow.axaml.cs">
+      <DependentUpon>AuthWindow.axaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Views\Windows\StartWindow.axaml.cs">
+      <DependentUpon>StartWindow.axaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+  </ItemGroup>
 
-    <ItemGroup>
-      <None Update="log_paths.json">
-        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-      </None>
-    </ItemGroup>
+  <ItemGroup>
+    <None Update="log_paths.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
 </Project>

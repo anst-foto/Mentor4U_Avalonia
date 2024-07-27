@@ -9,6 +9,6 @@ public partial class InputControl : UserControl
 {
     public InputControl()
     {
-        InitializeComponent(); 
+        InitializeComponent();
     }
 }

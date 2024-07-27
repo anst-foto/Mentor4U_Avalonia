@@ -7,14 +7,14 @@ namespace Mentor4U_Avalonia.DAL;
 
 public static class DbHelper
 {
-    public static readonly Dictionary<Type, string> TableNames = new Dictionary<Type, string>()
+    public static readonly Dictionary<Type, string> TableNames = new()
     {
-        {typeof(Role), "table_roles"}
+        { typeof(Role), "table_roles" }
     };
 
-    public static readonly Dictionary<string, string> RoleTablesColumnNames = new Dictionary<string, string>()
+    public static readonly Dictionary<string, string> RoleTablesColumnNames = new()
     {
-        {nameof(Role.Id), "id"},
-        {nameof(Role.RoleName),  "role_name"},
+        { nameof(Role.Id), "id" },
+        { nameof(Role.RoleName), "role_name" }
     };
 }

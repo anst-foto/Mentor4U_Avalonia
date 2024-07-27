@@ -9,13 +9,13 @@ namespace Mentor4U_Avalonia.Views.Windows;
 
 public partial class StartWindow : Window
 {
+    private bool _mouseDownForWindowMoving;
+    private PointerPoint _originalPoint;
+
     public StartWindow()
     {
         InitializeComponent();
     }
-    
-    private bool _mouseDownForWindowMoving = false;
-    private PointerPoint _originalPoint;
 
     private void Window_OnPointerMoved(object? sender, PointerEventArgs e)
     {

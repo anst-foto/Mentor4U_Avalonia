@@ -11,7 +11,7 @@ public static class MessageBox
             .GetMessageBoxStandard(title, text, ButtonEnum.Ok, Icon.Info)
             .ShowAsync();
     }
-    
+
     public static async Task ShowError(string title, string text)
     {
         await MessageBoxManager

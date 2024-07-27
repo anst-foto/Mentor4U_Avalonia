@@ -5,40 +5,40 @@
         xmlns:vm="using:Mentor4U_Avalonia.ViewModels.Windows"
         xmlns:component="clr-namespace:Mentor4U_Avalonia.Components;assembly=Mentor4U_Avalonia.Components"
 
-        mc:Ignorable="d" 
-        d:DesignWidth="{StaticResource WindowWidth}" 
+        mc:Ignorable="d"
+        d:DesignWidth="{StaticResource WindowWidth}"
         d:DesignHeight="{StaticResource WindowHeight}"
         x:Class="Mentor4U_Avalonia.Views.Windows.AuthWindow"
-        
+
         Title="AuthWindow"
-        
-        Width="{StaticResource WindowWidth}" 
+
+        Width="{StaticResource WindowWidth}"
         Height="{StaticResource WindowHeight}"
-        
+
         x:DataType="vm:AuthWindowViewModel">
     <Window.DataContext>
-        <vm:AuthWindowViewModel/>
+        <vm:AuthWindowViewModel />
     </Window.DataContext>
-    
+
     <Window.Styles>
-        <StyleInclude Source="../../Styles/BaseStyles.axaml"/>
-        <StyleInclude Source="../../Styles/AuthWindowStyles.axaml"/>
+        <StyleInclude Source="../../Styles/BaseStyles.axaml" />
+        <StyleInclude Source="../../Styles/AuthWindowStyles.axaml" />
     </Window.Styles>
-    
+
     <StackPanel>
-        <component:InputControl x:Name="InputControlLogin" 
-                                DataContext="{Binding InputLogin}"/>
-        
+        <component:InputControl x:Name="InputControlLogin"
+                                DataContext="{Binding InputLogin}" />
+
         <component:InputControl x:Name="InputControlPassword"
-                                DataContext="{Binding InputPassword}"/>
-        
+                                DataContext="{Binding InputPassword}" />
+
         <StackPanel Orientation="Horizontal">
             <Button x:Name="ButtonAuth"
                     Content="Авторизоваться"
-                    Command="{Binding AuthCommand}"/>
+                    Command="{Binding AuthCommand}" />
             <Button x:Name="ButtonClear"
                     Content="Очистить"
-                    Command="{Binding ClearCommand}"/>
+                    Command="{Binding ClearCommand}" />
         </StackPanel>
     </StackPanel>
 </Window>

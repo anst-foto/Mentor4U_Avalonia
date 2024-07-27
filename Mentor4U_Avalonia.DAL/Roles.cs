@@ -8,6 +8,7 @@ namespace Mentor4U_Avalonia.DAL;
 public class Roles : ICrud<Role>
 {
     private readonly string _connectionString;
+
     public Roles(string connectionString)
     {
         _connectionString = string.IsNullOrWhiteSpace(connectionString)
@@ -23,10 +24,10 @@ public class Roles : ICrud<Role>
                           ({DbHelper.RoleTablesColumnNames[nameof(Role.RoleName)]}) 
                       VALUES (@RoleName);
                       """;
-        var sqlParameters = new { RoleName = entity.RoleName};
+        var sqlParameters = new { entity.RoleName };
         var result = await DbService<Role>.ExecuteNonQueryAsync(sqlRaw, sqlParameters);
         await DbService<Role>.DisconnectAsync();
-        
+
         return result;
     }
 
@@ -42,10 +43,10 @@ public class Roles : ICrud<Role>
                       DELETE FROM {DbHelper.TableNames[typeof(Role)]}
                       WHERE  Id = @Id;
                       """;
-        var sqlParameters = new { Id = id};
+        var sqlParameters = new { Id = id };
         var result = await DbService<Role>.ExecuteNonQueryAsync(sqlRaw, sqlParameters);
         await DbService<Role>.DisconnectAsync();
-        
+
         return result;
     }
 
@@ -54,16 +55,16 @@ public class Roles : ICrud<Role>
         await DbService<Role>.ConnectAsync(_connectionString);
         var role = await DbService<Role>.GetByIdAsync(id);
         await DbService<Role>.DisconnectAsync();
-        
+
         return role;
     }
 
     public async Task<IEnumerable<Role>?> GetAllAsync()
     {
         await DbService<Role>.ConnectAsync(_connectionString);
-        var roles  = await DbService<Role>.GetAllAsync();
+        var roles = await DbService<Role>.GetAllAsync();
         await DbService<Role>.DisconnectAsync();
-        
+
         return roles;
     }
 }

@@ -5,46 +5,46 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:heroIcons="clr-namespace:HeroIconsAvalonia.Controls;assembly=HeroIconsAvalonia"
 
-        mc:Ignorable="d" 
-        d:DesignWidth="{StaticResource WindowWidth}" 
+        mc:Ignorable="d"
+        d:DesignWidth="{StaticResource WindowWidth}"
         d:DesignHeight="{StaticResource WindowHeight}"
-        
+
         x:Class="Mentor4U_Avalonia.Views.Windows.StartWindow"
         x:DataType="vm:StartWindowViewModel"
-        
+
         Icon="/Assets/avalonia-logo.ico"
         Title="Mentor4U_Avalonia"
-        
+
         WindowState="Normal" WindowStartupLocation="CenterScreen"
         CanResize="False" SystemDecorations="BorderOnly"
-        
-        Width="{StaticResource WindowWidth}" 
+
+        Width="{StaticResource WindowWidth}"
         Height="{StaticResource WindowHeight}"
-        
+
         PointerPressed="Window_OnPointerPressed"
         PointerMoved="Window_OnPointerMoved"
         PointerReleased="Window_OnPointerReleased">
 
     <Design.DataContext>
-        <vm:StartWindowViewModel/>
+        <vm:StartWindowViewModel />
     </Design.DataContext>
-    
+
     <Window.Resources>
         <ResourceDictionary>
             <ResourceDictionary.MergedDictionaries>
-                <ResourceInclude Source="../../Icons.axaml"/>
+                <ResourceInclude Source="../../Icons.axaml" />
             </ResourceDictionary.MergedDictionaries>
         </ResourceDictionary>
     </Window.Resources>
-    
+
     <Window.Styles>
-        <StyleInclude Source="../../Styles/BaseStyles.axaml"/>
-        <StyleInclude Source="../../Styles/StartWindowStyles.axaml"/>
+        <StyleInclude Source="../../Styles/BaseStyles.axaml" />
+        <StyleInclude Source="../../Styles/StartWindowStyles.axaml" />
     </Window.Styles>
-    
+
     <Window.Background>
         <ImageBrush Source="/Assets/background_start_window.jpg"
-                    Opacity="0.9" Stretch="UniformToFill"/>
+                    Opacity="0.9" Stretch="UniformToFill" />
     </Window.Background>
 
     <Grid RowDefinitions="Auto,*,0.5*,2*">
@@ -59,20 +59,20 @@
                 <heroIcons:HeroIcon Type="XCircle" />
             </Button>
         </StackPanel>
-        
+
         <StackPanel Grid.Row="1">
             <TextBlock Text="Ментор для вас"
-                       Classes="header"/>
+                       Classes="header" />
             <TextBlock Text="Сервис для поиска ментора и для поиска учеников"
-                       Classes="subheader"/>
+                       Classes="subheader" />
         </StackPanel>
-        
+
         <StackPanel Grid.Row="2">
             <Button x:Name="ButtonAuth"
                     Content="Войти"
                     Command="{Binding Auth}"
                     Classes="open"
-                    IsDefault="True"/>
+                    IsDefault="True" />
         </StackPanel>
     </Grid>
 </Window>

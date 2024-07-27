@@ -4,30 +4,30 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              xmlns:viewModel="clr-namespace:Mentor4U_Avalonia.Components.ViewModel"
              xmlns:component="clr-namespace:Mentor4U_Avalonia.Components"
-             
-             mc:Ignorable="d" 
-             d:DesignWidth="800" 
+
+             mc:Ignorable="d"
+             d:DesignWidth="800"
              d:DesignHeight="450"
-             
+
              x:Class="Mentor4U_Avalonia.Components.InputControlWithButton"
              x:DataType="viewModel:InputControlWithButtonViewModel">
-    
+
     <UserControl.DataContext>
-        <viewModel:InputControlWithButtonViewModel/>
+        <viewModel:InputControlWithButtonViewModel />
     </UserControl.DataContext>
-    
+
     <UserControl.Styles>
-        <StyleInclude Source="../Style/InputControlWithButtonStyle.axaml"/>
+        <StyleInclude Source="../Style/InputControlWithButtonStyle.axaml" />
     </UserControl.Styles>
-    
+
     <DockPanel LastChildFill="True">
         <Button x:Name="Button"
                 Content="{Binding Button}"
                 Command="{Binding Command}"
-                DockPanel.Dock="Right"/>
-        
+                DockPanel.Dock="Right" />
+
         <component:InputControl x:Name="InputControl"
                                 DataContext="{Binding InputComponent}"
-                                DockPanel.Dock="Left"/>
+                                DockPanel.Dock="Left" />
     </DockPanel>
 </UserControl>

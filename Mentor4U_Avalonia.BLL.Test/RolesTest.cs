@@ -7,12 +7,13 @@ namespace Mentor4U_Avalonia.BLL.Test;
 
 public class RolesTest
 {
-    private const string ConnectionString = "Host=localhost;Port=5432;Database=mentor_db;User ID=postgres;Password=1234;Pooling=true;SearchPath=test;";
+    private const string ConnectionString =
+        "Host=localhost;Port=5432;Database=mentor_db;User ID=postgres;Password=1234;Pooling=true;SearchPath=test;";
 
     private const string RoleName = "guest";
     private const string RoleNameBad = "admin";
-    
-    
+
+
     [Fact]
     public Task GetByIdAsync_PositiveTest()
     {
@@ -20,7 +21,7 @@ public class RolesTest
         Assert.True(true);
         return Task.CompletedTask;
     }
-    
+
     [Fact]
     public Task GetByIdAsync_NegativeTest()
     {
@@ -28,19 +29,19 @@ public class RolesTest
         Assert.False(false);
         return Task.CompletedTask;
     }
-    
+
     [Fact]
     public async Task GetByNameAsync_PositiveTest()
     {
         var roles = new Roles(new DAL.Roles(ConnectionString));
         var actual = await roles.GetByNameAsync("admin");
-        
-        var expected = new Role()
+
+        var expected = new Role
         {
             Id = 1,
-            RoleName  =  "admin"
+            RoleName = "admin"
         };
-        
+
         Assert.Equal(expected, actual);
     }
 
@@ -49,7 +50,7 @@ public class RolesTest
     {
         var roles = new Roles(new DAL.Roles(ConnectionString));
         var actual = await roles.GetByNameAsync("admin1");
-        
+
         Assert.Null(actual);
     }
 
@@ -71,12 +72,12 @@ public class RolesTest
     public async Task CreateAndDeleteAsync_PositiveTest()
     {
         var roles = new Roles(new DAL.Roles(ConnectionString));
-        
-        var role = new Role() { RoleName = RoleName };
+
+        var role = new Role { RoleName = RoleName };
         var roleNew = await roles.CreateAsync(role);
         Assert.NotNull(roleNew);
-        
-        var result  = await roles.DeleteAsync(roleNew);
+
+        var result = await roles.DeleteAsync(roleNew);
         Assert.True(result);
     }
 
@@ -84,8 +85,8 @@ public class RolesTest
     public async Task CreateAsync_NegativeTest()
     {
         var roles = new Roles(new DAL.Roles(ConnectionString));
-        
-        var role = new Role() { RoleName = RoleNameBad };
+
+        var role = new Role { RoleName = RoleNameBad };
         var roleNew = await roles.CreateAsync(role);
         Assert.Null(roleNew);
     }

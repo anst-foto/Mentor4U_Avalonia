@@ -10,9 +10,8 @@ namespace Mentor4U_Avalonia.BLL;
 
 public class Roles
 {
-    private readonly ILogger? _logger;
-    
     private readonly ICrud<Role> _data;
+    private readonly ILogger? _logger;
 
     public Roles(ICrud<Role> data)
     {
@@ -29,7 +28,7 @@ public class Roles
         }
         catch (Exception e)
         {
-            _logger?.Error($"Module: {nameof(BLL.Roles)}. Method: {nameof(GetByIdAsync)}. Message:  {e.Message}");
+            _logger?.Error($"Module: {nameof(Roles)}. Method: {nameof(GetByIdAsync)}. Message:  {e.Message}");
             throw;
         }
     }
@@ -43,7 +42,7 @@ public class Roles
         }
         catch (Exception e)
         {
-            _logger?.Error($"Module: {nameof(BLL.Roles)}. Method: {nameof(GetByNameAsync)}. Message:  {e.Message}");
+            _logger?.Error($"Module: {nameof(Roles)}. Method: {nameof(GetByNameAsync)}. Message:  {e.Message}");
             throw;
         }
     }
@@ -56,7 +55,7 @@ public class Roles
         }
         catch (Exception e)
         {
-            _logger?.Error($"Module: {nameof(BLL.Roles)}. Method: {nameof(GetAllAsync)}. Message:  {e.Message}");
+            _logger?.Error($"Module: {nameof(Roles)}. Method: {nameof(GetAllAsync)}. Message:  {e.Message}");
             throw;
         }
     }
@@ -71,7 +70,7 @@ public class Roles
         }
         catch (Exception e)
         {
-            _logger?.Error($"Module: {nameof(BLL.Roles)}. Method: {nameof(CreateAsync)}. Message:  {e.Message}");
+            _logger?.Error($"Module: {nameof(Roles)}. Method: {nameof(CreateAsync)}. Message:  {e.Message}");
             return null; //TODO: Add exception handling
         }
     }
@@ -84,8 +83,8 @@ public class Roles
         }
         catch (Exception e)
         {
-            _logger?.Error($"Module: {nameof(BLL.Roles)}. Method: {nameof(DeleteAsync)}. Message:  {e.Message}");
-            return false;  //TODO: Add exception handling
+            _logger?.Error($"Module: {nameof(Roles)}. Method: {nameof(DeleteAsync)}. Message:  {e.Message}");
+            return false; //TODO: Add exception handling
         }
     }
 }

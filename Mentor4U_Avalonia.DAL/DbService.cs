@@ -19,7 +19,7 @@ public static class DbService<TEntity> where TEntity : IModel
     {
         if (string.IsNullOrEmpty(connectionString)) throw new EmptyStringException(nameof(connectionString));
 
-        Dapper.DefaultTypeMap.MatchNamesWithUnderscores = true;
+        DefaultTypeMap.MatchNamesWithUnderscores = true;
 
         _connection = new NpgsqlConnection(connectionString);
         await _connection.OpenAsync();
@@ -34,7 +34,8 @@ public static class DbService<TEntity> where TEntity : IModel
         }
         catch (Exception e)
         {
-            _logger?.Error($"Module: {nameof(DbService<TEntity>)}. Method: {nameof(GetAllAsync)}. Message:  {e.Message}");
+            _logger?.Error(
+                $"Module: {nameof(DbService<TEntity>)}. Method: {nameof(GetAllAsync)}. Message:  {e.Message}");
             throw;
         }
     }
@@ -50,14 +51,15 @@ public static class DbService<TEntity> where TEntity : IModel
         }
         catch (Exception e)
         {
-            _logger?.Error($"Module: {nameof(DbService<TEntity>)}. Method: {nameof(GetByIdAsync)}. Message:  {e.Message}");
+            _logger?.Error(
+                $"Module: {nameof(DbService<TEntity>)}. Method: {nameof(GetByIdAsync)}. Message:  {e.Message}");
             throw;
         }
     }
 
     public static async Task<bool> ExecuteNonQueryAsync(string sqlRaw, object? parameters = null)
     {
-        if  (_connection  == null) return false;
+        if (_connection == null) return false;
         var result = await _connection.ExecuteAsync(sqlRaw, parameters);
         return result > 0;
     }
