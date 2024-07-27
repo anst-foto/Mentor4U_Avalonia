@@ -1,0 +1,62 @@
+﻿<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:vm="using:Mentor4U_Avalonia.ViewModels.Windows"
+        xmlns:component="clr-namespace:Mentor4U_Avalonia.Components;assembly=Mentor4U_Avalonia.Components"
+
+        mc:Ignorable="d"
+        d:DesignWidth="{StaticResource WindowWidth}"
+        d:DesignHeight="{StaticResource WindowHeight}"
+        x:Class="Mentor4U_Avalonia.Views.Windows.PersonInfoWindow"
+
+        Title="PersonInfoWindow"
+
+        Width="{StaticResource WindowWidth}"
+        Height="{StaticResource WindowHeight}"
+
+        x:DataType="vm:PersonInfoViewModel">
+
+    <Window.DataContext>
+        <vm:PersonInfoViewModel />
+    </Window.DataContext>
+
+    <Window.Styles>
+        <StyleInclude Source="../../Styles/BaseStyles.axaml" />
+        <StyleInclude Source="../../Styles/PersonInfoWindowStyles.axaml" />
+    </Window.Styles>
+
+    <Grid RowDefinitions="*"
+          ColumnDefinitions="*, 2*">
+        <Panel Grid.Row="0" Grid.Column="0">
+            <Image Source="{Binding PhotoPath}"/>
+        </Panel>
+
+        <StackPanel Orientation="Vertical"
+                    Grid.Row="0" Grid.Column="1">
+            <Button x:Name="Button_Get"
+                    Content="Get"
+                    Command="{Binding GetCommand}"/>
+
+            <component:InputControl x:Name="InputControlLogin"
+                                    DataContext="{Binding InputLogin}"/>
+            <!--<component:InputControl x:Name="InputControlPassword"
+                                    DataContext="{Binding InputPassword}"/>
+            <component:InputControl x:Name="InputControlRole"
+                                    DataContext="{Binding InputRole}"/>
+            <component:InputControl x:Name="InputControlLastName"
+                                    DataContext="{Binding InputLastName}"/>
+            <component:InputControl x:Name="InputControlFirstName"
+                                    DataContext="{Binding InputFirstName}"/>
+            <component:InputControl x:Name="InputControlPatronymicName"
+                                    DataContext="{Binding InputPatronymicName}"/>-->
+            <!--<DatePicker x:Name="InputDateOfBirth"
+                        SelectedDate="{Binding DateOfBirth}"/>-->
+            <!--<component:InputControl x:Name="InputControlTelegram"
+                                    DataContext="{Binding InputTelegram}"/>
+            <component:InputControl x:Name="InputControlEmail"
+                                    DataContext="{Binding InputEmail}"/>-->
+        </StackPanel>
+    </Grid>
+
+</Window>

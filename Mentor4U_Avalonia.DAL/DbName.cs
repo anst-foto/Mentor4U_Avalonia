@@ -9,7 +9,8 @@ public static class DbHelper
 {
     public static readonly Dictionary<Type, string> TableNames = new()
     {
-        { typeof(Role), "table_roles" }
+        { typeof(Role), "table_roles" },
+        { typeof(Person), "view_persons" }
     };
 
     public static readonly Dictionary<string, string> RoleTablesColumnNames = new()
