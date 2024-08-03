@@ -1,7 +1,8 @@
 ﻿using System;
 using System.Reactive;
-using Mentor4U_Avalonia.BLL;
+using Avalonia.Media.Imaging;
 using Mentor4U_Avalonia.Components.ViewModel;
+using Mentor4U_Avalonia.Lib;
 using ReactiveUI;
 
 namespace Mentor4U_Avalonia.ViewModels.Windows;
@@ -15,6 +16,13 @@ public class PersonInfoViewModel : ViewModelBase
         set => this.RaiseAndSetIfChanged(ref _inputLogin, value);
     }
 
+    private Bitmap _photo;
+    public Bitmap Photo
+    {
+        get => _photo;
+        set => this.RaiseAndSetIfChanged(ref _photo, value);
+    }
+
     //public InputControlViewModel InputPassword { get; set; } = new();
     //public InputControlViewModel InputRole { get; set; } = new();
     //public InputControlViewModel InputLastName { get; set; } = new();
@@ -23,9 +31,6 @@ public class PersonInfoViewModel : ViewModelBase
     //public InputControlViewModel InputTelegram { get; set; } = new();
     //public InputControlViewModel InputEmail { get; set; } = new();
 
-    public DateTime DateOfBirth { get; set; } = DateTime.Now;
-    public string PhotoPath { get; set; } = "";
-
     private const string ConnectionString =
         "Host=localhost;Port=5432;Database=mentor_db;User ID=postgres;Password=1234;Pooling=true;SearchPath=test;";
 
@@ -33,11 +38,7 @@ public class PersonInfoViewModel : ViewModelBase
 
     public PersonInfoViewModel()
     {
-        InputLogin = new InputControlViewModel()
-        {
-            Label = "",
-            Input = ""
-        };
+        _inputLogin = new InputControlViewModel();
 
         GetCommand = ReactiveCommand.CreateFromTask(async () =>
         {
@@ -46,6 +47,9 @@ public class PersonInfoViewModel : ViewModelBase
 
                     InputLogin.Label = "Логин";
                     InputLogin.Input = person.Login;
+
+                    Photo = ImageHelper.LoadFromDisk(new Uri(person.PhotoPath));
+
                     /*InputPassword = new InputControlViewModel()
                     {
                         Label = "Пароль",

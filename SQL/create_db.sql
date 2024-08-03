@@ -179,7 +179,7 @@ CREATE TABLE table_persons
     birthday        DATE NOT NULL,
     telegram        TEXT NOT NULL,
     email           TEXT NOT NULL,
-    photo           TEXT NOT NULL,
+    photo_path      TEXT NOT NULL,
     FOREIGN KEY (id) REFERENCES table_accounts (id)
         ON DELETE NO ACTION
         ON UPDATE NO ACTION
@@ -251,7 +251,7 @@ SELECT table_accounts.id     AS id,
        birthday,
        telegram,
        email,
-       photo
+       photo_path
 FROM table_accounts
          JOIN table_persons
               ON table_accounts.id = table_persons.id
@@ -288,7 +288,7 @@ $$;
 CREATE OR REPLACE PROCEDURE procedure_insert_person(
     IN _login TEXT, IN _password TEXT, IN _role_name TEXT,
     IN _last_name TEXT, IN _first_name TEXT, IN _patronymic_name TEXT,
-    IN _birthday DATE, IN _telegram TEXT, IN _email TEXT, IN _photo TEXT)
+    IN _birthday DATE, IN _telegram TEXT, IN _email TEXT, IN _photo_path TEXT)
     LANGUAGE plpgsql AS
 $$
 BEGIN
@@ -303,8 +303,8 @@ BEGIN
         THEN
             ROLLBACK;
         ELSE
-            INSERT INTO table_persons (last_name, first_name, patronymic_name, birthday, telegram, email, photo)
-            VALUES (_last_name, _first_name, _patronymic_name, _birthday, _telegram, _email, _photo);
+            INSERT INTO table_persons (last_name, first_name, patronymic_name, birthday, telegram, email, photo_path)
+            VALUES (_last_name, _first_name, _patronymic_name, _birthday, _telegram, _email, _photo_path);
 
             IF (SELECT id FROM table_accounts WHERE login = _login) != (SELECT id
                                                                         FROM table_persons
@@ -336,7 +336,7 @@ CALL procedure_insert_person('admin', '1234', 'admin', 'Иванов', 'Иван
                              '<EMAIL>', 'test_photo');
 CALL procedure_insert_person('anst', '1234', 'admin', 'Петров', 'Иван', 'Иванович', '1989-01-01', 'test_telegram',
                              '<EMAIL>', 'test_photo');
-INSERT INTO table_persons (last_name, first_name, patronymic_name, birthday, telegram, email, photo)
+INSERT INTO table_persons (last_name, first_name, patronymic_name, birthday, telegram, email, photo_path)
 VALUES ('Иванов', 'Иван', 'Иванович', '1989-01-01', 'test_telegram', '<EMAIL>', 'test_photo');
 CALL procedure_insert_person('user', '1234', 'admin', 'Сидоров', 'Иван', 'Иванович', '1989-01-01', 'test_telegram',
                              '<EMAIL>', 'test_photo');

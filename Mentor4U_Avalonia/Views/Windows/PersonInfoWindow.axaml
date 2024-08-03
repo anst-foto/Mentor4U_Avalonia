@@ -29,7 +29,7 @@
     <Grid RowDefinitions="*"
           ColumnDefinitions="*, 2*">
         <Panel Grid.Row="0" Grid.Column="0">
-            <Image Source="{Binding PhotoPath}"/>
+            <Image Source="{Binding Photo}"/>
         </Panel>
 
         <StackPanel Orientation="Vertical"
