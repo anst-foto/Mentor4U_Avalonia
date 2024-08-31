@@ -3,6 +3,7 @@ using System.Reactive;
 using Avalonia.Media.Imaging;
 using Mentor4U_Avalonia.Components.ViewModel;
 using Mentor4U_Avalonia.Lib;
+using Microsoft.Extensions.Logging;
 using ReactiveUI;
 
 namespace Mentor4U_Avalonia.ViewModels.Windows;
@@ -36,14 +37,17 @@ public class PersonInfoViewModel : ViewModelBase
 
     public ReactiveCommand<Unit, Unit> GetCommand { get; }
 
-    public PersonInfoViewModel()
+    public PersonInfoViewModel() : base()
     {
+        Logger = loggerFactory.CreateLogger<PersonInfoViewModel>();
+
         _inputLogin = new InputControlViewModel();
 
         GetCommand = ReactiveCommand.CreateFromTask(async () =>
         {
              var persons = new BLL.Persons(new DAL.Persons(ConnectionString));
                     var person = await persons.GetByLoginAsync("user"); //TODO: Сделать проверку на null
+                    Logger.LogInformation("Получение данных");
 
                     InputLogin.Label = "Логин";
                     InputLogin.Input = person.Login;

@@ -53,7 +53,7 @@ public static class DbService<TEntity> where TEntity : IModel
         {
             _logger?.Error(
                 $"Module: {nameof(DbService<TEntity>)}. Method: {nameof(GetByIdAsync)}. Message:  {e.Message}");
-            throw;
+            throw; //FIXME
         }
     }
 
